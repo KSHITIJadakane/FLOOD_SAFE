@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserRole } from '../types';
-import { ShieldCheck, ChevronDown, Check, Moon, Sun, ExternalLink } from 'lucide-react';
+import { ShieldCheck, ChevronDown, Check, Moon, Sun, ExternalLink, Sliders, Sparkles } from 'lucide-react';
 
 export type ActiveNavTab = 'command' | 'queue' | 'benchmark' | 'cedar' | 'rules';
 
@@ -97,26 +97,53 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right Actions */}
         <div className="header-actions-row">
+
           {onOpenTuning && (
             <button
-              className="btn-secondary btn-compact"
+              className="btn btn-secondary btn-compact"
               onClick={onOpenTuning}
-              style={{ fontSize: 11.5, padding: '4px 10px', display: 'flex', alignItems: 'center', gap: 5 }}
+              style={{
+                fontSize: 12,
+                padding: '6px 12px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                borderRadius: 'var(--radius-sm)',
+                fontWeight: 600,
+                background: 'var(--tint)',
+                border: '1px solid var(--line-card)',
+                color: 'var(--ink)',
+                cursor: 'pointer',
+                transition: 'all 120ms ease',
+              }}
               title="What-If MCDA Sensitivity Tuning"
             >
-              <span>⚙️</span>
+              <Sliders size={13} style={{ color: 'var(--brand-text)' }} />
               <span>What-If Tuning</span>
             </button>
           )}
 
           {onOpenInspector && (
             <button
-              className="btn-secondary btn-compact"
+              className="btn btn-secondary btn-compact"
               onClick={onOpenInspector}
-              style={{ fontSize: 11.5, padding: '4px 10px', display: 'flex', alignItems: 'center', gap: 5 }}
+              style={{
+                fontSize: 12,
+                padding: '6px 12px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                borderRadius: 'var(--radius-sm)',
+                fontWeight: 600,
+                background: 'var(--tint)',
+                border: '1px solid var(--line-card)',
+                color: 'var(--ink)',
+                cursor: 'pointer',
+                transition: 'all 120ms ease',
+              }}
               title="Inspect Decision Engine & AI Pipelines"
             >
-              <span>🔬</span>
+              <Sparkles size={13} style={{ color: 'var(--brand-text)' }} />
               <span>AI Inspector</span>
             </button>
           )}
