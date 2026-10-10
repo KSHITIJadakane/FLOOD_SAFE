@@ -1,0 +1,77 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: FloodSafe — AWS Serverless & App Runner Infrastructure for Emergency Water Triage
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 512
+    Runtime: python3.11
+
+Resources:
+  # 1. Amazon S3 Bucket for Satellite SAR Imagery Ingestion
+  SatelliteIngestBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'floodsafe-sar-ingest-${AWS::AccountId}'
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  # 2. DynamoDB Table for Monitored Water Sources
+  WaterSourcesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: FloodSafe_WaterSources
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: source_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: source_id
+          KeyType: HASH
+
+  # 3. DynamoDB Table for Testing Allocation Plans
+  TestingPlansTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: FloodSafe_TestingPlans
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: plan_id
+          AttributeType: S
+        - AttributeName: event_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: plan_id
+          KeyType: HASH
+        - AttributeName: event_id
+          KeyType: RANGE
+
+  # 4. AWS App Runner Service running FloodSafe Container
+  FloodSafeAppRunnerService:
+    Type: AWS::AppRunner::Service
+    Properties:
+      ServiceName: floodsafe-api
+      SourceConfiguration:
+        ImageRepository:
+          ImageIdentifier: !Sub '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/floodsafe-backend:latest'
+          ImageRepositoryType: ECR
+          ImageConfiguration:
+            Port: '8000'
+            RuntimeEnvironmentVariables:
+              - Name: ENVIRONMENT
+                Value: production
+              - Name: IS_SYNTHETIC
+                Value: 'true'
+      InstanceConfiguration:
+        Cpu: '1 vCPU'
+        Memory: '2 GB'
+
+Outputs:
+  AppRunnerServiceUrl:
+    Description: URL of the FloodSafe FastAPI App Runner service
+    Value: !GetAtt FloodSafeAppRunnerService.ServiceUrl
