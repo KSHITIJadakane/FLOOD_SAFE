@@ -1,10 +1,18 @@
-"""FastAPI application entrypoint for FloodSafe."""
+"""FastAPI application entrypoint for FloodSafe.
+
+Production-ready REST API with AWS Cedar authorization, Gzip compression,
+OpenAPI documentation, and lifecycle management.
+"""
 from __future__ import annotations
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from typing import Tuple
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
+
 from backend.app.models import HealthResponse
 from backend.app.storage import storage
+from backend.app.auth import get_current_user_and_role, authorize
 
 from backend.app.routers.events import router as events_router
 from backend.app.routers.sources import router as sources_router
@@ -18,7 +26,7 @@ from backend.app.routers.config_router import router as config_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Seed default synthetic dataset on startup if not present
+    """Lifecycle manager to seed deterministic synthetic dataset on startup."""
     if not storage.list_events():
         storage.seed_default_data(seed=42)
     yield
@@ -36,7 +44,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS middleware for local frontend dev
+# Gzip compression middleware for high-efficiency GeoJSON transmission
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+# CORS middleware for local frontend dev & cloud deployment
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -56,18 +67,16 @@ app.include_router(audit_router)
 app.include_router(config_router)
 
 
-from backend.app.auth import require_auth, get_current_user_and_role, authorize
-from fastapi import Depends
-
-
 @app.post(
     "/api/v1/advisories",
     tags=["Safety & Cedar Boundaries"],
+    summary="Attempt to issue public contamination advisory (Unconditionally Forbidden)",
 )
-def issue_public_advisory(user_info: tuple = Depends(get_current_user_and_role)):
-    """
-    Attempt to issue a public water contamination advisory.
-    Strictly FORBIDDEN by Cedar policy 'no-automatic-advisory' across all roles.
+def issue_public_advisory(user_info: Tuple[str, list] = Depends(get_current_user_and_role)):
+    """Attempt to issue a public water contamination advisory.
+
+    Strictly FORBIDDEN by Cedar policy 'no-automatic-advisory' across all roles
+    including Admin to prevent automated panic broadcast.
     """
     user_id, roles = user_info
     authorize(user_id, roles, "IssueAdvisory", 'FloodSafe::FloodEvent::"default"')

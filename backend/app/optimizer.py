@@ -1,13 +1,21 @@
 """Greedy Maximum Coverage Optimizer and Baseline Evaluator for FloodSafe.
 
 Pure, deterministic optimization module for test allocation under budget K.
-Zero DB sessions, zero request objects.
+Optimized using vectorized NumPy distance matrices and greedy marginal gain indexing.
+
+Algorithmic Design:
+    - Precomputation: Vectorized O(N * M) Haversine distance matrix.
+    - Optimization: Greedy forward selection O(K * N) with deterministic tie-breaking.
+    - Baseline: Monte Carlo simulation O(T * K) across 1,000 randomized trials.
 """
 from __future__ import annotations
 import time
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple, Union
 import numpy as np
-from backend.app.geo_utils import haversine_distance_m
+from backend.app.geo_utils import (
+    haversine_distance_m,
+    haversine_distance_matrix_vectorized,
+)
 from backend.app.models import (
     BaselineStats,
     PlanMetrics,
@@ -26,30 +34,49 @@ def precompute_coverage(
     radius_m: float = 500.0,
     only_high_risk: bool = True,
 ) -> Tuple[Dict[str, Set[str]], Dict[str, int]]:
-    """
-    Precomputes the set of covered population unit IDs for each source within radius_m.
-    Returns:
-        coverage: source_id -> Set[unit_id]
-        unit_pop: unit_id -> population_count
-    """
-    # Filter units if requested
-    units = [u for u in pop_units if (not only_high_risk or u.is_high_risk)]
-    unit_pop = {u.id: u.population for u in units}
+    """Precomputes the set of covered population unit IDs for each source within radius_m.
 
+    Uses vectorized NumPy distance matrix broadcasting for fast O(N * M) computation.
+
+    Args:
+        sources: List of water source instances (either WaterSource or ScoredSource).
+        pop_units: List of all population units in the disaster zone.
+        radius_m: Spatial radius threshold in meters (default 500.0m).
+        only_high_risk: If True, restricts coverage tracking to units tagged is_high_risk.
+
+    Returns:
+        Tuple containing:
+            - coverage: Map of source_id -> Set of covered population unit IDs.
+            - unit_pop: Map of unit_id -> population count.
+
+    Time Complexity:
+        O(N * M) vectorized across SIMD arrays.
+    Space Complexity:
+        O(N * M)
+    """
+    # Filter population units if restricted to high-risk
+    units = [u for u in pop_units if (not only_high_risk or u.is_high_risk)]
+    unit_pop: Dict[str, int] = {u.id: u.population for u in units}
+
+    if not sources or not units:
+        return {getattr(s, "source_id", None) or getattr(s, "id", ""): set() for s in sources}, unit_pop
+
+    source_ids = [getattr(s, "source_id", None) or getattr(s, "id", "") for s in sources]
+    s_lats = np.array([s.latitude for s in sources], dtype=np.float64)
+    s_lons = np.array([s.longitude for s in sources], dtype=np.float64)
+    u_lats = np.array([u.latitude for u in units], dtype=np.float64)
+    u_lons = np.array([u.longitude for u in units], dtype=np.float64)
+
+    # Compute (N, M) distance matrix in a single vectorized NumPy operation
+    dist_matrix = haversine_distance_matrix_vectorized(s_lats, s_lons, u_lats, u_lons)
+    within_radius_mask = dist_matrix <= radius_m  # Boolean (N, M) matrix
+
+    unit_ids_array = np.array([u.id for u in units])
     coverage: Dict[str, Set[str]] = {}
 
-    for s in sources:
-        s_id = getattr(s, "source_id", None) or getattr(s, "id", "")
-        s_lat = s.latitude
-        s_lon = s.longitude
-        covered_set: Set[str] = set()
-
-        for u in units:
-            dist = haversine_distance_m(s_lat, s_lon, u.latitude, u.longitude)
-            if dist <= radius_m:
-                covered_set.add(u.id)
-
-        coverage[s_id] = covered_set
+    for i, s_id in enumerate(source_ids):
+        covered_indices = within_radius_mask[i]
+        coverage[s_id] = set(unit_ids_array[covered_indices].tolist())
 
     return coverage, unit_pop
 
@@ -58,16 +85,36 @@ def greedy_max_coverage(
     coverage: Dict[str, Set[str]],
     unit_pop: Dict[str, int],
     k: int,
-    scores: Dict[str, float] | None = None,
-    source_codes: Dict[str, str] | None = None,
+    scores: Optional[Dict[str, float]] = None,
+    source_codes: Optional[Dict[str, str]] = None,
 ) -> Tuple[List[str], Set[str], int, List[Dict[str, Any]]]:
-    """
-    Executes greedy maximum unique coverage.
+    """Executes Greedy Maximum Unique Coverage under capacity constraint K.
 
-    Tie-breaking hierarchy:
-    1. Marginal unique population gain (descending)
-    2. Vulnerability risk score (descending)
-    3. Source code string (ascending)
+    Guarantees strict (1 - 1/e) ~ 63.2% approximation ratio to NP-hard optimal coverage.
+
+    Deterministic Tie-breaking Hierarchy:
+        1. Marginal unique population gain (descending)
+        2. Relative vulnerability score (descending)
+        3. Source code string (ascending alphanumeric)
+
+    Args:
+        coverage: Map of source_id -> Set of covered population unit IDs.
+        unit_pop: Map of unit_id -> population count.
+        k: Maximum test allocation budget (capacity K).
+        scores: Optional map of source_id -> relative vulnerability score.
+        source_codes: Optional map of source_id -> human-readable source code.
+
+    Returns:
+        Tuple containing:
+            - selected: List of chosen source IDs in selection sequence.
+            - covered_units: Set of all unique population unit IDs covered.
+            - total_covered_pop: Total unique population covered without double-counting.
+            - steps: Chronological list of allocation steps with marginal gains.
+
+    Time Complexity:
+        O(K * N) where N is number of candidate sources.
+    Space Complexity:
+        O(N + M)
     """
     if k <= 0 or not coverage or not unit_pop:
         return [], set(), 0, []
@@ -87,7 +134,7 @@ def greedy_max_coverage(
         best_score: float = -1.0
         best_code: str = "ZZZZ"
 
-        # Deterministic candidate traversal
+        # Deterministic candidate evaluation
         for s_id in sorted(candidates):
             new_units = coverage[s_id] - covered_units
             gain = sum(unit_pop.get(u, 0) for u in new_units)
@@ -111,8 +158,8 @@ def greedy_max_coverage(
                 best_score = src_score
                 best_code = src_code
 
+        # If no remaining candidate offers marginal coverage gain, terminate early
         if best_id is None or best_gain <= 0:
-            # No further positive marginal gains available
             break
 
         selected.append(best_id)
@@ -133,11 +180,20 @@ def greedy_max_coverage(
 
 
 def calculate_coverage_for_set(
-    selected_ids: List[str] | Set[str],
+    selected_ids: Union[List[str], Set[str]],
     coverage: Dict[str, Set[str]],
     unit_pop: Dict[str, int],
 ) -> int:
-    """Calculates total unique population covered by a given set of source IDs."""
+    """Calculates total unique population covered by an arbitrary set of source IDs.
+
+    Args:
+        selected_ids: Collection of source IDs to evaluate.
+        coverage: Map of source_id -> Set of covered unit IDs.
+        unit_pop: Map of unit_id -> population count.
+
+    Returns:
+        int: Unique non-overlapping population covered.
+    """
     covered: Set[str] = set()
     for s_id in selected_ids:
         if s_id in coverage:
@@ -155,10 +211,20 @@ def evaluate_baselines(
     trials: int = 1000,
     seed: int = 42,
 ) -> BaselineStats:
-    """
-    Benchmarks optimizer against:
-    1. 1,000-trial Monte Carlo random K-selection
-    2. Top-K by score ranking
+    """Evaluates optimizer against Monte Carlo random baseline and naive score ranking.
+
+    Args:
+        coverage: Map of source_id -> Set of covered unit IDs.
+        unit_pop: Map of unit_id -> population count.
+        k: Testing budget capacity.
+        optimizer_pop: Population achieved by greedy optimizer.
+        scores: Map of source_id -> vulnerability score.
+        source_codes: Map of source_id -> code.
+        trials: Number of Monte Carlo iterations (default 1,000).
+        seed: Random seed for exact reproducibility.
+
+    Returns:
+        BaselineStats: Comprehensive statistical comparison.
     """
     all_candidate_ids = np.array(sorted(coverage.keys()))
     n_candidates = len(all_candidate_ids)
@@ -218,7 +284,23 @@ def generate_testing_plan(
     include_baseline: bool = True,
     baseline_trials: int = 1000,
 ) -> TestingPlan:
-    """End-to-end plan generation with timing metrics and baseline benchmarks."""
+    """Generates an end-to-end testing plan with execution metrics and baseline evaluation.
+
+    Args:
+        event_id: Unique identifier for flood event.
+        assessment_run_id: Unique identifier for vulnerability scoring assessment.
+        scored_sources: Map of source_id -> ScoredSource models.
+        pop_units: List of PopulationUnit models.
+        capacity_k: Testing kit budget capacity (default 15).
+        coverage_radius_m: Spatial coverage buffer in meters (default 500.0m).
+        objective: Optimization objective function description.
+        seed: Random seed for baseline evaluation.
+        include_baseline: If True, computes Monte Carlo and Top-K comparisons.
+        baseline_trials: Number of Monte Carlo iterations.
+
+    Returns:
+        TestingPlan: Complete validated allocation plan with metrics and baseline stats.
+    """
     t0 = time.perf_counter()
 
     sources_list = list(scored_sources.values())
@@ -267,7 +349,6 @@ def generate_testing_plan(
         runtime_ms=runtime_ms,
     )
 
-    # Baseline comparison
     baseline_stats = None
     if include_baseline and selected_ids:
         baseline_stats = evaluate_baselines(
@@ -281,7 +362,6 @@ def generate_testing_plan(
             seed=seed,
         )
 
-    # Build selected site models
     selected_sites: List[SelectedSite] = []
     for step in steps:
         s_id = step["source_id"]
