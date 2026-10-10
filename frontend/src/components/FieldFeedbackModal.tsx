@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, FlaskConical, CheckCircle2, ArrowRight } from 'lucide-react';
+import { X, FlaskConical, CheckCircle2 } from 'lucide-react';
 import { recordFieldTest } from '../services/api';
 
 interface FieldFeedbackModalProps {
@@ -36,11 +36,11 @@ export const FieldFeedbackModal: React.FC<FieldFeedbackModalProps> = ({
         verification_status: 'simulated',
         notes,
       });
-      setSuccessMsg(`Simulated ${resultCategory} result recorded! Applied +0.10 neighbor uplift within 300m.`);
+      setSuccessMsg(`Simulated ${resultCategory.toUpperCase()} result recorded! Applied +0.10 neighbor uplift within 300m.`);
       setTimeout(() => {
         onTestRecorded();
         onClose();
-      }, 1500);
+      }, 1400);
     } catch (err: any) {
       alert(`Error submitting field test: ${err?.response?.data?.detail?.message || err.message}`);
     } finally {
@@ -49,64 +49,90 @@ export const FieldFeedbackModal: React.FC<FieldFeedbackModalProps> = ({
   };
 
   return (
-    <div className="modal-overlay-editorial" onClick={onClose}>
-      <div className="modal-stadium-dialog animate-fade-in" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close-btn-circle" onClick={onClose} title="Close">
+    <div className="modal-overlay-backdrop" onClick={onClose}>
+      <div className="modal-dialog-panel animate-fade-in" onClick={(e) => e.stopPropagation()} style={{ maxWidth: 540 }}>
+        <button className="modal-close-btn" onClick={onClose} title="Close">
           <X size={18} />
         </button>
 
-        <div className="eyebrow-tag">
-          <span className="eyebrow-bullet" />
-          <span>Feedback Loop & Neighbor Uplift</span>
+        {/* Eyebrow */}
+        <div className="mono-eyebrow">
+          <span className="dot" />
+          <span>FIELD FEEDBACK &amp; SPATIAL PROPAGATION</span>
         </div>
 
-        <h2 style={{ fontSize: 26, fontWeight: 700, letterSpacing: '-0.025em', color: 'var(--ink-primary)', margin: '6px 0 16px 0' }}>
-          Simulate Field Test for <span style={{ fontFamily: 'JetBrains Mono', color: 'var(--signal-rust)' }}>{sourceCode}</span>
+        <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', margin: '6px 0 16px 0', fontFamily: 'var(--sans)' }}>
+          Simulate Field Test for <span style={{ fontFamily: 'var(--mono)', color: 'var(--brand-text)' }}>{sourceCode}</span>
         </h2>
 
         {successMsg ? (
-          <div style={{ background: 'rgba(16, 185, 129, 0.12)', border: '1px solid var(--band-low)', borderRadius: 20, padding: 24, color: 'var(--band-low)', display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{ background: 'var(--tint)', border: '1px solid var(--success)', borderRadius: 'var(--radius-container)', padding: 20, color: 'var(--success)', display: 'flex', alignItems: 'center', gap: 12 }}>
             <CheckCircle2 size={24} />
-            <span style={{ fontSize: 15, fontWeight: 600 }}>{successMsg}</span>
+            <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'var(--mono)' }}>{successMsg}</span>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
-            <div style={{ background: 'var(--surface-nested)', padding: 18, borderRadius: 20, marginBottom: 20, border: '1px solid var(--border-light)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, fontSize: 13, fontWeight: 700, color: 'var(--signal-rust)' }}>
-                <span className="synthetic-pill-badge" style={{ margin: 0 }}>SIMULATED</span>
+            {/* Rule Notice */}
+            <div style={{ background: 'var(--tint)', padding: 14, borderRadius: 'var(--radius-sm)', marginBottom: 18, border: '1px solid var(--line-card)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, fontSize: 12, fontWeight: 700, color: 'var(--brand-text)', fontFamily: 'var(--mono)' }}>
+                <span style={{ background: 'var(--warning)', color: '#000', padding: '1px 6px', borderRadius: 2, fontSize: 10 }}>SIMULATED</span>
                 <span>Hydrological Feedback Rule</span>
               </div>
-              <p style={{ fontSize: 13.5, color: 'var(--ink-secondary)', lineHeight: 1.5 }}>
+              <p style={{ fontSize: 12.5, color: 'var(--ink-body)', lineHeight: 1.5, margin: 0 }}>
                 Simulating an <strong>Abnormal</strong> rapid test applies a bounded <strong>+0.10 uplift</strong> on neighboring sources within 300m without declaring them contaminated.
               </p>
             </div>
 
-            <div style={{ marginBottom: 20 }}>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--ink-muted)', marginBottom: 8 }}>
+            {/* Selection Buttons */}
+            <div style={{ marginBottom: 18 }}>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-label)', marginBottom: 8, fontFamily: 'var(--mono)' }}>
                 Test Result Category:
               </label>
-              <div style={{ display: 'flex', gap: 12 }}>
+              <div style={{ display: 'flex', gap: 10 }}>
                 <button
                   type="button"
-                  className={resultCategory === 'abnormal' ? 'btn-rust-pill' : 'btn-white-pill'}
-                  style={{ flex: 1, justifyContent: 'center', padding: '10px 16px' }}
                   onClick={() => setResultCategory('abnormal')}
+                  style={{
+                    flex: 1,
+                    padding: '10px 12px',
+                    fontSize: 12.5,
+                    fontFamily: 'var(--mono)',
+                    fontWeight: 600,
+                    borderRadius: 'var(--radius-sm)',
+                    border: resultCategory === 'abnormal' ? '2px solid var(--danger)' : '1px solid var(--line-card)',
+                    background: resultCategory === 'abnormal' ? 'rgba(220, 38, 38, 0.15)' : 'var(--surface)',
+                    color: resultCategory === 'abnormal' ? 'var(--danger)' : 'var(--ink-body)',
+                    cursor: 'pointer',
+                    transition: 'all 120ms ease',
+                  }}
                 >
-                  Abnormal Result (+0.10 Neighbor Uplift)
+                  ⚠️ Abnormal Result (+0.10 Uplift)
                 </button>
                 <button
                   type="button"
-                  className={resultCategory === 'normal' ? 'btn-ink-pill' : 'btn-white-pill'}
-                  style={{ flex: 1, justifyContent: 'center', padding: '10px 16px' }}
                   onClick={() => setResultCategory('normal')}
+                  style={{
+                    flex: 1,
+                    padding: '10px 12px',
+                    fontSize: 12.5,
+                    fontFamily: 'var(--mono)',
+                    fontWeight: 600,
+                    borderRadius: 'var(--radius-sm)',
+                    border: resultCategory === 'normal' ? '2px solid var(--success)' : '1px solid var(--line-card)',
+                    background: resultCategory === 'normal' ? 'rgba(34, 197, 94, 0.15)' : 'var(--surface)',
+                    color: resultCategory === 'normal' ? 'var(--success)' : 'var(--ink-body)',
+                    cursor: 'pointer',
+                    transition: 'all 120ms ease',
+                  }}
                 >
-                  Normal Result (No Uplift)
+                  ✅ Normal Result (No Uplift)
                 </button>
               </div>
             </div>
 
-            <div style={{ marginBottom: 24 }}>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--ink-muted)', marginBottom: 8 }}>
+            {/* Notes Input */}
+            <div style={{ marginBottom: 22 }}>
+              <label style={{ display: 'block', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-label)', marginBottom: 6, fontFamily: 'var(--mono)' }}>
                 Field Observation Notes:
               </label>
               <input
@@ -115,25 +141,25 @@ export const FieldFeedbackModal: React.FC<FieldFeedbackModalProps> = ({
                 onChange={(e) => setNotes(e.target.value)}
                 style={{
                   width: '100%',
-                  background: 'var(--surface-nested)',
-                  border: '1px solid var(--border-medium)',
-                  color: 'var(--ink-primary)',
-                  padding: '10px 16px',
-                  borderRadius: 'var(--r-pill)',
-                  fontSize: 14,
-                  fontFamily: 'inherit',
+                  background: 'var(--surface)',
+                  border: '1px solid var(--line-input)',
+                  color: 'var(--ink)',
+                  padding: '9px 12px',
+                  borderRadius: 'var(--radius-sm)',
+                  fontSize: 13,
                   outline: 'none',
                 }}
               />
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12 }}>
-              <button type="button" className="btn-white-pill" onClick={onClose} disabled={submitting}>
+            {/* Action Buttons */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
+              <button type="button" className="btn btn-secondary" onClick={onClose} disabled={submitting}>
                 Cancel
               </button>
-              <button type="submit" className="btn-rust-pill" disabled={submitting}>
-                <FlaskConical size={15} />
-                <span>{submitting ? 'Submitting...' : 'Record Simulated Result & Re-score'}</span>
+              <button type="submit" className="btn btn-primary" disabled={submitting} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <FlaskConical size={14} />
+                <span>{submitting ? 'Recording...' : 'Record Simulated Result & Re-score'}</span>
               </button>
             </div>
           </form>
