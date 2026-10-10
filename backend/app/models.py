@@ -81,6 +81,9 @@ class WaterSource(BaseModel):
     flood_exposure: Optional[float] = None  # 0.0 - 1.0
     historical_risk: Optional[float] = None  # 0.0 - 1.0
     source_vulnerability: Optional[float] = None  # 0.0 - 1.0
+    elevation_m: Optional[float] = None  # DEM height in meters
+    topographic_wetness_index: Optional[float] = None  # TWI hydrologic accumulation
+    sar_backscatter_db: Optional[float] = None  # Sentinel-1 SAR radar backscatter
     data_quality_status: str = "complete"  # complete / partial / stale
     is_synthetic: bool = True
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
@@ -113,6 +116,9 @@ class ScoredSource(BaseModel):
     missing_features: List[str]
     data_quality: str
     quality_score: float
+    elevation_m: Optional[float] = None
+    topographic_wetness_index: Optional[float] = None
+    sar_backscatter_db: Optional[float] = None
     spatial_uplift: float = 0.0
     uplift_sources: List[Dict[str, Any]] = Field(default_factory=list)
     explanation: str

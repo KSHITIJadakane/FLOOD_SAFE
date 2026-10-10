@@ -129,6 +129,39 @@ export const WhyModal: React.FC<WhyModalProps> = ({ source, onClose }) => {
           )}
         </div>
 
+        {/* Satellite Radar (Sentinel-1 SAR) & Physical DEM Hydrology Block */}
+        {(current.elevation_m !== undefined || current.topographic_wetness_index !== undefined || current.sar_backscatter_db !== undefined) && (
+          <div style={{ marginBottom: 20, background: 'rgba(30, 41, 59, 0.4)', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: 'var(--radius-container)', padding: 14 }}>
+            <div className="mono-eyebrow" style={{ margin: '0 0 10px 0', color: '#38bdf8' }}>
+              <span className="dot" style={{ background: '#38bdf8' }} />
+              <span>SATELLITE SAR &amp; DEM HYDROLOGICAL INDICATORS</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+              <div style={{ background: 'var(--surface)', padding: '8px 10px', borderRadius: 4, border: '1px solid var(--line-card)' }}>
+                <div style={{ fontSize: 10, fontFamily: 'var(--mono)', color: 'var(--ink-label)', textTransform: 'uppercase' }}>DEM Elevation</div>
+                <div style={{ fontSize: 15, fontWeight: 600, fontFamily: 'var(--mono)', color: 'var(--ink)', marginTop: 2 }}>
+                  {current.elevation_m !== undefined ? `${current.elevation_m}m` : 'N/A'}
+                </div>
+              </div>
+              <div style={{ background: 'var(--surface)', padding: '8px 10px', borderRadius: 4, border: '1px solid var(--line-card)' }}>
+                <div style={{ fontSize: 10, fontFamily: 'var(--mono)', color: 'var(--ink-label)', textTransform: 'uppercase' }}>Topographic Wetness (TWI)</div>
+                <div style={{ fontSize: 15, fontWeight: 600, fontFamily: 'var(--mono)', color: 'var(--ink)', marginTop: 2 }}>
+                  {current.topographic_wetness_index !== undefined ? current.topographic_wetness_index.toFixed(2) : 'N/A'}
+                </div>
+              </div>
+              <div style={{ background: 'var(--surface)', padding: '8px 10px', borderRadius: 4, border: '1px solid var(--line-card)' }}>
+                <div style={{ fontSize: 10, fontFamily: 'var(--mono)', color: 'var(--ink-label)', textTransform: 'uppercase' }}>Sentinel-1 SAR Radar</div>
+                <div style={{ fontSize: 15, fontWeight: 600, fontFamily: 'var(--mono)', color: (current.sar_backscatter_db ?? 0) < -16 ? 'var(--danger)' : 'var(--ink)', marginTop: 2 }}>
+                  {current.sar_backscatter_db !== undefined ? `${current.sar_backscatter_db} dB` : 'N/A'}
+                </div>
+              </div>
+            </div>
+            <div style={{ fontSize: 11, color: 'var(--ink-muted)', marginTop: 8, fontFamily: 'var(--mono)' }}>
+              ✦ Specular radar backscatter &lt; -16dB indicates standing surface water pooling around source perimeter.
+            </div>
+          </div>
+        )}
+
         {/* Dynamic Spatial Contamination Uplift Propagation Section (Option A) */}
         {((current.spatial_uplift && current.spatial_uplift > 0) || (current.uplift_sources && current.uplift_sources.length > 0)) && (
           <div style={{ marginBottom: 20, background: 'var(--tint)', border: '1px solid var(--line-card)', borderRadius: 'var(--radius-container)', padding: 14 }}>

@@ -35,6 +35,9 @@ export interface ScoredSource {
   missing_features: string[];
   data_quality: string;
   quality_score: number;
+  elevation_m?: number;
+  topographic_wetness_index?: number;
+  sar_backscatter_db?: number;
   spatial_uplift?: number;
   uplift_sources?: Array<{
     source_id: string;

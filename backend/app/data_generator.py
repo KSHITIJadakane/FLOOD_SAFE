@@ -145,6 +145,17 @@ def generate_synthetic_dataset(
         else:
             quality_status = "complete"
 
+        # Physical DEM Elevation & Topographic Wetness Index (TWI)
+        elevation_base = 28.0 - (lat - center_lat) * 120.0 + (lon - center_lon) * 80.0
+        elevation = round(max(8.0, min(55.0, elevation_base + rng.gauss(0, 3.5))), 1)
+        twi_value = round(max(0.05, min(0.98, 1.0 - (elevation - 8.0) / 47.0 + rng.uniform(-0.1, 0.1))), 3)
+
+        # Copernicus Sentinel-1 SAR Radar Backscatter (dB): Water causes specular reflection -> low dB (-22 to -16)
+        if in_flood or flood_exp > 0.6:
+            sar_db = round(rng.uniform(-23.5, -16.0), 1)
+        else:
+            sar_db = round(rng.uniform(-15.5, -8.0), 1)
+
         sources.append(
             WaterSource(
                 source_code=code,
@@ -158,6 +169,9 @@ def generate_synthetic_dataset(
                 flood_exposure=flood_exp,
                 historical_risk=hist_risk,
                 source_vulnerability=round(src_vuln, 3),
+                elevation_m=elevation,
+                topographic_wetness_index=twi_value,
+                sar_backscatter_db=sar_db,
                 data_quality_status=quality_status,
                 is_synthetic=True,
             )
