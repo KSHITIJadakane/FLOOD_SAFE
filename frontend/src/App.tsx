@@ -109,19 +109,29 @@ export const App: React.FC = () => {
   };
 
   const handleRunOptimizer = async () => {
-    if (!activeEvent) return;
+    let ev = activeEvent;
+    if (!ev) {
+      const evList = await fetchEvents();
+      if (evList.length > 0) {
+        ev = evList[0];
+        setActiveEvent(ev);
+      } else {
+        alert("No flood events found to optimize.");
+        return;
+      }
+    }
     setOptimizing(true);
     try {
       const newPlan = await createTestingPlan({
-        event_id: activeEvent.id,
+        event_id: ev.id,
         capacity_k: capacityK,
       });
       setPlan(newPlan);
 
       // Refresh queue and map
       const [srcs, q] = await Promise.all([
-        fetchSources({ event_id: activeEvent.id }),
-        fetchTestingQueue(activeEvent.id, newPlan.plan_id),
+        fetchSources({ event_id: ev.id }),
+        fetchTestingQueue(ev.id, newPlan.plan_id),
       ]);
       setSources(srcs);
       setQueue(q);
@@ -137,19 +147,28 @@ export const App: React.FC = () => {
   };
 
   const handleRefreshAssessment = async () => {
-    if (!activeEvent) return;
+    let ev = activeEvent;
+    if (!ev) {
+      const evList = await fetchEvents();
+      if (evList.length > 0) {
+        ev = evList[0];
+        setActiveEvent(ev);
+      } else {
+        return;
+      }
+    }
     setLoading(true);
     try {
-      await runRiskAssessment(activeEvent.id);
+      await runRiskAssessment(ev.id);
       const [srcs, q] = await Promise.all([
-        fetchSources({ event_id: activeEvent.id }),
-        fetchTestingQueue(activeEvent.id),
+        fetchSources({ event_id: ev.id }),
+        fetchTestingQueue(ev.id),
       ]);
       setSources(srcs);
       setQueue(q);
       if (plan) {
         const newPlan = await createTestingPlan({
-          event_id: activeEvent.id,
+          event_id: ev.id,
           capacity_k: capacityK,
         });
         setPlan(newPlan);
@@ -328,11 +347,11 @@ export const App: React.FC = () => {
       />
 
       {/* Simulated Feedback Modal */}
-      {feedbackSource && activeEvent && (
+      {feedbackSource && (activeEvent || events[0]) && (
         <FieldFeedbackModal
           sourceId={feedbackSource.id}
           sourceCode={feedbackSource.code}
-          eventId={activeEvent.id}
+          eventId={(activeEvent || events[0])!.id}
           onClose={() => setFeedbackSource(null)}
           onTestRecorded={() => handleRefreshAssessment()}
         />

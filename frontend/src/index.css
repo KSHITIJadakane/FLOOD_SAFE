@@ -878,6 +878,24 @@ body {
   overflow: hidden;
 }
 
+.map-container-frame {
+  height: 520px;
+  min-height: 520px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  position: relative;
+  background: #111827;
+}
+
+.map-container-frame .leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  min-height: 520px !important;
+  z-index: 10;
+}
+
 .map-card-header {
   padding: 14px 18px;
   border-bottom: 1px solid var(--line);
