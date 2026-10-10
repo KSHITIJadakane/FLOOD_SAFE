@@ -1,0 +1,22 @@
+config_version: risk-v1
+weights:
+  flood_exposure: 0.30
+  drain_proximity_risk: 0.25
+  historical_risk: 0.15
+  source_vulnerability: 0.15
+  population_exposure: 0.15
+missing_policy:
+  default: neutral_with_confidence_penalty
+  neutral_value: 0.5
+bands:
+  low: [0.00, 0.25]
+  moderate: [0.25, 0.50]
+  high: [0.50, 0.75]
+  very_high: [0.75, 1.00]
+optimizer:
+  coverage_radius_m: 500
+  objective: max_unique_high_risk_population
+  baseline_trials: 1000
+feedback:
+  neighbor_radius_m: 300
+  abnormal_uplift: 0.10

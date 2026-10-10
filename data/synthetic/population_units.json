@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "201835d4-a3fd-4eff-85ab-ed8eec38deaa",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-001",
+    "latitude": 13.017296,
+    "longitude": 80.250788,
+    "population": 2894,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "95ef4b1f-5ef0-4320-b86d-fc8cc15129a1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-002",
+    "latitude": 13.013856,
+    "longitude": 80.197219,
+    "population": 2261,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2fd41fd9-9033-4640-a0f8-1c171b5e994e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-003",
+    "latitude": 13.048529,
+    "longitude": 80.205198,
+    "population": 1164,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "63f0c44b-dbf1-4ebf-8850-f54307b520ab",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-004",
+    "latitude": 13.029284,
+    "longitude": 80.216692,
+    "population": 3007,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c5605f27-a30e-437b-a90f-c5c046431bcf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-005",
+    "latitude": 13.033011,
+    "longitude": 80.263539,
+    "population": 2632,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "02382912-747c-448f-a8cd-d385e1c0ae14",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-006",
+    "latitude": 13.046499,
+    "longitude": 80.257779,
+    "population": 2639,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e499ac95-2d38-4014-8dae-1eac22ea0127",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-007",
+    "latitude": 13.048304,
+    "longitude": 80.179759,
+    "population": 749,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ab65a013-b250-4c52-a0bc-6e2e55f556ad",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-008",
+    "latitude": 13.021288,
+    "longitude": 80.247142,
+    "population": 462,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "997d2158-844e-46a7-9e4c-a7c6eb82bd79",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-009",
+    "latitude": 13.040807,
+    "longitude": 80.233692,
+    "population": 1283,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "18fe913c-1749-4be6-936c-69c730100bba",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-010",
+    "latitude": 13.027759,
+    "longitude": 80.272773,
+    "population": 737,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "cbeb27d0-5a3a-4a18-adb5-3c21cb841cb3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-011",
+    "latitude": 13.08134,
+    "longitude": 80.209061,
+    "population": 1444,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9de343f0-346c-41e1-886f-9caeb658ecb6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-012",
+    "latitude": 13.085853,
+    "longitude": 80.210888,
+    "population": 838,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7902408d-d4b6-4dae-b8e4-adf50dd500dc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-013",
+    "latitude": 13.00764,
+    "longitude": 80.193696,
+    "population": 2376,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9b0b2d04-7309-49f9-a10f-6d2b78dff215",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-014",
+    "latitude": 13.0461,
+    "longitude": 80.216062,
+    "population": 3543,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "bf855499-d466-47b8-bbba-9bdf16dd437a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-015",
+    "latitude": 13.05187,
+    "longitude": 80.178689,
+    "population": 2201,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4582737e-4c11-4b0f-8061-a14c0e5acf2d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-016",
+    "latitude": 12.983214,
+    "longitude": 80.237852,
+    "population": 747,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2a3a7c17-eddd-4dfb-9458-652a87e20f8c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-017",
+    "latitude": 13.066461,
+    "longitude": 80.224548,
+    "population": 667,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ccf2c3f2-bd4c-4209-a007-ba77e4e1d4bb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-018",
+    "latitude": 13.097431,
+    "longitude": 80.261975,
+    "population": 2271,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1658ce28-6dc6-4c4d-8caf-fb29710e90db",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-019",
+    "latitude": 13.062388,
+    "longitude": 80.238316,
+    "population": 2874,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "135c0e0f-a261-4b5a-b40f-5df789691fbc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-020",
+    "latitude": 13.028869,
+    "longitude": 80.27205,
+    "population": 1656,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f6d9e81f-3667-4d6c-b1d3-6c9e432636e0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-021",
+    "latitude": 13.003321,
+    "longitude": 80.202646,
+    "population": 846,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "d09b46ad-abc0-498d-aa59-8cefb47289c7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-022",
+    "latitude": 13.049291,
+    "longitude": 80.182755,
+    "population": 1682,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2a5640f0-0aec-4582-84ec-0ee63d7596af",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-023",
+    "latitude": 13.051958,
+    "longitude": 80.191628,
+    "population": 2136,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0f7b3c2f-6949-4edc-ac1e-adc7e839eb72",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-024",
+    "latitude": 13.016565,
+    "longitude": 80.255763,
+    "population": 1156,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "07376a7c-cb37-41de-bcec-bb3ab0eab8b9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-025",
+    "latitude": 13.020192,
+    "longitude": 80.258747,
+    "population": 448,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ea131a1c-18ed-4683-bb6a-f644a5ac1742",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-026",
+    "latitude": 13.080563,
+    "longitude": 80.246747,
+    "population": 665,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6eee3ab5-8a11-45f0-a9ed-77755d27c16c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-027",
+    "latitude": 13.035728,
+    "longitude": 80.223253,
+    "population": 2613,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ff886e12-f328-4f80-906f-067048f7d10c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-028",
+    "latitude": 13.040557,
+    "longitude": 80.246885,
+    "population": 1199,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "aba77c66-45c4-4d7d-84b3-673454be1517",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-029",
+    "latitude": 13.063239,
+    "longitude": 80.231712,
+    "population": 3047,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9e6414f7-6c8b-46c1-8488-8d238ff4a0e6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-030",
+    "latitude": 13.002922,
+    "longitude": 80.211789,
+    "population": 2476,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "53ebd5d3-2095-4593-9423-02cf4cf24339",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-031",
+    "latitude": 13.03622,
+    "longitude": 80.244804,
+    "population": 2075,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eab2d291-7930-430a-93aa-8741b590c58b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-032",
+    "latitude": 13.062567,
+    "longitude": 80.215323,
+    "population": 3214,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f1fc5f7c-dbba-4584-9d5c-1ea5a6cc2191",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-033",
+    "latitude": 13.062629,
+    "longitude": 80.203986,
+    "population": 2988,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "136c29c5-6465-426b-867a-cb5c6362af11",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-034",
+    "latitude": 13.025977,
+    "longitude": 80.250898,
+    "population": 1195,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1cde7b20-2a1a-4d52-a423-b60008c5f594",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-035",
+    "latitude": 13.021345,
+    "longitude": 80.261105,
+    "population": 1517,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4bda8446-70e6-47c9-a95c-da3ea72320a9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-036",
+    "latitude": 12.995491,
+    "longitude": 80.263982,
+    "population": 1096,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e722ca25-5f96-42b1-ac92-acacf3c18111",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-037",
+    "latitude": 13.059285,
+    "longitude": 80.189415,
+    "population": 2536,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "35e2898c-738e-4121-8a46-140444997e64",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-038",
+    "latitude": 13.064038,
+    "longitude": 80.266227,
+    "population": 2438,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ea555346-277b-46c7-af7c-5ccb50928c00",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-039",
+    "latitude": 13.037888,
+    "longitude": 80.189282,
+    "population": 1009,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "9437b4c0-6bc8-4f6c-beff-6b0498e4d551",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-040",
+    "latitude": 13.064223,
+    "longitude": 80.221818,
+    "population": 1217,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ecf952b9-a4e1-48a9-90e5-4a9c71dd3dc4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-041",
+    "latitude": 13.027591,
+    "longitude": 80.219155,
+    "population": 1425,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "17168b67-42cd-4834-8517-e6a03c37b818",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-042",
+    "latitude": 13.014136,
+    "longitude": 80.256879,
+    "population": 2009,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "dd1d5245-9e79-4237-a26c-37e7434df659",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-043",
+    "latitude": 13.073262,
+    "longitude": 80.219027,
+    "population": 2615,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6102b30a-cd4e-4cfa-b15f-caac65cb7f19",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-044",
+    "latitude": 13.059602,
+    "longitude": 80.234932,
+    "population": 1714,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "58fc384f-19ad-43b5-848f-58200532f97c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-045",
+    "latitude": 13.029673,
+    "longitude": 80.254325,
+    "population": 613,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "291c2c90-7a82-4f29-b260-e25627b9b670",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-046",
+    "latitude": 13.056723,
+    "longitude": 80.172233,
+    "population": 1563,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7926bd81-a4db-4bb8-bca7-baa7a20a4b9d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-047",
+    "latitude": 13.074277,
+    "longitude": 80.245807,
+    "population": 804,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8815d922-c0e9-46e3-865e-a938bed29c07",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-048",
+    "latitude": 13.070408,
+    "longitude": 80.17428,
+    "population": 173,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "42a7c6a0-d1fe-4dd5-afbc-61a239a44f0b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-049",
+    "latitude": 13.029275,
+    "longitude": 80.229787,
+    "population": 1875,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5920b704-c1d1-44d5-ac12-c03e8590f97f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-050",
+    "latitude": 13.018914,
+    "longitude": 80.240088,
+    "population": 1167,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "774caa68-0cc0-40d0-8054-151da2d99abb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-051",
+    "latitude": 13.042284,
+    "longitude": 80.289647,
+    "population": 1423,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "486e6b2b-035d-4c46-9ab7-24595bb8a0df",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-052",
+    "latitude": 13.045323,
+    "longitude": 80.258758,
+    "population": 1864,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2cf8ec2a-f43f-4d75-b37f-f8bf4f42a295",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-053",
+    "latitude": 13.049316,
+    "longitude": 80.188905,
+    "population": 1121,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ee4b60b4-870e-4ec4-9bc6-07e83db08093",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-054",
+    "latitude": 13.055531,
+    "longitude": 80.184891,
+    "population": 1727,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1e305152-8333-40be-81c9-97e4013c8cf7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-055",
+    "latitude": 13.034678,
+    "longitude": 80.267976,
+    "population": 459,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e7d75ead-b9e0-45de-bd11-c24e6ce772ee",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-056",
+    "latitude": 13.045905,
+    "longitude": 80.192122,
+    "population": 1307,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a0a20a4d-67c1-4f22-b6a9-f963ad184554",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-057",
+    "latitude": 12.998867,
+    "longitude": 80.219802,
+    "population": 880,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "454a65d5-5927-47d5-8ebf-818edc1c2d8a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-058",
+    "latitude": 13.032544,
+    "longitude": 80.204899,
+    "population": 2629,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "65b9c245-784e-40a8-b501-eb51f7375961",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-059",
+    "latitude": 13.035376,
+    "longitude": 80.264035,
+    "population": 771,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "5fcb9cd0-2b03-4f75-8537-f8b8000b8ef6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-060",
+    "latitude": 13.094998,
+    "longitude": 80.243465,
+    "population": 1544,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d999342c-b641-4d7e-ad2d-b73c6b05e441",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-061",
+    "latitude": 13.019391,
+    "longitude": 80.213511,
+    "population": 800,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9b8fbe29-4b7c-4902-b485-82dde7da8b3f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-062",
+    "latitude": 13.031294,
+    "longitude": 80.198177,
+    "population": 3095,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ecaa4a75-64fd-41fa-8490-545ad1e6e13a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-063",
+    "latitude": 13.061726,
+    "longitude": 80.199246,
+    "population": 1706,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ab0a8237-f102-4290-978b-0b3a04581512",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-064",
+    "latitude": 13.000571,
+    "longitude": 80.223343,
+    "population": 1401,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "64123140-632d-493c-a3b9-52d3dd101b96",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-065",
+    "latitude": 13.046795,
+    "longitude": 80.229967,
+    "population": 1006,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "94567b03-303c-46e4-b4f9-c84d8e8f6eb1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-066",
+    "latitude": 13.030655,
+    "longitude": 80.20473,
+    "population": 471,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e74b4898-b303-475d-8d7b-49faf787d158",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-067",
+    "latitude": 13.051549,
+    "longitude": 80.234296,
+    "population": 740,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "287af8a7-3b86-41b5-b108-c73fc5699e77",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-068",
+    "latitude": 13.091199,
+    "longitude": 80.257168,
+    "population": 1641,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "76e6ba06-86cd-4f40-8b4d-523e947a7dd0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-069",
+    "latitude": 13.018934,
+    "longitude": 80.261358,
+    "population": 2863,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "cf724a87-4c9b-411b-a769-a896e3297761",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-070",
+    "latitude": 13.075698,
+    "longitude": 80.268278,
+    "population": 2012,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "37ac804f-e3a5-4cb3-a985-dc47f33ff043",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-071",
+    "latitude": 13.087501,
+    "longitude": 80.25469,
+    "population": 2460,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "67d974ff-0d07-49e9-b0d1-50d1ccb8299c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-072",
+    "latitude": 12.999745,
+    "longitude": 80.238282,
+    "population": 1663,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e5ec4e78-9b26-4f3a-ad64-f0c5c3add343",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-073",
+    "latitude": 13.055594,
+    "longitude": 80.248845,
+    "population": 1503,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7d941d27-74f2-4c93-bfa1-7ddc5471c18c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-074",
+    "latitude": 13.04994,
+    "longitude": 80.257893,
+    "population": 3488,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "be2558c1-f6aa-4918-867f-2d979a341ac4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-075",
+    "latitude": 13.023993,
+    "longitude": 80.264006,
+    "population": 3048,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0a084b8e-8a12-49b2-84c7-d1739edb94d2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-076",
+    "latitude": 13.047145,
+    "longitude": 80.27637,
+    "population": 1053,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5326633b-b4b3-4cf3-b424-7ff8b6d39ce7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-077",
+    "latitude": 13.057092,
+    "longitude": 80.188754,
+    "population": 3663,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "81c997d8-2736-4ec6-b8d7-4dafb5220aa9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-078",
+    "latitude": 13.047155,
+    "longitude": 80.227264,
+    "population": 654,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f5e01b25-e7dc-407c-a615-fa055f6305da",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-079",
+    "latitude": 13.024726,
+    "longitude": 80.281299,
+    "population": 1082,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "727edb7c-8b11-4bf3-9b27-5773a4ff0c35",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-080",
+    "latitude": 13.070417,
+    "longitude": 80.24879,
+    "population": 1810,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "40dc57cf-3d5c-4db6-a6ab-ef53e8965af4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-081",
+    "latitude": 13.03472,
+    "longitude": 80.20899,
+    "population": 885,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ae78351b-ffcc-4529-b353-4e263b2cccfa",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-082",
+    "latitude": 13.061204,
+    "longitude": 80.253842,
+    "population": 1644,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f493b771-5e4c-4c3f-a6fe-6a8c3129a7dc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-083",
+    "latitude": 13.071183,
+    "longitude": 80.250783,
+    "population": 818,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "98298689-291c-42c5-b47f-0d76f5204a7a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-084",
+    "latitude": 13.062315,
+    "longitude": 80.196789,
+    "population": 1374,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a1ea5315-51e9-4755-989d-e82128ae87bb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-085",
+    "latitude": 13.011434,
+    "longitude": 80.233904,
+    "population": 1937,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6b19692a-48e6-48c4-bb61-3915f3b236ad",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-086",
+    "latitude": 13.011423,
+    "longitude": 80.207152,
+    "population": 559,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "6f111cdb-36c4-4d01-be37-e2f56629b6b2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-087",
+    "latitude": 13.092433,
+    "longitude": 80.250972,
+    "population": 1520,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "026e0855-a2a3-4324-aa03-80c3b216cfb1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-088",
+    "latitude": 13.009289,
+    "longitude": 80.1856,
+    "population": 1657,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "05f169e0-feea-404c-96c3-f14bc53127b7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-089",
+    "latitude": 13.002899,
+    "longitude": 80.199004,
+    "population": 1057,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3a424b72-9c0c-45e8-a5e5-5f7dfff5fe11",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-090",
+    "latitude": 13.050179,
+    "longitude": 80.218,
+    "population": 1455,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ba996e0f-72d1-4c9f-a336-aa4d491aa560",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-091",
+    "latitude": 13.049152,
+    "longitude": 80.264773,
+    "population": 3280,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "fc194134-c8cb-4a4d-bc2b-1186d8bfdc59",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-092",
+    "latitude": 13.095431,
+    "longitude": 80.233382,
+    "population": 3282,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f1c26b94-7eff-4458-b885-ff681f46b589",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-093",
+    "latitude": 12.990344,
+    "longitude": 80.198638,
+    "population": 1077,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "6e4c5823-d02a-4736-8c4a-35e81d0d7dc2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-094",
+    "latitude": 13.074266,
+    "longitude": 80.266846,
+    "population": 1484,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "527361b5-e184-4878-acb9-cd457e9f3df6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-095",
+    "latitude": 13.059795,
+    "longitude": 80.204181,
+    "population": 1802,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9d8c7f26-f8fe-4a46-9939-0749d1042477",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-096",
+    "latitude": 13.015437,
+    "longitude": 80.221274,
+    "population": 3717,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4d00317f-2af6-46ef-b4f8-89ae8b485693",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-097",
+    "latitude": 13.003003,
+    "longitude": 80.253216,
+    "population": 2594,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d483fdee-56df-4f0c-846e-bd86a4cde00b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-098",
+    "latitude": 13.05791,
+    "longitude": 80.255658,
+    "population": 2078,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5620c8f3-51ef-410c-8065-499a988ae4e1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-099",
+    "latitude": 13.027401,
+    "longitude": 80.272338,
+    "population": 921,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "810e5292-24c7-4fa7-9adb-1631c2411bfb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-100",
+    "latitude": 13.070869,
+    "longitude": 80.24115,
+    "population": 1816,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "83f4065e-b1ea-4614-bcc9-62da4efe0806",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-101",
+    "latitude": 13.071874,
+    "longitude": 80.216359,
+    "population": 2148,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3c3ecf96-a908-4d24-8b70-f4468f40d969",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-102",
+    "latitude": 13.094249,
+    "longitude": 80.256611,
+    "population": 1293,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "95a3ed76-08a4-4cb3-a6f5-3b50e797d03e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-103",
+    "latitude": 13.007378,
+    "longitude": 80.216808,
+    "population": 2894,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d123c711-c9e2-4a9d-bf26-81a2895bdeb5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-104",
+    "latitude": 13.067377,
+    "longitude": 80.256833,
+    "population": 2003,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "27b037a4-6ccc-44c0-9c4c-890ddd01a524",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-105",
+    "latitude": 13.050982,
+    "longitude": 80.216416,
+    "population": 1085,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f24eac74-db17-4529-8283-e6e7dddd216f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-106",
+    "latitude": 13.000724,
+    "longitude": 80.190581,
+    "population": 2357,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8ef41e59-edbb-40ca-abfb-70e272df2f7b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-107",
+    "latitude": 13.028172,
+    "longitude": 80.265138,
+    "population": 2382,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "790aa1b7-96a8-46c6-a0f0-101129cc6212",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-108",
+    "latitude": 12.965309,
+    "longitude": 80.252643,
+    "population": 1048,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "86108d59-913a-420f-99ea-70a40cd6dcd5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-109",
+    "latitude": 13.023552,
+    "longitude": 80.233402,
+    "population": 3084,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3a1ef110-7d40-4efc-9e94-11861c51dcb9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-110",
+    "latitude": 13.040154,
+    "longitude": 80.196873,
+    "population": 727,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "564229ce-ed55-4e98-856c-55ea99806451",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-111",
+    "latitude": 13.056087,
+    "longitude": 80.175798,
+    "population": 1953,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "05939c93-e68e-4007-9ede-d5d4ca930c28",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-112",
+    "latitude": 13.008227,
+    "longitude": 80.206975,
+    "population": 623,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "306fcc7f-2ccb-48f0-98db-1d6f3ae2f453",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-113",
+    "latitude": 13.02551,
+    "longitude": 80.257046,
+    "population": 1571,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "864045f6-ad36-4568-a25c-a940c4b7bb73",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-114",
+    "latitude": 13.027487,
+    "longitude": 80.200529,
+    "population": 2015,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3ca4bf49-56da-4212-90bb-bb95de2e9574",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-115",
+    "latitude": 13.032986,
+    "longitude": 80.271228,
+    "population": 1326,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9b63da87-99ec-4666-9bc4-d827dffa498f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-116",
+    "latitude": 13.036053,
+    "longitude": 80.241224,
+    "population": 1554,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a7cdc7f8-f59c-4b07-94e4-de8cbcd8ed44",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-117",
+    "latitude": 12.986628,
+    "longitude": 80.231118,
+    "population": 2515,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "218472de-b2e9-453b-86e4-f3f0c08ca159",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-118",
+    "latitude": 13.073699,
+    "longitude": 80.244665,
+    "population": 3266,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5da61842-240b-4fe7-a158-36c54e11e749",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-119",
+    "latitude": 13.025771,
+    "longitude": 80.230036,
+    "population": 3685,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ba2268ba-d2c4-4f3d-b27e-2db9b4269959",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-120",
+    "latitude": 13.018529,
+    "longitude": 80.245826,
+    "population": 1922,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "26f5510c-095f-45bb-a91e-8ab26624a115",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-121",
+    "latitude": 13.082914,
+    "longitude": 80.254677,
+    "population": 3322,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "fb7a5167-c2a4-48d4-be6a-6a742c6820fb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-122",
+    "latitude": 13.090121,
+    "longitude": 80.22156,
+    "population": 1112,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "edbfb426-eaa1-4cb4-b58d-3b2d59254cc1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-123",
+    "latitude": 13.067603,
+    "longitude": 80.188179,
+    "population": 917,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eb39fdd7-1076-4bc0-9b16-6b72967a195a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-124",
+    "latitude": 13.064387,
+    "longitude": 80.23361,
+    "population": 661,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e22c1b01-bfa5-4376-b97b-9a23b2bf0fc7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-125",
+    "latitude": 13.046809,
+    "longitude": 80.245417,
+    "population": 481,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "d7b95af4-c0c3-4855-a2cf-477d6fc686c3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-126",
+    "latitude": 13.055947,
+    "longitude": 80.198063,
+    "population": 2439,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "aa9fafd0-4620-4983-b236-fbbba03e7aff",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-127",
+    "latitude": 13.050354,
+    "longitude": 80.265416,
+    "population": 2604,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "73060d29-ba5d-4596-9086-d78040b0acd1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-128",
+    "latitude": 13.013132,
+    "longitude": 80.214332,
+    "population": 1214,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "745803f7-0ce4-4bd6-9e5f-228c1bdd1ec2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-129",
+    "latitude": 13.026071,
+    "longitude": 80.255572,
+    "population": 753,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "00b82b5f-a798-4433-aaec-6d27eb195885",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-130",
+    "latitude": 13.047905,
+    "longitude": 80.218852,
+    "population": 2055,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8ed6ef02-2be6-4751-a899-a53ca395ac88",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-131",
+    "latitude": 13.065303,
+    "longitude": 80.198986,
+    "population": 3060,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9d6fefdc-17fb-497e-b3f8-49248c5dbc9f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-132",
+    "latitude": 13.073256,
+    "longitude": 80.225963,
+    "population": 392,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f2e1ad46-2b50-4616-8ae5-527e0508ef58",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-133",
+    "latitude": 13.074676,
+    "longitude": 80.190824,
+    "population": 784,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "ad1c9972-d326-4745-8c37-3ef53c68c250",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-134",
+    "latitude": 13.100267,
+    "longitude": 80.22775,
+    "population": 697,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d5aeeac0-8a1a-478c-b5e6-a289f8ee61cc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-135",
+    "latitude": 13.077406,
+    "longitude": 80.194522,
+    "population": 743,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "04050f0f-5489-4aee-b6e7-79eb5959ff04",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-136",
+    "latitude": 13.059384,
+    "longitude": 80.208441,
+    "population": 1404,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8b07f330-bda5-433c-bdd9-76cbecd6e698",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-137",
+    "latitude": 13.05153,
+    "longitude": 80.222461,
+    "population": 3467,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7004a029-f209-4b08-a80d-d3fd3831bf92",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-138",
+    "latitude": 13.043852,
+    "longitude": 80.181694,
+    "population": 3356,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9c361478-3ba5-4b28-b101-73963e5582dd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-139",
+    "latitude": 13.04737,
+    "longitude": 80.198554,
+    "population": 1206,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d574769b-d43a-4772-8610-fd577fb334af",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-140",
+    "latitude": 13.070846,
+    "longitude": 80.272464,
+    "population": 869,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "27ec1e2f-f355-49c9-95c4-fc4684231ab3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-141",
+    "latitude": 13.003167,
+    "longitude": 80.241971,
+    "population": 504,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "b9bc9f4b-e38f-4aaa-9d5c-5acaf337fc36",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-142",
+    "latitude": 13.030981,
+    "longitude": 80.215234,
+    "population": 369,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "10032478-cc38-4ef0-b2dd-fa7e793b7b11",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-143",
+    "latitude": 13.112627,
+    "longitude": 80.246709,
+    "population": 2144,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4576baf2-83be-4b31-acee-e445dd197970",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-144",
+    "latitude": 13.065381,
+    "longitude": 80.176067,
+    "population": 2496,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "64694e92-da16-4698-9da2-4cf622b469f6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-145",
+    "latitude": 13.005763,
+    "longitude": 80.203816,
+    "population": 1943,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "19c4ab7f-1d87-490a-9925-f1d3655eeb09",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-146",
+    "latitude": 13.045708,
+    "longitude": 80.187992,
+    "population": 883,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1894377f-6b6d-430c-8c79-e95e3ef18ded",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-147",
+    "latitude": 13.061616,
+    "longitude": 80.19906,
+    "population": 3236,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f4aa43b8-5222-49eb-9667-953df9e7c286",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-148",
+    "latitude": 13.06861,
+    "longitude": 80.223484,
+    "population": 1387,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8995cb8b-5f04-4b83-9540-271e01c796f9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-149",
+    "latitude": 13.055595,
+    "longitude": 80.191573,
+    "population": 1651,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "433ce84d-31b7-4a8e-9d38-0a3f8c2e40c4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-150",
+    "latitude": 13.050877,
+    "longitude": 80.222653,
+    "population": 3606,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d5f261be-2eb0-4652-8052-14c4f84be944",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-151",
+    "latitude": 13.059344,
+    "longitude": 80.207221,
+    "population": 1999,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "dbf3226b-9305-4fce-b53e-2b9c77156cf0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-152",
+    "latitude": 13.032115,
+    "longitude": 80.262465,
+    "population": 827,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1e6c43fc-e472-4837-bf7d-34a813d5021f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-153",
+    "latitude": 12.999617,
+    "longitude": 80.215162,
+    "population": 3047,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "aed3f8bf-d1e5-4206-8299-3e971696134f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-154",
+    "latitude": 13.066706,
+    "longitude": 80.234327,
+    "population": 1423,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f82ca86a-7f57-4c8b-b1de-315077477ae1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-155",
+    "latitude": 13.000971,
+    "longitude": 80.238323,
+    "population": 1465,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2df16de2-29b1-4d29-9e14-232a88e10ada",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-156",
+    "latitude": 13.072741,
+    "longitude": 80.207526,
+    "population": 886,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "64ccf2a1-9c7a-41f1-97e6-2e1058aa6a50",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-157",
+    "latitude": 13.003282,
+    "longitude": 80.214369,
+    "population": 1003,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a2a510cd-bd49-4855-b8cc-3db4ab4cdc25",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-158",
+    "latitude": 13.050963,
+    "longitude": 80.192805,
+    "population": 2052,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "336ece23-6dd6-4641-ba3a-3cd3fdfc6021",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-159",
+    "latitude": 13.025929,
+    "longitude": 80.267381,
+    "population": 988,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "47a83da5-cb98-44a1-8ab0-9049c2c9cc14",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-160",
+    "latitude": 13.041925,
+    "longitude": 80.185131,
+    "population": 1292,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7896c8d7-13b6-432c-a638-4008734feaa2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-161",
+    "latitude": 13.06851,
+    "longitude": 80.236707,
+    "population": 559,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ef130ca8-df70-4d02-af1f-f12b0e405f3d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-162",
+    "latitude": 13.03475,
+    "longitude": 80.246883,
+    "population": 1470,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6d832dd6-05bb-406a-aa23-861df74d5f9f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-163",
+    "latitude": 12.996363,
+    "longitude": 80.228899,
+    "population": 923,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "01cd3eb5-d566-4288-b0a8-cd23ee1324c5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-164",
+    "latitude": 13.027376,
+    "longitude": 80.267674,
+    "population": 2098,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3d333427-d03c-4a43-b22e-9303e95364a8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-165",
+    "latitude": 13.07347,
+    "longitude": 80.252861,
+    "population": 1494,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a9853343-3991-43f5-8528-502cef6d733f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-166",
+    "latitude": 13.017673,
+    "longitude": 80.22921,
+    "population": 2845,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "55b6829f-3b48-40ce-994c-ed30d3707cbf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-167",
+    "latitude": 13.067981,
+    "longitude": 80.204571,
+    "population": 3255,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "30313ebb-5def-4d2c-b24f-d19eee385133",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-168",
+    "latitude": 13.022848,
+    "longitude": 80.21316,
+    "population": 992,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "065d6a77-4a82-4138-9896-806234fe62ab",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-169",
+    "latitude": 13.011556,
+    "longitude": 80.187949,
+    "population": 1810,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4ff502e7-9463-4054-86e9-b14ea6f41202",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-170",
+    "latitude": 13.004809,
+    "longitude": 80.243004,
+    "population": 2239,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "82db2e3b-65ae-4f1c-914f-0c686fde9f77",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-171",
+    "latitude": 13.045288,
+    "longitude": 80.246131,
+    "population": 978,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6eedcb7a-f09e-4b95-8529-7fd53ad567c1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-172",
+    "latitude": 13.081265,
+    "longitude": 80.203168,
+    "population": 1385,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "54ed7f0c-fe01-46b6-be94-20dee2070d59",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-173",
+    "latitude": 13.093024,
+    "longitude": 80.249635,
+    "population": 2351,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e59277bd-767d-402a-87ce-6b6a82b7903c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-174",
+    "latitude": 13.060245,
+    "longitude": 80.252437,
+    "population": 2505,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "373ad0ef-7400-4d4c-8922-563de89afa30",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-175",
+    "latitude": 13.070458,
+    "longitude": 80.218236,
+    "population": 1013,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ffe927b7-ae68-4b72-ba8a-9687620a5315",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-176",
+    "latitude": 13.069107,
+    "longitude": 80.229206,
+    "population": 969,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "090b4b6b-2035-4098-a8ad-8246b8802950",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-177",
+    "latitude": 13.039821,
+    "longitude": 80.21809,
+    "population": 1528,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4ddac3c2-92ea-4f91-be98-b836eede1026",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-178",
+    "latitude": 13.033987,
+    "longitude": 80.274522,
+    "population": 1753,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "be3fa1f0-dc38-4f5a-9efc-75c96c6f6174",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-179",
+    "latitude": 13.069369,
+    "longitude": 80.187222,
+    "population": 2363,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9c7c7b34-3290-4c68-b937-6509782fe136",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-180",
+    "latitude": 13.027811,
+    "longitude": 80.261769,
+    "population": 1281,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b7228d3f-9ae6-4020-bd6a-b92a7385bf41",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-181",
+    "latitude": 13.009737,
+    "longitude": 80.214119,
+    "population": 1908,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "97bbae12-8191-4689-9e76-6709e99dcc4a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-182",
+    "latitude": 13.022417,
+    "longitude": 80.205171,
+    "population": 467,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b9e50db0-f9f5-4777-8c0a-6908f880f47e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-183",
+    "latitude": 13.018201,
+    "longitude": 80.239914,
+    "population": 1766,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2bc44cb1-c3cf-4fa6-bdf7-e341b7c5c580",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-184",
+    "latitude": 13.046909,
+    "longitude": 80.217091,
+    "population": 2817,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "71aedba1-0f41-4a33-ac16-91a1b00c9a9d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-185",
+    "latitude": 13.084095,
+    "longitude": 80.229074,
+    "population": 2972,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5e5c6f32-707b-4b0d-8957-534c9627b91d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-186",
+    "latitude": 13.030694,
+    "longitude": 80.255166,
+    "population": 1270,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "01f2dd00-9e5f-4b5f-8a07-0c06ea83371f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-187",
+    "latitude": 13.067198,
+    "longitude": 80.188203,
+    "population": 1967,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c76d1512-b5c9-4455-8da7-379c19fa702d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-188",
+    "latitude": 13.091564,
+    "longitude": 80.254134,
+    "population": 944,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "47f943e2-7f29-42c5-a709-73cf31a28471",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-189",
+    "latitude": 13.017231,
+    "longitude": 80.217938,
+    "population": 2243,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "72d2abe7-8e50-464f-9753-ef2d389e7739",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-190",
+    "latitude": 13.069183,
+    "longitude": 80.17011,
+    "population": 2297,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3f83c32a-df34-452a-b5cc-5d9aa2c74865",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-191",
+    "latitude": 13.026878,
+    "longitude": 80.263222,
+    "population": 1585,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8f7c86d4-eed3-4537-b55b-50ce735fda54",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-192",
+    "latitude": 13.008919,
+    "longitude": 80.221276,
+    "population": 1227,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "be65c0b2-2834-430a-8531-18b61335ab1e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-193",
+    "latitude": 12.976893,
+    "longitude": 80.214698,
+    "population": 1505,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f07f2894-a5b4-4755-9ef5-4671629f4a8f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-194",
+    "latitude": 13.04791,
+    "longitude": 80.170339,
+    "population": 1117,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6e64762c-1b14-4a06-b089-778a48431b80",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-195",
+    "latitude": 13.097684,
+    "longitude": 80.226531,
+    "population": 3166,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "dca24e5f-a3d1-459d-972f-9c3340bfc544",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-196",
+    "latitude": 13.087936,
+    "longitude": 80.27671,
+    "population": 668,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "053f03a5-c2a2-4f94-ac5f-fee41c7720fc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-197",
+    "latitude": 13.021634,
+    "longitude": 80.206316,
+    "population": 3286,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "af56b147-f150-41f9-b11c-0b1ee11357ed",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-198",
+    "latitude": 13.079104,
+    "longitude": 80.251917,
+    "population": 825,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ae5b5aa0-5a3a-4c98-82db-dfdf90183049",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-199",
+    "latitude": 13.061979,
+    "longitude": 80.20802,
+    "population": 1907,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8fb07bb9-086d-48a8-9c5d-a1f4fe2e006c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-200",
+    "latitude": 13.00481,
+    "longitude": 80.271679,
+    "population": 3104,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "40dafb2b-1cb0-4597-96a1-51c70939d14c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-201",
+    "latitude": 12.999116,
+    "longitude": 80.230653,
+    "population": 1957,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0b655de1-ba43-4e1f-abae-80d2a26e1af2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-202",
+    "latitude": 13.026215,
+    "longitude": 80.263016,
+    "population": 2475,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "081b92fa-b246-472b-99d2-a8f3f1386fdb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-203",
+    "latitude": 13.046644,
+    "longitude": 80.174274,
+    "population": 1222,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "004cf30b-c780-45e4-8b61-cb4e93a67967",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-204",
+    "latitude": 13.065822,
+    "longitude": 80.215289,
+    "population": 2019,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5d505c32-5945-408a-9710-85e70b02432e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-205",
+    "latitude": 13.062823,
+    "longitude": 80.172994,
+    "population": 1141,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "7cb8f6d4-596e-4177-ad3e-06a372307fe8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-206",
+    "latitude": 13.030643,
+    "longitude": 80.270535,
+    "population": 1539,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "044dd257-3e44-4980-8c4d-62ce32589c9a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-207",
+    "latitude": 13.025594,
+    "longitude": 80.255242,
+    "population": 1243,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a2c79d6e-e79c-4459-bd22-d0efd717d4a1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-208",
+    "latitude": 13.033519,
+    "longitude": 80.208361,
+    "population": 853,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "98a45187-1abe-458e-b05b-1661a63f67da",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-209",
+    "latitude": 13.047199,
+    "longitude": 80.219648,
+    "population": 2626,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f5c05e2e-23f5-47ba-beb4-b7ba7b0e2085",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-210",
+    "latitude": 13.092327,
+    "longitude": 80.217945,
+    "population": 854,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "e27550af-1b78-4aa3-8adf-9eb9d225d0b3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-211",
+    "latitude": 13.010181,
+    "longitude": 80.252505,
+    "population": 1279,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "599c46cd-2f93-4de2-91b3-f4c6f9b86c63",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-212",
+    "latitude": 13.040139,
+    "longitude": 80.222987,
+    "population": 1167,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d4e8f533-16c2-4730-b5b5-7442622760f2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-213",
+    "latitude": 12.985246,
+    "longitude": 80.273352,
+    "population": 1659,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ab04da1e-353d-4810-8d18-c36f4ba7bbbf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-214",
+    "latitude": 13.089746,
+    "longitude": 80.236946,
+    "population": 1575,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "97172c7a-32ad-45e2-ae2a-93bc45057aeb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-215",
+    "latitude": 13.087977,
+    "longitude": 80.210373,
+    "population": 843,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a319c9e7-fcbb-4acf-b310-4b3e50bbaeba",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-216",
+    "latitude": 13.066703,
+    "longitude": 80.183192,
+    "population": 2140,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ea6433e6-f040-4443-b95e-a02d5cff799f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-217",
+    "latitude": 13.046934,
+    "longitude": 80.186713,
+    "population": 2300,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3be3f5ea-f57e-4cca-a208-0552fb0487b8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-218",
+    "latitude": 13.043195,
+    "longitude": 80.164488,
+    "population": 2214,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d833e995-aab9-4c6e-ad3c-09d01d65afca",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-219",
+    "latitude": 13.005457,
+    "longitude": 80.222292,
+    "population": 1526,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "90314244-b114-4cf1-a966-a888be9e42b7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-220",
+    "latitude": 13.088367,
+    "longitude": 80.26104,
+    "population": 1149,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "22458a26-d1ea-4bdd-9455-a4a3ab3de12f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-221",
+    "latitude": 13.000816,
+    "longitude": 80.206641,
+    "population": 1253,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "029565c9-3639-48fa-b5bb-02107f7cc4d3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-222",
+    "latitude": 13.045747,
+    "longitude": 80.267474,
+    "population": 1788,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2f405c7e-64d4-4b77-8340-7f5033c83f7e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-223",
+    "latitude": 13.051601,
+    "longitude": 80.19185,
+    "population": 926,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "8ae6d19e-5f40-4249-8152-0b203c54f582",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-224",
+    "latitude": 12.990422,
+    "longitude": 80.175312,
+    "population": 3467,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d44583c6-de55-4a56-bea2-ff63044716c5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-225",
+    "latitude": 13.015264,
+    "longitude": 80.229463,
+    "population": 1846,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f6355120-b790-4051-a917-a72d1d5a426b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-226",
+    "latitude": 13.088104,
+    "longitude": 80.236503,
+    "population": 825,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a6241433-a5ef-4c7e-ad27-916c0c2921a8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-227",
+    "latitude": 13.02318,
+    "longitude": 80.261582,
+    "population": 1226,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "47d9fb37-4bb1-44a6-a03d-fb436d74ac64",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-228",
+    "latitude": 13.056051,
+    "longitude": 80.255585,
+    "population": 669,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8a134fc7-0716-4e26-bf58-7cce90888351",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-229",
+    "latitude": 13.009029,
+    "longitude": 80.196783,
+    "population": 1441,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2e83d3d7-2f0f-4982-8137-94a8621455f0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-230",
+    "latitude": 13.063001,
+    "longitude": 80.175656,
+    "population": 1398,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "076edb8e-2ed7-439d-9492-73f8ef4cb953",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-231",
+    "latitude": 13.024972,
+    "longitude": 80.232999,
+    "population": 664,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "893e68ba-ad29-48c0-84be-7e6025dac440",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-232",
+    "latitude": 13.031427,
+    "longitude": 80.213433,
+    "population": 1206,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "16e8509d-4709-46d3-b5f3-f3f85de4f587",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-233",
+    "latitude": 13.055218,
+    "longitude": 80.179323,
+    "population": 1366,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "88f72d33-a8db-4638-a8f9-2f2dfb367f9d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-234",
+    "latitude": 13.008143,
+    "longitude": 80.270039,
+    "population": 2155,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eb150adc-2eae-4245-a4f1-43d98f877700",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-235",
+    "latitude": 13.056728,
+    "longitude": 80.26053,
+    "population": 1111,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "645f5a75-b3c0-42fc-99f3-efa296c680e6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-236",
+    "latitude": 13.031643,
+    "longitude": 80.248699,
+    "population": 1725,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a3802a5f-71af-4497-be36-50a35678364d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-237",
+    "latitude": 13.014966,
+    "longitude": 80.245754,
+    "population": 838,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "13da7208-4cd4-403d-b826-7782aae9d69c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-238",
+    "latitude": 13.072565,
+    "longitude": 80.218521,
+    "population": 1983,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3c9cc24a-e68c-4fd0-a180-1017b68ad66b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-239",
+    "latitude": 13.009453,
+    "longitude": 80.268912,
+    "population": 2085,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "55b73a95-13b9-4f27-a94c-431c1be62623",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-240",
+    "latitude": 13.078147,
+    "longitude": 80.230987,
+    "population": 1560,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "238dc5ec-e8ee-4a0a-aa11-dac35b8e1540",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-241",
+    "latitude": 13.062286,
+    "longitude": 80.235897,
+    "population": 1530,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "129da569-faab-4fce-8732-5cd2df8bcb6a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-242",
+    "latitude": 13.026755,
+    "longitude": 80.196782,
+    "population": 1519,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "659d0b88-4f8e-4657-bddf-b78b0999a332",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-243",
+    "latitude": 13.068846,
+    "longitude": 80.220663,
+    "population": 2229,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e0fbd393-e0c3-4a8c-b266-39bead3c12b9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-244",
+    "latitude": 13.080544,
+    "longitude": 80.236873,
+    "population": 574,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "842a71e0-cc8b-40ee-947e-4cc2d30eea06",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-245",
+    "latitude": 13.068657,
+    "longitude": 80.249882,
+    "population": 1077,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0fed0847-f71b-4547-b655-9af00b434dc6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-246",
+    "latitude": 12.981256,
+    "longitude": 80.181877,
+    "population": 537,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "afb79467-ed9a-4969-ac03-d2c4d751baf5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-247",
+    "latitude": 13.084336,
+    "longitude": 80.229707,
+    "population": 2343,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "617ff32e-00c0-4936-83ae-b0d316fa0543",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-248",
+    "latitude": 13.047466,
+    "longitude": 80.198355,
+    "population": 867,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f1b4ab20-7d2e-4503-aacb-64393b708603",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-249",
+    "latitude": 13.035865,
+    "longitude": 80.239267,
+    "population": 1135,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f8c4b31a-ef23-4418-9265-c7d34d72dd57",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-250",
+    "latitude": 13.04233,
+    "longitude": 80.260683,
+    "population": 1240,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7be9967d-1ebc-47ea-8e7d-bc72863d984b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-251",
+    "latitude": 13.068849,
+    "longitude": 80.226937,
+    "population": 1286,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8984ae54-babe-441c-b86e-3b1a135c12ca",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-252",
+    "latitude": 12.976262,
+    "longitude": 80.235822,
+    "population": 858,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "f738ce5f-e813-45ee-bb4f-bc2bb5a2b709",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-253",
+    "latitude": 13.05654,
+    "longitude": 80.193389,
+    "population": 2900,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1a2e8a07-134a-4955-8020-6b7491ccf291",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-254",
+    "latitude": 13.042939,
+    "longitude": 80.154729,
+    "population": 2655,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7be8d8d0-c39e-4e9b-874d-350ab3b25923",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-255",
+    "latitude": 13.024922,
+    "longitude": 80.228331,
+    "population": 742,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "88e57a96-430b-4efe-a0d8-dd4237810be9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-256",
+    "latitude": 13.081508,
+    "longitude": 80.250852,
+    "population": 381,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c1056a37-7890-4194-b32b-1ac5fd211cd9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-257",
+    "latitude": 13.033653,
+    "longitude": 80.270821,
+    "population": 2862,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2fb27ce5-a6ee-4477-bbff-c3c11944d8ec",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-258",
+    "latitude": 13.020393,
+    "longitude": 80.179937,
+    "population": 878,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "09868333-6724-454c-902f-02c8bf7b4b91",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-259",
+    "latitude": 13.052811,
+    "longitude": 80.265081,
+    "population": 978,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "63d023e0-d7c5-4a6b-83ec-afbceec4b77d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-260",
+    "latitude": 13.038559,
+    "longitude": 80.209298,
+    "population": 953,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "36d0628c-d752-4217-b7bf-1d65be9a0be3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-261",
+    "latitude": 13.050068,
+    "longitude": 80.257742,
+    "population": 736,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "6cbd0b2e-5913-47d5-80de-d78dad1d19f4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-262",
+    "latitude": 13.010239,
+    "longitude": 80.209817,
+    "population": 726,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "92caaf52-fec5-4a15-9d88-6969448302bf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-263",
+    "latitude": 13.04262,
+    "longitude": 80.176792,
+    "population": 2963,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "bfcb73ef-1ec0-4d7f-9b05-77d109675510",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-264",
+    "latitude": 13.097398,
+    "longitude": 80.254901,
+    "population": 2302,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1b537607-36da-42c7-bfd6-e24e6a0a4cd2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-265",
+    "latitude": 13.084808,
+    "longitude": 80.239616,
+    "population": 2922,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "759fc584-6827-402d-9182-fccd1b4ee35c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-266",
+    "latitude": 13.042691,
+    "longitude": 80.220763,
+    "population": 819,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4783af1a-d22f-45e9-8175-7a2ed6dcbc9d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-267",
+    "latitude": 13.110094,
+    "longitude": 80.220835,
+    "population": 1232,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "236d7b88-1bcf-43b2-b35b-28db91c5b76d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-268",
+    "latitude": 13.066167,
+    "longitude": 80.19776,
+    "population": 1868,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6b682060-cee3-4039-a6af-ff00c6a72cd6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-269",
+    "latitude": 13.049547,
+    "longitude": 80.182424,
+    "population": 1774,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b38579ed-69ca-4f92-92b3-cd4a706ec6e3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-270",
+    "latitude": 13.049255,
+    "longitude": 80.240283,
+    "population": 3352,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a9347912-2c03-4df0-b974-4bebae609d4d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-271",
+    "latitude": 13.065032,
+    "longitude": 80.210763,
+    "population": 3443,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b94a1443-0c37-4116-b16e-442cceb03e20",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-272",
+    "latitude": 13.108,
+    "longitude": 80.227985,
+    "population": 2678,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "32304e3f-0f78-4701-8e9a-69d6db1304b9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-273",
+    "latitude": 12.994309,
+    "longitude": 80.232471,
+    "population": 1434,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "81dfb742-b249-45dd-86be-8fcd955c3fc9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-274",
+    "latitude": 13.081502,
+    "longitude": 80.259012,
+    "population": 1300,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ea9fbffb-db1f-45b5-9d1c-c40e2e4d7d38",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-275",
+    "latitude": 13.024821,
+    "longitude": 80.223188,
+    "population": 2326,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1573908e-3d73-4410-b52f-7f6b5e7aea82",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-276",
+    "latitude": 13.030311,
+    "longitude": 80.265219,
+    "population": 797,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7ff8acf2-0093-4835-8b03-4a970a077f50",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-277",
+    "latitude": 13.019484,
+    "longitude": 80.241135,
+    "population": 503,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e5a4dd72-9488-4f79-9a8c-f28f2579377e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-278",
+    "latitude": 13.06134,
+    "longitude": 80.257076,
+    "population": 2239,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "02c5121d-234c-4319-ab95-dfea1729f135",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-279",
+    "latitude": 13.083569,
+    "longitude": 80.236446,
+    "population": 1711,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9fa4d600-e990-441d-af32-b163786b7c28",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-280",
+    "latitude": 13.041204,
+    "longitude": 80.258464,
+    "population": 2703,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5b9a082a-15d4-4ff1-b09d-8d5b5eeca837",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-281",
+    "latitude": 13.025625,
+    "longitude": 80.208709,
+    "population": 348,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2fecfcb2-ee6f-442f-a753-43a65218a8b4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-282",
+    "latitude": 13.078648,
+    "longitude": 80.254497,
+    "population": 1997,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2094de43-2f0d-4aca-866c-956d5d174762",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-283",
+    "latitude": 13.08711,
+    "longitude": 80.256261,
+    "population": 2107,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4f5c6576-9fac-413f-80ac-e66384c809e5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-284",
+    "latitude": 13.073125,
+    "longitude": 80.210208,
+    "population": 870,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9748f7a9-507e-4c11-ae8b-3050b2399add",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-285",
+    "latitude": 13.03093,
+    "longitude": 80.247598,
+    "population": 3668,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9a308800-1ffe-47dc-aa75-aa57c28d1aeb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-286",
+    "latitude": 13.076864,
+    "longitude": 80.26225,
+    "population": 1574,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "73ee4645-8dde-468f-b29d-b203f34e81cf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-287",
+    "latitude": 13.062958,
+    "longitude": 80.210624,
+    "population": 2308,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e7fc652d-7001-4a3c-a880-9d88db0f864f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-288",
+    "latitude": 13.079343,
+    "longitude": 80.232791,
+    "population": 2021,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "82810767-d849-4ed6-b941-239d6db6dc99",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-289",
+    "latitude": 13.031,
+    "longitude": 80.21335,
+    "population": 823,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "62159c0a-9868-4d1e-8bde-bfeb9234c133",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-290",
+    "latitude": 13.074916,
+    "longitude": 80.264351,
+    "population": 1911,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "db0381ae-bebf-4a8f-acfd-29bdcf111f89",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-291",
+    "latitude": 13.076834,
+    "longitude": 80.231015,
+    "population": 2588,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "fd180822-b878-48c4-86e1-07655cd4ff74",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-292",
+    "latitude": 12.989448,
+    "longitude": 80.17264,
+    "population": 1307,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "520fd3ac-a1ba-4c2b-a48f-9b684409a8ca",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-293",
+    "latitude": 13.051314,
+    "longitude": 80.256542,
+    "population": 1896,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9c56db63-818b-4ef3-b02e-f9be442eeba9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-294",
+    "latitude": 13.064404,
+    "longitude": 80.22805,
+    "population": 1558,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4a0fc190-3750-4f19-b2b1-dddb0485c40b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-295",
+    "latitude": 13.017712,
+    "longitude": 80.239753,
+    "population": 1553,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9dc61f46-e3d1-4562-ab34-40107d1d6e89",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-296",
+    "latitude": 12.997948,
+    "longitude": 80.252611,
+    "population": 1677,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eb98e32f-59bb-4f53-81cd-d90e319b6d05",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-297",
+    "latitude": 13.078997,
+    "longitude": 80.243773,
+    "population": 1413,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e480705e-5c3c-4b27-bf7a-5da3466e45cc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-298",
+    "latitude": 13.064325,
+    "longitude": 80.254576,
+    "population": 1293,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "85d8f0fb-ba81-4d4c-8e70-148beaf6bcfc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-299",
+    "latitude": 13.020702,
+    "longitude": 80.217461,
+    "population": 2000,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9b9e18e3-b4fd-4a68-be8a-26ec2ba4d0e0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-300",
+    "latitude": 13.031906,
+    "longitude": 80.253888,
+    "population": 1414,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7a055832-2c39-4e57-a19a-526e3209e436",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-301",
+    "latitude": 13.021195,
+    "longitude": 80.242606,
+    "population": 730,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b7c2fa82-b91d-4c03-b1a9-54bc91551464",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-302",
+    "latitude": 13.034156,
+    "longitude": 80.230918,
+    "population": 1504,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eb348f5a-fc8d-4271-a26a-5b2066448d94",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-303",
+    "latitude": 13.064567,
+    "longitude": 80.172562,
+    "population": 1326,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "20d6b0bd-3a6e-408c-a716-f7c8a22200b2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-304",
+    "latitude": 12.995585,
+    "longitude": 80.205718,
+    "population": 2050,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ffad6c9f-2de5-429f-91ce-7beeac627cae",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-305",
+    "latitude": 13.023423,
+    "longitude": 80.263325,
+    "population": 522,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6f6ae3b4-4ada-4ccc-b802-e00bcc811614",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-306",
+    "latitude": 13.010244,
+    "longitude": 80.280615,
+    "population": 437,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7203bd5c-8479-4ffc-9742-7d7028a83892",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-307",
+    "latitude": 13.013091,
+    "longitude": 80.271103,
+    "population": 3692,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5144bf2d-842d-4615-acb1-d3d4928b63da",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-308",
+    "latitude": 12.994612,
+    "longitude": 80.235828,
+    "population": 1027,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "46d0d4a7-316b-4d2f-90ef-e5dea6314e7d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-309",
+    "latitude": 13.072345,
+    "longitude": 80.195249,
+    "population": 2759,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f6953ad2-29a4-4ab8-a8c7-08a41f070704",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-310",
+    "latitude": 13.073278,
+    "longitude": 80.247806,
+    "population": 1186,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "24f31780-12ea-4898-8e9e-c01254d3f5f2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-311",
+    "latitude": 12.999901,
+    "longitude": 80.199569,
+    "population": 1612,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2c877127-8a35-4033-b621-425f8523aece",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-312",
+    "latitude": 13.007169,
+    "longitude": 80.242011,
+    "population": 1800,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "517f9884-2bb5-4b70-a362-9af6ce127357",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-313",
+    "latitude": 13.013983,
+    "longitude": 80.270645,
+    "population": 1759,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e7dbf750-a424-40dc-9a02-27c504bc9b80",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-314",
+    "latitude": 13.031346,
+    "longitude": 80.23052,
+    "population": 1207,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1f8830ee-bc42-419f-9ec3-5f811af29902",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-315",
+    "latitude": 13.062376,
+    "longitude": 80.166856,
+    "population": 866,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "4ce6daf6-9f39-4409-8c58-44f1700f2a10",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-316",
+    "latitude": 13.017463,
+    "longitude": 80.238863,
+    "population": 3448,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a03baf47-0203-41a3-a089-cb952a444d1d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-317",
+    "latitude": 13.085995,
+    "longitude": 80.227766,
+    "population": 1107,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "d1730516-0296-4e46-8e89-72dd0a9a9b7b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-318",
+    "latitude": 13.047288,
+    "longitude": 80.190454,
+    "population": 2262,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "bcdd8711-9fa0-4c13-9e6a-5005cd633b55",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-319",
+    "latitude": 13.070631,
+    "longitude": 80.223765,
+    "population": 1810,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "17f71429-d1d7-4f29-a699-fc7339a36fd8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-320",
+    "latitude": 13.050245,
+    "longitude": 80.271354,
+    "population": 1517,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "97e66d95-05c5-4a60-b419-64563f21336d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-321",
+    "latitude": 13.04046,
+    "longitude": 80.231475,
+    "population": 2561,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "406488b5-741b-420f-b68a-f70c1c0abec3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-322",
+    "latitude": 13.05969,
+    "longitude": 80.171746,
+    "population": 1675,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ff7f9704-6ffa-4456-ab92-c4e04709f561",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-323",
+    "latitude": 13.032068,
+    "longitude": 80.232723,
+    "population": 1614,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f699dbb6-3d87-4c52-a36b-2c25aa5cf241",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-324",
+    "latitude": 13.061171,
+    "longitude": 80.226164,
+    "population": 389,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0165acde-c0c5-49cb-b314-777dd7f4a943",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-325",
+    "latitude": 13.045937,
+    "longitude": 80.238561,
+    "population": 1575,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b26b0747-c051-4afa-9b7d-d9abdf22aa02",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-326",
+    "latitude": 13.095203,
+    "longitude": 80.231459,
+    "population": 1498,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ec6bd99b-8799-4114-a82a-7487d98603ee",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-327",
+    "latitude": 13.030267,
+    "longitude": 80.2338,
+    "population": 2353,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4886fa2a-7135-45da-898d-aff212e3461e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-328",
+    "latitude": 13.035988,
+    "longitude": 80.203683,
+    "population": 579,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2db78afa-5bc9-4ade-b6ac-8fb871f61ef0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-329",
+    "latitude": 13.037634,
+    "longitude": 80.233432,
+    "population": 830,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6b088d2c-6624-4047-a4cf-f02b3014a003",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-330",
+    "latitude": 13.033823,
+    "longitude": 80.246861,
+    "population": 2718,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7099e2d6-15be-48f7-bcf6-31f55667c70c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-331",
+    "latitude": 13.053734,
+    "longitude": 80.221203,
+    "population": 1066,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "88d18ea4-0c13-4b81-8523-c427e8c39151",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-332",
+    "latitude": 13.017795,
+    "longitude": 80.250585,
+    "population": 1836,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d8632c81-29c4-421e-a7a8-9238c5a2a0bd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-333",
+    "latitude": 13.010725,
+    "longitude": 80.225007,
+    "population": 442,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "82370509-7423-44ce-a2f2-8ee0e01a9814",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-334",
+    "latitude": 13.005769,
+    "longitude": 80.264405,
+    "population": 1426,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e19a8ddd-15cd-4479-8d06-2aad5aba3a36",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-335",
+    "latitude": 13.072257,
+    "longitude": 80.231743,
+    "population": 1077,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "1e11a1d7-98ff-4655-a318-713aaebc0405",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-336",
+    "latitude": 13.019798,
+    "longitude": 80.251953,
+    "population": 2684,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f405f769-bc42-4653-8e3d-584d29028f13",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-337",
+    "latitude": 13.055605,
+    "longitude": 80.240392,
+    "population": 2715,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "09d067c7-c676-46e3-bede-d113df3665c8",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-338",
+    "latitude": 13.069576,
+    "longitude": 80.257776,
+    "population": 592,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d89b5303-774e-447d-bd2b-2547e0f35b55",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-339",
+    "latitude": 13.009844,
+    "longitude": 80.231731,
+    "population": 1338,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8aed218c-324f-4e40-a10d-f4defec09876",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-340",
+    "latitude": 13.068885,
+    "longitude": 80.226521,
+    "population": 1755,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a9c66438-7904-43f0-a3e5-17a4a12649d6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-341",
+    "latitude": 13.069635,
+    "longitude": 80.17844,
+    "population": 2582,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e2cf6836-2302-40da-bf1e-549a0e8c4820",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-342",
+    "latitude": 13.054688,
+    "longitude": 80.212428,
+    "population": 1008,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "1f04525d-3512-46fc-aa71-b12496af8e44",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-343",
+    "latitude": 13.01525,
+    "longitude": 80.277925,
+    "population": 1323,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6ee27113-04e5-4da9-b47e-97e5fa526da1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-344",
+    "latitude": 13.058045,
+    "longitude": 80.188526,
+    "population": 969,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "ce7fb716-7fb6-4ca0-afec-e6823fe787da",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-345",
+    "latitude": 13.065925,
+    "longitude": 80.220998,
+    "population": 1040,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9636bd01-d08f-4575-8d17-14db3ee532fd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-346",
+    "latitude": 12.983305,
+    "longitude": 80.209302,
+    "population": 739,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "33379333-04aa-41b8-ae32-6be0cf8bddb3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-347",
+    "latitude": 12.99144,
+    "longitude": 80.173729,
+    "population": 2810,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "92974a9e-387b-44ba-b029-42e14edab865",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-348",
+    "latitude": 13.024531,
+    "longitude": 80.248814,
+    "population": 2551,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "04119772-9528-4022-befb-668e8575e72a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-349",
+    "latitude": 13.053117,
+    "longitude": 80.216643,
+    "population": 477,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "403f9a96-d529-40b5-940e-7981fc647594",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-350",
+    "latitude": 13.032586,
+    "longitude": 80.195439,
+    "population": 2094,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "92772b1f-8a6c-4ad7-b408-8beb46bd9625",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-351",
+    "latitude": 13.061809,
+    "longitude": 80.267849,
+    "population": 1152,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "35440f48-e2ff-481d-af4e-4b209ef75281",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-352",
+    "latitude": 13.044213,
+    "longitude": 80.246615,
+    "population": 1663,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f1d4726c-3444-4c27-b915-a31e393198d6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-353",
+    "latitude": 13.057292,
+    "longitude": 80.209686,
+    "population": 2970,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3019f942-c877-484d-a9c3-837d6e3cd97e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-354",
+    "latitude": 13.045344,
+    "longitude": 80.197687,
+    "population": 1134,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1f2ae7b9-e5cb-4a81-ac45-7c0c4eb4b610",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-355",
+    "latitude": 13.033485,
+    "longitude": 80.262493,
+    "population": 852,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b19171b3-803c-4974-be4f-e27ba27dbaf1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-356",
+    "latitude": 13.044094,
+    "longitude": 80.241949,
+    "population": 1359,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "66f963ba-26d5-482c-92bd-06ca44c3195f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-357",
+    "latitude": 13.073986,
+    "longitude": 80.251665,
+    "population": 2390,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "70e35663-3d8a-48ba-b782-2939b9ed9b80",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-358",
+    "latitude": 12.992133,
+    "longitude": 80.218282,
+    "population": 2634,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e4d12f67-d916-4cb8-a32a-892f4ed1eee2",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-359",
+    "latitude": 13.016477,
+    "longitude": 80.263091,
+    "population": 706,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6f8e4a63-78ab-43a2-800e-4f2e8650b0e1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-360",
+    "latitude": 13.037517,
+    "longitude": 80.202696,
+    "population": 1241,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "07a69394-5572-4a4b-8253-25815f443ffd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-361",
+    "latitude": 13.052836,
+    "longitude": 80.168513,
+    "population": 1188,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "58b71ab9-ab1b-42ce-ad16-8678ea523230",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-362",
+    "latitude": 13.068368,
+    "longitude": 80.236841,
+    "population": 1443,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d2790577-04f7-4fcc-921d-f359664e9019",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-363",
+    "latitude": 13.074606,
+    "longitude": 80.256799,
+    "population": 1910,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c20d88a6-c85c-4937-9280-bcdc7b697390",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-364",
+    "latitude": 13.018367,
+    "longitude": 80.256577,
+    "population": 1031,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c4436473-bb54-4ac9-b66c-fd8cd5187d0a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-365",
+    "latitude": 13.100708,
+    "longitude": 80.232146,
+    "population": 2332,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "bac1cec6-77e4-455a-bb5e-e0d055389930",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-366",
+    "latitude": 13.045803,
+    "longitude": 80.163467,
+    "population": 1172,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a868814c-fa2b-4a42-ac99-8d8fdf24d52e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-367",
+    "latitude": 13.069076,
+    "longitude": 80.250102,
+    "population": 1813,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ed1fa836-2cbd-49d0-b14c-1c17fbd9cfe0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-368",
+    "latitude": 13.028138,
+    "longitude": 80.250243,
+    "population": 1377,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "35d748a5-4464-431b-a080-b9e8826a7ebb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-369",
+    "latitude": 13.029884,
+    "longitude": 80.236956,
+    "population": 2606,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "89d8f620-1e51-4e3d-ae86-9f289f0f0081",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-370",
+    "latitude": 13.060125,
+    "longitude": 80.216698,
+    "population": 3049,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9a397bcf-af44-4ed6-aa59-01f575dbde74",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-371",
+    "latitude": 13.047912,
+    "longitude": 80.229741,
+    "population": 673,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "565949fa-9c18-4200-8ce2-9cebce6c549a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-372",
+    "latitude": 13.022177,
+    "longitude": 80.251072,
+    "population": 1347,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d31700d9-00ea-4c7f-a240-443a1dcda8f0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-373",
+    "latitude": 13.001919,
+    "longitude": 80.209098,
+    "population": 3298,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "40611044-194e-408c-8a92-c53e10f2901a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-374",
+    "latitude": 13.054355,
+    "longitude": 80.22178,
+    "population": 2182,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "052399d1-2345-4047-b763-8c608f4b92e6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-375",
+    "latitude": 13.015909,
+    "longitude": 80.175031,
+    "population": 2575,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "80d110da-4c63-4499-a94e-40eeea97e9f9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-376",
+    "latitude": 13.030465,
+    "longitude": 80.233861,
+    "population": 916,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "cb430fbf-b98f-4512-8dff-3bfded94ab74",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-377",
+    "latitude": 13.020752,
+    "longitude": 80.277471,
+    "population": 783,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "39b85c2f-be57-4f4a-96b5-bd042839524c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-378",
+    "latitude": 12.992667,
+    "longitude": 80.186937,
+    "population": 1098,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7e28927d-6b1b-428e-9efa-3a0425a84ca9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-379",
+    "latitude": 13.023224,
+    "longitude": 80.243272,
+    "population": 447,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3ef03f1f-e963-48cf-bc92-408f314f66ab",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-380",
+    "latitude": 13.013091,
+    "longitude": 80.195899,
+    "population": 1279,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3ccf96a8-d9cc-43f2-ab00-7b879e31128a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-381",
+    "latitude": 13.054395,
+    "longitude": 80.23256,
+    "population": 1502,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "97a98042-3fe1-4fdf-bc07-706d828bf4e3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-382",
+    "latitude": 13.040304,
+    "longitude": 80.257517,
+    "population": 958,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "032bf6d6-c099-4d76-9339-b9780da05d28",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-383",
+    "latitude": 13.008819,
+    "longitude": 80.201509,
+    "population": 691,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "0d686a31-a678-4e0c-991e-2278bad58def",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-384",
+    "latitude": 13.040773,
+    "longitude": 80.252706,
+    "population": 1246,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b8c6af6f-08d1-465c-9c61-e5951e3b6f6b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-385",
+    "latitude": 13.087033,
+    "longitude": 80.172159,
+    "population": 1827,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b2000883-0018-493b-8f86-03241431b7fa",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-386",
+    "latitude": 13.060838,
+    "longitude": 80.237878,
+    "population": 1587,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "521a90ef-fb6c-4161-8ec1-15ae7646bc25",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-387",
+    "latitude": 13.004287,
+    "longitude": 80.231685,
+    "population": 1282,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "85a7fbb7-9ec2-40b5-a6ff-0f357c3922c9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-388",
+    "latitude": 13.063024,
+    "longitude": 80.187121,
+    "population": 873,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4e403d7b-b38c-4da8-bbc6-72a1085ab8c3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-389",
+    "latitude": 13.030897,
+    "longitude": 80.254314,
+    "population": 1168,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8362025c-5a13-4084-88c5-117982d56e41",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-390",
+    "latitude": 13.043878,
+    "longitude": 80.242129,
+    "population": 3497,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "748e8e42-b8f4-46ff-9bcb-db0b918d798e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-391",
+    "latitude": 13.033119,
+    "longitude": 80.190895,
+    "population": 2279,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1431d42c-1562-46a8-87f5-3d29bac2920f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-392",
+    "latitude": 13.0026,
+    "longitude": 80.250259,
+    "population": 1868,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "58d99016-2b9c-4a97-ae1c-b6b530e5185b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-393",
+    "latitude": 13.008618,
+    "longitude": 80.258246,
+    "population": 862,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "80f320ba-41a8-4a21-a599-78740b790976",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-394",
+    "latitude": 13.097346,
+    "longitude": 80.238724,
+    "population": 832,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3c1f693b-9384-4c4a-9107-ba336edf1faa",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-395",
+    "latitude": 13.044518,
+    "longitude": 80.222068,
+    "population": 912,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "425e5cbb-efab-48ac-aa3b-c1d93b7ef036",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-396",
+    "latitude": 13.075563,
+    "longitude": 80.249424,
+    "population": 1052,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "41fbfb37-78a4-4db7-9b8b-c6bd58158bb7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-397",
+    "latitude": 13.049306,
+    "longitude": 80.24224,
+    "population": 2890,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "850a98b1-850a-4924-8978-6bbfcd03675b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-398",
+    "latitude": 13.025987,
+    "longitude": 80.21919,
+    "population": 2151,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "fb4446ac-0bc2-4fc0-a3bd-f371f513dffc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-399",
+    "latitude": 13.001703,
+    "longitude": 80.217255,
+    "population": 2185,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6d449f69-e9f8-41ce-9a7d-9e24e811ff73",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-400",
+    "latitude": 13.051259,
+    "longitude": 80.231154,
+    "population": 2755,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6f963ecd-28c1-495e-8b55-90837ec82946",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-401",
+    "latitude": 13.061773,
+    "longitude": 80.19662,
+    "population": 2556,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3b36ae1f-5b3d-4e50-977f-fac698907933",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-402",
+    "latitude": 13.068564,
+    "longitude": 80.173907,
+    "population": 1788,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e88c8e80-d9a9-4b11-9577-17b87b3a4782",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-403",
+    "latitude": 13.053826,
+    "longitude": 80.241508,
+    "population": 1382,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c9abb544-cf9f-4df7-927d-0a38a9e76554",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-404",
+    "latitude": 13.075468,
+    "longitude": 80.264369,
+    "population": 688,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c78267e9-2c59-4bb0-92b1-5ca9a15c882a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-405",
+    "latitude": 13.04798,
+    "longitude": 80.263782,
+    "population": 2063,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "aa6fa2dd-241b-4074-b93f-a8fa9956c8af",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-406",
+    "latitude": 12.981625,
+    "longitude": 80.243894,
+    "population": 721,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3bd189c6-4932-4e3e-a3aa-6107411852e9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-407",
+    "latitude": 13.102151,
+    "longitude": 80.260163,
+    "population": 2000,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2b6b06ce-6b25-4249-a2ab-23004597917f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-408",
+    "latitude": 13.000351,
+    "longitude": 80.204935,
+    "population": 1996,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "71c749da-0302-43ae-9305-37cbc66395c7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-409",
+    "latitude": 13.047098,
+    "longitude": 80.255751,
+    "population": 3240,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "46bac1ed-b947-4545-b91b-7726a1e73361",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-410",
+    "latitude": 13.085515,
+    "longitude": 80.239246,
+    "population": 2954,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "427c717b-4818-451d-9e4b-eb898e34c7e5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-411",
+    "latitude": 13.073108,
+    "longitude": 80.204119,
+    "population": 2473,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f82eb980-77fa-45cb-844b-91fa4949b0a1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-412",
+    "latitude": 13.02269,
+    "longitude": 80.264665,
+    "population": 616,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7b96b2a3-efb0-4aae-8f9d-4301500d7890",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-413",
+    "latitude": 13.045213,
+    "longitude": 80.194031,
+    "population": 890,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "f99eedb1-9633-4309-bdd8-b1433ae5ddfd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-414",
+    "latitude": 13.03916,
+    "longitude": 80.233297,
+    "population": 858,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9a20ae12-2fdb-45cd-9c74-ce84a69f1d5b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-415",
+    "latitude": 13.001955,
+    "longitude": 80.22944,
+    "population": 839,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "8167b6cf-f71c-43d9-8e39-f918ac555df9",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-416",
+    "latitude": 13.006483,
+    "longitude": 80.175431,
+    "population": 2936,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a543e062-52f3-4233-86db-efdb0547cf8b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-417",
+    "latitude": 13.068258,
+    "longitude": 80.199349,
+    "population": 2595,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "71e506a7-298a-4696-bb41-730c3da896e1",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-418",
+    "latitude": 13.05944,
+    "longitude": 80.198629,
+    "population": 1319,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2336855b-8054-42ed-8c96-0ddf775816cf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-419",
+    "latitude": 13.010099,
+    "longitude": 80.253767,
+    "population": 2309,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9dad9662-4e28-4acd-9950-0486587240ca",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-420",
+    "latitude": 13.012596,
+    "longitude": 80.24922,
+    "population": 1403,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ff9f877f-86a7-4629-9132-e901482ca87b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-421",
+    "latitude": 13.030746,
+    "longitude": 80.241282,
+    "population": 2050,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5ee99745-d568-41cc-994e-b27afcc67f65",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-422",
+    "latitude": 13.055019,
+    "longitude": 80.22824,
+    "population": 1565,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1cb67b5f-f098-45fa-b0f4-d83b365fa28d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-423",
+    "latitude": 13.054455,
+    "longitude": 80.232641,
+    "population": 1501,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "47f88665-0680-4389-86a1-67c5f3275846",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-424",
+    "latitude": 13.090697,
+    "longitude": 80.234648,
+    "population": 826,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "c20fe33b-d85f-4976-864d-9404393cf1eb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-425",
+    "latitude": 13.035194,
+    "longitude": 80.244275,
+    "population": 1123,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "e5fe0cee-20a3-46b7-a079-6b212a940c79",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-426",
+    "latitude": 13.092191,
+    "longitude": 80.235166,
+    "population": 1602,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "2d727fb5-646d-4bb6-98ca-9ab64a2e5efc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-427",
+    "latitude": 13.031454,
+    "longitude": 80.229479,
+    "population": 1748,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b90c912e-33b8-4016-9f29-2c585af8e4dc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-428",
+    "latitude": 13.012426,
+    "longitude": 80.276115,
+    "population": 2351,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "eaf8045c-84a8-498d-bb30-b0d64d9044dc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-429",
+    "latitude": 13.093326,
+    "longitude": 80.26094,
+    "population": 893,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "f2086e30-6037-4b83-a484-6a5d52f5c0ed",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-430",
+    "latitude": 13.027528,
+    "longitude": 80.220123,
+    "population": 2136,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a6ff1c41-0c7e-42fe-8e8a-11d78c98ae0a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-431",
+    "latitude": 13.010517,
+    "longitude": 80.251161,
+    "population": 2032,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "960ef381-7a8e-4766-aac3-b1a61196e079",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-432",
+    "latitude": 13.059287,
+    "longitude": 80.173725,
+    "population": 3019,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5887b89e-927b-40ee-96c8-11fe212d5b9e",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-433",
+    "latitude": 13.046935,
+    "longitude": 80.232754,
+    "population": 3542,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8318939a-0a4b-4f41-8e07-d512f7958785",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-434",
+    "latitude": 13.030053,
+    "longitude": 80.254728,
+    "population": 1661,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "520d955e-4de1-4ece-9dd8-3300468ec561",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-435",
+    "latitude": 13.072867,
+    "longitude": 80.246656,
+    "population": 1989,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "afddc623-8c18-4ca7-b82d-5a0b2370ed73",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-436",
+    "latitude": 12.997317,
+    "longitude": 80.181874,
+    "population": 3366,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "13f30236-bbc1-401a-a2d9-493fa40d47c6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-437",
+    "latitude": 13.05331,
+    "longitude": 80.173917,
+    "population": 2518,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0a89cf1f-c0a2-464e-a47c-a2b812e51b98",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-438",
+    "latitude": 13.042336,
+    "longitude": 80.200166,
+    "population": 2092,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4e1297cf-4066-49eb-bc49-3cd6702b1cfe",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-439",
+    "latitude": 13.012537,
+    "longitude": 80.207902,
+    "population": 795,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "90f5ab65-8723-4352-86e5-3042451e3125",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-440",
+    "latitude": 13.071456,
+    "longitude": 80.234951,
+    "population": 437,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ae91a86c-8394-4802-b928-a5376b62f781",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-441",
+    "latitude": 13.032521,
+    "longitude": 80.207882,
+    "population": 1904,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "b892782f-694e-4ff8-aeaf-e7bc3e75a16c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-442",
+    "latitude": 13.059052,
+    "longitude": 80.195408,
+    "population": 1489,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "47925a42-d2a3-434c-8ba4-36e61ddcc2bd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-443",
+    "latitude": 13.002276,
+    "longitude": 80.219128,
+    "population": 2929,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7b8f95a0-31c2-4751-96c7-b3c7cb96e326",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-444",
+    "latitude": 13.043363,
+    "longitude": 80.185801,
+    "population": 1508,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c63a4aef-529f-4dd8-8522-da87451836d0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-445",
+    "latitude": 12.99985,
+    "longitude": 80.208978,
+    "population": 1751,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "7a314e01-d7ba-43ea-b8fa-af65aa40e01d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-446",
+    "latitude": 13.012101,
+    "longitude": 80.215696,
+    "population": 1916,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "69658647-ddba-422f-b1fc-fbc66ee67958",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-447",
+    "latitude": 13.039257,
+    "longitude": 80.249478,
+    "population": 1566,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0c69490f-bf33-42d7-bbdf-00cd9268e8a3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-448",
+    "latitude": 13.04117,
+    "longitude": 80.175494,
+    "population": 1114,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "491bb2c8-4726-4711-9e87-97d65ee12356",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-449",
+    "latitude": 12.981834,
+    "longitude": 80.212631,
+    "population": 3128,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e97fdd33-e4c6-4708-98fc-8adb664da93b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-450",
+    "latitude": 13.010707,
+    "longitude": 80.221189,
+    "population": 392,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "30f2bdce-1d4a-4f75-9bf7-73525834ced5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-451",
+    "latitude": 13.080708,
+    "longitude": 80.19584,
+    "population": 1383,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "76fce7e7-0bcd-43c6-ae78-dfb95ba3f220",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-452",
+    "latitude": 13.028233,
+    "longitude": 80.231474,
+    "population": 1961,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "96afc5d9-4ee1-42ef-b5ff-a400d2f6ca32",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-453",
+    "latitude": 13.008831,
+    "longitude": 80.211585,
+    "population": 1108,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "bc096bb4-a2d4-48cd-98e8-2dced11a6af0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-454",
+    "latitude": 13.008036,
+    "longitude": 80.26695,
+    "population": 1799,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "4d0ce454-5181-4327-801f-3bea5a2ae673",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-455",
+    "latitude": 13.044131,
+    "longitude": 80.265303,
+    "population": 2639,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1bcd2399-e8d9-4cc8-89e7-a23f5decf6fc",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-456",
+    "latitude": 13.015303,
+    "longitude": 80.248973,
+    "population": 2196,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ed50e98d-9203-4819-b418-1eb1366a9430",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-457",
+    "latitude": 13.042247,
+    "longitude": 80.206678,
+    "population": 2040,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "439c25f3-42d9-43e0-bedb-5cb8fc20ac6a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-458",
+    "latitude": 13.044113,
+    "longitude": 80.259142,
+    "population": 3415,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "783e06d0-3963-4830-ad38-f8388885bf3d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-459",
+    "latitude": 13.033369,
+    "longitude": 80.213821,
+    "population": 2284,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e5d5880d-92a2-426c-9f97-3be82bbb66c0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-460",
+    "latitude": 13.046506,
+    "longitude": 80.241456,
+    "population": 843,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1db20c01-4540-466f-b477-1b76c0142377",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-461",
+    "latitude": 13.029235,
+    "longitude": 80.207808,
+    "population": 1002,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8649a983-733f-44cf-8761-72850d43a6a5",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-462",
+    "latitude": 13.057416,
+    "longitude": 80.185736,
+    "population": 2817,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "34dba50c-771a-4e51-9e05-b5e4a9eaaa01",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-463",
+    "latitude": 13.020771,
+    "longitude": 80.251445,
+    "population": 2715,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "c4753c2b-9015-45f7-abf4-7139bb06fdbb",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-464",
+    "latitude": 13.059692,
+    "longitude": 80.185955,
+    "population": 1414,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "743f2b1e-3ada-43be-ab9d-fca4fbe30458",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-465",
+    "latitude": 13.057475,
+    "longitude": 80.201779,
+    "population": 1544,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "552f1c9f-55cc-4d55-b7a0-2f76c8217669",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-466",
+    "latitude": 13.030736,
+    "longitude": 80.234253,
+    "population": 2356,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e0468606-d068-495c-80a2-b35f55a6baee",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-467",
+    "latitude": 13.054171,
+    "longitude": 80.192512,
+    "population": 2092,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "406951a2-f8be-439e-a432-fb5ee9c66416",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-468",
+    "latitude": 13.050092,
+    "longitude": 80.181228,
+    "population": 544,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "aa153b00-13cb-4f27-b19e-8f66c164b1c6",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-469",
+    "latitude": 13.038741,
+    "longitude": 80.208128,
+    "population": 3454,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "6d1cb6c3-008b-48de-b56c-d1db31671f5b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-470",
+    "latitude": 13.034854,
+    "longitude": 80.168407,
+    "population": 710,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "0f8bd22f-db5b-4b02-a263-98f16c43d94b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-471",
+    "latitude": 13.069677,
+    "longitude": 80.196445,
+    "population": 2768,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d0e539ad-b21f-4e6a-9f34-7acccf93fbf7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-472",
+    "latitude": 13.03206,
+    "longitude": 80.270679,
+    "population": 1439,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "881df70b-ddc3-4b4f-b643-ebe827b50396",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-473",
+    "latitude": 13.028312,
+    "longitude": 80.18527,
+    "population": 839,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "9c74c857-ed46-4922-a61f-b44d60101443",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-474",
+    "latitude": 13.020749,
+    "longitude": 80.267228,
+    "population": 2666,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "a1fa0bac-f30e-4b7b-b99f-da22283c5185",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-475",
+    "latitude": 13.039593,
+    "longitude": 80.209285,
+    "population": 292,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "18acbc93-5adb-4aa5-bbb0-4839599bf6b4",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-476",
+    "latitude": 12.99867,
+    "longitude": 80.23253,
+    "population": 662,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "faa56c62-d09c-4fd8-82c6-3f92eca4902d",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-477",
+    "latitude": 12.993327,
+    "longitude": 80.234989,
+    "population": 833,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3616903b-3ec5-4763-a4ed-2d02d4d8850a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-478",
+    "latitude": 13.012222,
+    "longitude": 80.20567,
+    "population": 1410,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "5af16949-bc5d-41f0-bca8-a8079d2c5852",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-479",
+    "latitude": 13.044758,
+    "longitude": 80.189096,
+    "population": 1616,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "aefe0578-78e7-4ad2-93e2-8a7052ca5d9a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-480",
+    "latitude": 13.056506,
+    "longitude": 80.244128,
+    "population": 819,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "63b0a195-f9ab-49c3-ae96-afcc5d24b894",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-481",
+    "latitude": 13.060211,
+    "longitude": 80.183073,
+    "population": 1163,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d2a8e7da-b84a-41bb-8a27-5e9d3befa289",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-482",
+    "latitude": 13.026881,
+    "longitude": 80.232967,
+    "population": 488,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ce3f0607-0605-48a0-aacf-86693d31c287",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-483",
+    "latitude": 13.050591,
+    "longitude": 80.221071,
+    "population": 1920,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "ea883034-1f8c-4e03-8f54-ddad68d935ec",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-484",
+    "latitude": 13.073636,
+    "longitude": 80.197183,
+    "population": 3433,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "8b4712c8-7973-4cd7-b602-be781d6931c3",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-485",
+    "latitude": 12.988285,
+    "longitude": 80.230363,
+    "population": 1710,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "94ab441b-b70e-4211-8eb0-f6b6fd210f59",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-486",
+    "latitude": 13.022624,
+    "longitude": 80.246851,
+    "population": 1224,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "3c817d40-1073-483e-95ed-7f04eb68cd0f",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-487",
+    "latitude": 13.042123,
+    "longitude": 80.247594,
+    "population": 822,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d91fb684-f0fd-4ee7-a303-585874802521",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-488",
+    "latitude": 13.067674,
+    "longitude": 80.266498,
+    "population": 2423,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "916dacb3-ad00-4289-be94-161ff28ba98c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-489",
+    "latitude": 13.041076,
+    "longitude": 80.247199,
+    "population": 2513,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "1c70723e-4b2e-4e3b-81fb-70eb1a2ee67c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-490",
+    "latitude": 13.047962,
+    "longitude": 80.248236,
+    "population": 1136,
+    "is_high_risk": false,
+    "is_synthetic": true
+  },
+  {
+    "id": "89621eda-3672-478c-9877-136ce0beef7c",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-491",
+    "latitude": 13.006097,
+    "longitude": 80.275639,
+    "population": 2812,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "447c7764-1f5a-40ba-9988-bdfd57df3b2a",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-492",
+    "latitude": 13.065774,
+    "longitude": 80.184453,
+    "population": 684,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "482b9a5c-a064-415f-8f69-b59fb02c91f7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-493",
+    "latitude": 13.044878,
+    "longitude": 80.200793,
+    "population": 418,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "839fb740-00ba-466a-8dad-c37ef33f3a70",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-494",
+    "latitude": 13.0468,
+    "longitude": 80.179613,
+    "population": 2371,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "55584c0b-4db9-4fec-89c8-c11e738b772b",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-495",
+    "latitude": 13.036914,
+    "longitude": 80.252178,
+    "population": 2225,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e6ded03e-77cd-40cb-b827-3540ea3454cd",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-496",
+    "latitude": 13.023877,
+    "longitude": 80.278294,
+    "population": 767,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "e277e6d1-6e73-45d3-bda6-68bd63bd7fb7",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-497",
+    "latitude": 13.082398,
+    "longitude": 80.23135,
+    "population": 1759,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "d0168ec7-3e2b-4d8c-9ccc-7a02a6c7d6a0",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-498",
+    "latitude": 13.02994,
+    "longitude": 80.258662,
+    "population": 2488,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "09532a58-4670-4af1-b781-7b93e289c372",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-499",
+    "latitude": 13.029358,
+    "longitude": 80.173789,
+    "population": 1909,
+    "is_high_risk": true,
+    "is_synthetic": true
+  },
+  {
+    "id": "87a3bfc7-346e-45f4-882e-36c6cd793aaf",
+    "event_id": "7c0f60b0-9d73-44bd-97eb-1e7ef2ecdc11",
+    "unit_code": "POP-500",
+    "latitude": 13.06039,
+    "longitude": 80.177014,
+    "population": 1131,
+    "is_high_risk": true,
+    "is_synthetic": true
+  }
+]

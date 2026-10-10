@@ -1,0 +1,35 @@
+namespace FloodSafe {
+  entity Role;
+  entity User in [Role];
+  entity FloodEvent;
+  entity Plan;
+  entity Source;
+
+  action ViewQueue, ViewSource, ViewPlan appliesTo {
+    principal: User,
+    resource: [FloodEvent, Source, Plan]
+  };
+
+  action CreateEvent, RunAssessment, CreatePlan appliesTo {
+    principal: User,
+    resource: FloodEvent
+  };
+
+  action RecordFieldTest appliesTo {
+    principal: User,
+    resource: Source,
+    context: {
+      verification_status: String
+    }
+  };
+
+  action ViewAudit appliesTo {
+    principal: User,
+    resource: FloodEvent
+  };
+
+  action IssueAdvisory appliesTo {
+    principal: User,
+    resource: FloodEvent
+  };
+}
