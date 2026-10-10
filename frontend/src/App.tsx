@@ -296,6 +296,8 @@ export const App: React.FC = () => {
           <div className="animate-fade-in" style={{ marginTop: 24 }}>
             <TestingQueue
               queue={queue}
+              plan={plan}
+              sources={sources}
               onSelectSource={(src) => setSelectedWhySource(src)}
               onOpenFeedback={(id, code) => setFeedbackSource({ id, code })}
             />

@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import {
-  ListFilter,
   Search,
+  FileText,
   Download,
-  HelpCircle,
   FlaskConical,
   ArrowRight,
-  Sparkles,
+  Printer,
 } from 'lucide-react';
-import { QueueItem, ScoredSource } from '../types';
+import { QueueItem, ScoredSource, TestingPlan } from '../types';
+import { generatePDFReport } from '../services/pdfReport';
 
 interface TestingQueueProps {
   queue: QueueItem[];
+  plan?: TestingPlan | null;
+  sources?: ScoredSource[];
   onSelectSource: (source: ScoredSource) => void;
   onOpenFeedback: (sourceId: string, sourceCode: string) => void;
 }
 
 export const TestingQueue: React.FC<TestingQueueProps> = ({
   queue,
+  plan = null,
+  sources = [],
   onSelectSource,
   onOpenFeedback,
 }) => {
@@ -37,6 +41,10 @@ export const TestingQueue: React.FC<TestingQueueProps> = ({
     if (filterSelectedOnly && !item.is_selected_by_optimizer) return false;
     return true;
   });
+
+  const handleExportPDF = () => {
+    generatePDFReport(plan, filteredQueue, sources);
+  };
 
   const exportCSV = () => {
     const headers = [
@@ -78,16 +86,6 @@ export const TestingQueue: React.FC<TestingQueueProps> = ({
     document.body.removeChild(link);
   };
 
-  const exportJSON = () => {
-    const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(filteredQueue, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `floodsafe_plan_${new Date().toISOString().slice(0, 10)}.json`);
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
-  };
-
   return (
     <div className="panel-paper animate-fade-in">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, flexWrap: 'wrap', gap: 14 }}>
@@ -96,17 +94,27 @@ export const TestingQueue: React.FC<TestingQueueProps> = ({
             <span className="dot" />
             <span>ALLOCATION ROSTER</span>
           </div>
-          <h3 style={{ fontSize: 20, fontWeight: 500, color: 'var(--ink)' }}>Testing Queue ({filteredQueue.length} Sources)</h3>
+          <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)' }}>Testing Queue ({filteredQueue.length} Sources)</h3>
         </div>
 
-        <div style={{ display: 'flex', gap: 8 }}>
-          <button className="btn btn-secondary btn-compact" onClick={exportCSV}>
-            <Download size={14} />
-            <span>Export CSV</span>
+        {/* PDF & Export Actions */}
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <button
+            className="btn btn-primary btn-compact"
+            onClick={handleExportPDF}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 700 }}
+            title="Generate and Download Detailed Emergency Field Testing Directive PDF"
+          >
+            <Printer size={14} />
+            <span>Export Detailed PDF Dossier</span>
           </button>
-          <button className="btn btn-secondary btn-compact" onClick={exportJSON}>
-            <Download size={14} />
-            <span>Export JSON</span>
+          <button
+            className="btn btn-secondary btn-compact"
+            onClick={exportCSV}
+            title="Download CSV SpreadSheet"
+          >
+            <Download size={13} />
+            <span>CSV</span>
           </button>
         </div>
       </div>

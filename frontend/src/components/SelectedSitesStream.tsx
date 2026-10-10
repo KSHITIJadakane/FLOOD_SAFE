@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, FlaskConical } from 'lucide-react';
+import { ArrowRight, FlaskConical, Printer } from 'lucide-react';
 import { TestingPlan, ScoredSource } from '../types';
+import { generatePDFReport } from '../services/pdfReport';
 
 interface SelectedSitesStreamProps {
   plan: TestingPlan | null;
@@ -22,7 +23,7 @@ export const SelectedSitesStream: React.FC<SelectedSitesStreamProps> = ({
 
   return (
     <div className="stream-container-card animate-fade-in">
-      <div className="stream-card-header">
+      <div className="stream-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <div className="mono-eyebrow">
             <span className="dot" />
@@ -32,6 +33,18 @@ export const SelectedSitesStream: React.FC<SelectedSitesStreamProps> = ({
             Selected Sites ({selectedList.length} / K={plan?.capacity_k || 15})
           </h3>
         </div>
+
+        {plan && selectedList.length > 0 && (
+          <button
+            className="btn btn-primary btn-compact"
+            onClick={() => generatePDFReport(plan, [], sources)}
+            style={{ fontSize: 11.5, padding: '4px 10px', display: 'inline-flex', alignItems: 'center', gap: 5 }}
+            title="Export Emergency PDF Dispatch Dossier"
+          >
+            <Printer size={13} />
+            <span>PDF Dossier</span>
+          </button>
+        )}
       </div>
 
       <div className="stream-list-scroll">
