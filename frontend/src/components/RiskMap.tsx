@@ -40,8 +40,15 @@ export const RiskMap: React.FC<RiskMapProps> = ({
   const [showFlood, setShowFlood] = useState(true);
   const [showSources, setShowSources] = useState(true);
   const [showCoverageCircles, setShowCoverageCircles] = useState(true);
+  const [basemapStyle, setBasemapStyle] = useState<'satellite' | 'dark' | 'streets'>('dark');
 
   const center: [number, number] = [13.045, 80.225];
+
+  const basemapUrls = {
+    dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    satellite: 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
+    streets: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+  };
 
   const selectedMap = new Map<string, number>();
   if (plan) {
@@ -71,8 +78,57 @@ export const RiskMap: React.FC<RiskMapProps> = ({
           <h3 style={{ fontSize: 20, fontWeight: 500, color: 'var(--ink)' }}>Geographic Allocation Map</h3>
         </div>
 
-        {/* Layer Toggles (Mono Uppercase) */}
-        <div style={{ display: 'flex', gap: 14, fontSize: 12, fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '0.06em', flexWrap: 'wrap' }}>
+        {/* Layer & Basemap Toggles */}
+        <div style={{ display: 'flex', gap: 14, alignItems: 'center', fontSize: 12, fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '0.06em', flexWrap: 'wrap' }}>
+          {/* Basemap Switcher */}
+          <div style={{ display: 'flex', background: 'var(--surface)', border: '1px solid var(--line-card)', borderRadius: 4, padding: 2 }}>
+            <button
+              onClick={() => setBasemapStyle('dark')}
+              style={{
+                background: basemapStyle === 'dark' ? 'var(--brand)' : 'transparent',
+                color: basemapStyle === 'dark' ? '#fff' : 'var(--ink-body)',
+                border: 'none',
+                padding: '3px 8px',
+                fontSize: 10,
+                fontFamily: 'var(--mono)',
+                cursor: 'pointer',
+                borderRadius: 3,
+              }}
+            >
+              Dark
+            </button>
+            <button
+              onClick={() => setBasemapStyle('satellite')}
+              style={{
+                background: basemapStyle === 'satellite' ? 'var(--brand)' : 'transparent',
+                color: basemapStyle === 'satellite' ? '#fff' : 'var(--ink-body)',
+                border: 'none',
+                padding: '3px 8px',
+                fontSize: 10,
+                fontFamily: 'var(--mono)',
+                cursor: 'pointer',
+                borderRadius: 3,
+              }}
+            >
+              🛰️ Google Satellite
+            </button>
+            <button
+              onClick={() => setBasemapStyle('streets')}
+              style={{
+                background: basemapStyle === 'streets' ? 'var(--brand)' : 'transparent',
+                color: basemapStyle === 'streets' ? '#fff' : 'var(--ink-body)',
+                border: 'none',
+                padding: '3px 8px',
+                fontSize: 10,
+                fontFamily: 'var(--mono)',
+                cursor: 'pointer',
+                borderRadius: 3,
+              }}
+            >
+              Streets
+            </button>
+          </div>
+
           <label style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer', color: 'var(--ink-label)' }}>
             <input
               type="checkbox"
@@ -104,12 +160,14 @@ export const RiskMap: React.FC<RiskMapProps> = ({
         <MapContainer
           center={center}
           zoom={13}
-          style={{ height: '100%', width: '100%', background: '#FBFAF7' }}
+          style={{ height: '100%', width: '100%', background: '#111827' }}
         >
-          {/* CartoDB Voyager / Light Clean Basemap */}
+          {/* Dynamic Basemap Layer */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            key={basemapStyle}
+            attribution='&copy; Google Maps / OpenStreetMap / CARTO'
+            url={basemapUrls[basemapStyle]}
+            maxZoom={20}
           />
 
           {/* Flood Inundation Polygons (Data Blue #0060A4) */}
