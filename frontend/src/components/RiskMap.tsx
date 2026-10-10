@@ -45,9 +45,9 @@ export const RiskMap: React.FC<RiskMapProps> = ({
   const center: [number, number] = [13.045, 80.225];
 
   const basemapUrls = {
-    dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    satellite: 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
-    streets: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    dark: 'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+    satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    streets: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
   };
 
   const selectedMap = new Map<string, number>();
@@ -110,7 +110,7 @@ export const RiskMap: React.FC<RiskMapProps> = ({
                 borderRadius: 3,
               }}
             >
-              🛰️ Google Satellite
+              🛰️ Satellite
             </button>
             <button
               onClick={() => setBasemapStyle('streets')}
