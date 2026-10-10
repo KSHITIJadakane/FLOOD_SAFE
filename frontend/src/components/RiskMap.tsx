@@ -41,7 +41,7 @@ export const RiskMap: React.FC<RiskMapProps> = ({
   const [showFlood, setShowFlood] = useState(true);
   const [showSources, setShowSources] = useState(true);
   const [showCoverageCircles, setShowCoverageCircles] = useState(true);
-  const [basemapStyle, setBasemapStyle] = useState<'satellite' | 'dark' | 'streets'>('dark');
+  const [basemapStyle, setBasemapStyle] = useState<'satellite' | 'streets'>('satellite');
 
   // Interactive Greedy Animation Replay State
   const [animatedStep, setAnimatedStep] = useState<number>(0);
@@ -102,7 +102,6 @@ export const RiskMap: React.FC<RiskMapProps> = ({
   const center: [number, number] = [13.045, 80.225];
 
   const basemapUrls = {
-    dark: 'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
     satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     streets: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
   };
@@ -183,31 +182,17 @@ export const RiskMap: React.FC<RiskMapProps> = ({
           {/* Basemap Switcher */}
           <div style={{ display: 'flex', background: 'var(--surface)', border: '1px solid var(--line-card)', borderRadius: 4, padding: 2 }}>
             <button
-              onClick={() => setBasemapStyle('dark')}
-              style={{
-                background: basemapStyle === 'dark' ? 'var(--brand)' : 'transparent',
-                color: basemapStyle === 'dark' ? '#fff' : 'var(--ink-body)',
-                border: 'none',
-                padding: '3px 8px',
-                fontSize: 10,
-                fontFamily: 'var(--mono)',
-                cursor: 'pointer',
-                borderRadius: 3,
-              }}
-            >
-              Dark
-            </button>
-            <button
               onClick={() => setBasemapStyle('satellite')}
               style={{
                 background: basemapStyle === 'satellite' ? 'var(--brand)' : 'transparent',
                 color: basemapStyle === 'satellite' ? '#fff' : 'var(--ink-body)',
                 border: 'none',
-                padding: '3px 8px',
-                fontSize: 10,
+                padding: '3px 9px',
+                fontSize: 10.5,
                 fontFamily: 'var(--mono)',
                 cursor: 'pointer',
                 borderRadius: 3,
+                fontWeight: 600,
               }}
             >
               🛰️ Satellite
@@ -218,14 +203,15 @@ export const RiskMap: React.FC<RiskMapProps> = ({
                 background: basemapStyle === 'streets' ? 'var(--brand)' : 'transparent',
                 color: basemapStyle === 'streets' ? '#fff' : 'var(--ink-body)',
                 border: 'none',
-                padding: '3px 8px',
-                fontSize: 10,
+                padding: '3px 9px',
+                fontSize: 10.5,
                 fontFamily: 'var(--mono)',
                 cursor: 'pointer',
                 borderRadius: 3,
+                fontWeight: 600,
               }}
             >
-              Streets
+              🗺️ Clean Streets
             </button>
           </div>
 
