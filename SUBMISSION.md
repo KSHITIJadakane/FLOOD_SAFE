@@ -27,9 +27,12 @@ FloodSafe embeds AWS’s open-source **Cedar Policy Engine** (`policies/floodsaf
 * **Automated Safety Invariant**: `IssueAdvisory` is unconditionally `FORBIDDEN` across all roles (including Admin) to prevent unvalidated public panics.
 * **Role-Gated Operational Actions**: Plan creation and parameter tuning are restricted to `TriageLead` and `Admin`. Simulated field tests are open to `FieldOperator`, but verified lab overrides require `Admin`.
 
-### 2. AWS Container & Cloud Readiness
-* **Containerized Microservices**: Self-contained `backend/Dockerfile` and `docker-compose.yml` configured for deployment on **AWS App Runner**, **AWS ECS (Fargate)**, or **AWS EC2**.
-* **Zero Secret Leakage / Self-Contained**: Evaluates Cedar policies locally in-process with Rust-backed `cedarpy` bindings, requiring zero external billable API overhead for local reliability.
+### 3. Cyber-Physical IoT Telemetry & Wokwi Hardware Simulation
+To bridge the gap between orbital satellite latency and physical ground truth, FloodSafe integrates in-situ hydrometric IoT stations with an interactive **Wokwi microcontroller simulation** (`hardware/wokwi/`):
+* **Simulated Hardware Node**: ESP32 DevKit + HC-SR04 ultrasonic water depth sensor + SSD1306 OLED (I2C) + 3 status LEDs + piezo overtopping alarm.
+* **Multi-Source Sensor Fusion**: Combines Copernicus Sentinel-1 SAR orbital backscatter ($55\%$) with real-time ground water level depth ($45\%$).
+* **Live Telemetry Interface**: Emits RESTful JSON telemetry updates (`PATCH /api/v1/iot-sensors/{node_id}/telemetry`) with "No Silent Zeroes" neutral ($0.5$) fallback for offline nodes.
+* **1-Click Live Simulation**: 👉 [wokwi.com/projects/477569569661872129](https://wokwi.com/projects/477569569661872129) or in VS Code with the Wokwi extension.
 
 ---
 
@@ -37,7 +40,7 @@ FloodSafe embeds AWS’s open-source **Cedar Policy Engine** (`policies/floodsaf
 
 ### User-Centric Decision Workflow
 Designed for emergency coordinators, field responders, and public-health officers who need rapid clarity under crisis conditions:
-* **Real-Time GIS Risk Canvas**: Dark-matter cartographic map visualizing flood inundation contours, 500 water sources color-coded by vulnerability score, and 500m spatial coverage buffers.
+* **Real-Time GIS Risk Canvas**: Dark-matter cartographic map visualizing flood inundation contours, 500 water sources color-coded by vulnerability score, 12 in-situ IoT hydrometric stations with live telemetry pulses, and 500m spatial coverage buffers.
 * **Transparent "WHY?" Explainability Panel**: Clicking any water source breaks down the exact mathematical formula components:
   $$\text{Score} = 0.30\times\text{Flood} + 0.25\times\text{Drainage} + 0.15\times\text{History} + 0.15\times\text{Source Vuln} + 0.15\times\text{Pop Density}$$
   Missing data uses documented **neutral imputation ($0.5$)** with visible data quality badges (no silent zeroes).
@@ -48,15 +51,17 @@ Designed for emergency coordinators, field responders, and public-health officer
 
 ## 04 | The Execution (Empirical Evidence & Code Quality)
 
-### 1. Fully Working Test Suite (37/37 Pytest Passed)
+### 1. Fully Working Test Suite (44/44 Pytest Passed)
 ```text
 backend/tests/test_api.py .......... [8 passed]
 backend/tests/test_auth_cedar.py ... [8 passed]
 backend/tests/test_config_router.py  [2 passed]
+backend/tests/test_iot_sensors.py .. [4 passed]
 backend/tests/test_optimizer.py .... [7 passed]
 backend/tests/test_phase1.py ....... [5 passed]
 backend/tests/test_risk_engine.py .. [7 passed]
-==================== 37 passed in 9.00s ====================
+backend/tests/test_satellite.py .... [3 passed]
+==================== 44 passed in 2.78s ====================
 ```
 
 ### 2. Specification Drift & Integrity Verification (10/10 Passed)
@@ -76,7 +81,7 @@ backend/tests/test_risk_engine.py .. [7 passed]
 | Timestamp | Screen / View | Action & Narrative |
 | :--- | :--- | :--- |
 | **0:00 – 0:35** | Hero / Map Overview | **Problem Hook**: Limited water testing kits after a flood disaster. Why naive triage fails. |
-| **0:35 – 1:15** | Map + "WHY?" Modal | **Explainable AI**: Transparent mathematical weights, neutral 0.5 imputation for missing sensor data. |
+| **0:35 – 1:15** | Map + "WHY?" Modal + Wokwi IoT Sim | **Explainable AI & Ground Reality**: Transparent mathematical weights, neutral 0.5 imputation, and live ESP32 ultrasonic water-depth simulation in Wokwi fusing with Sentinel-1 SAR. |
 | **1:15 – 2:05** | Testing Queue + Benchmark Lab | **Greedy Optimization**: +177.8% more people protected vs. naive ranking by eliminating spatial overlaps. |
 | **2:05 – 2:40** | Cedar Policy Studio | **AWS Cedar Security**: Default-deny in action, 403 blocks for Viewer role, and forbid on public advisories. |
 | **2:40 – 3:00** | Field Feedback & Export | **Closed-Loop Action**: Field tests update spatial risk; export GeoJSON dispatch list. |

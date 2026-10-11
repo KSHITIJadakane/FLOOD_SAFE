@@ -32,8 +32,8 @@ Following severe flood events, rural drinking-water sources (wells, public taps,
 | **01. Idea & Impact** | Concrete environmental public health solution: allocates scarce water-testing kits to protect the maximum number of vulnerable citizens. |
 | **02. Built on AWS** | Employs AWS's open-source **Cedar Policy Engine** (`cedarpy`) for security and safety guardrails. Fully containerized with `Dockerfile` and `docker-compose.yml` for AWS App Runner/EC2. |
 | **03. Design & Usability** | Intuitive dark-mode GIS canvas, visual "WHY?" breakdown drawers, interactive Cedar Policy Studio, and one-click field dispatch export. |
-| **04. Execution** | **37/37 Pytest tests passing**, **10/10 automated integrity checks**, reproducible benchmark script with empirical gains. |
-| **05. 3-Min Demo Video** | Clear 180-second walkthrough covering the environmental challenge, transparent scoring, optimizer lift, and AWS Cedar safety moment. |
+| **04. Execution & Hardware** | **44/44 Pytest tests passing**, **10/10 automated integrity checks**, cyber-physical **Wokwi ESP32 hardware simulation** (`hardware/wokwi/`), reproducible benchmark script with empirical gains. |
+| **05. 3-Min Demo Video** | Clear 180-second walkthrough covering the environmental challenge, transparent scoring, Wokwi IoT simulation, optimizer lift, and AWS Cedar safety moment. |
 
 ---
 
@@ -136,8 +136,8 @@ floodsafe/
 │   │   ├── data_generator.py   # Deterministic synthetic cluster generator
 │   │   ├── geo_utils.py        # Haversine geodesics & spatial containment
 │   │   ├── main.py             # FastAPI entrypoint
-│   │   └── routers/            # REST API endpoints (Assessments, Plans, Sources)
-│   ├── tests/                  # 37 Pytest unit & integration tests
+│   │   └── routers/            # REST API endpoints (Assessments, Plans, Sources, IoT)
+│   ├── tests/                  # 44 Pytest unit & integration tests
 │   └── Dockerfile              # Container definition for AWS App Runner/EC2
 ├── frontend/
 │   ├── src/
@@ -145,6 +145,11 @@ floodsafe/
 │   │   ├── App.tsx             # Main operational dashboard
 │   │   └── index.css           # Modern dark-mode styling
 │   └── package.json
+├── hardware/
+│   └── wokwi/                  # ESP32 + HC-SR04 + SSD1306 Wokwi hardware simulation
+│       ├── sketch.ino          # Firmware for ultrasonic water depth telemetry
+│       ├── diagram.json        # Interactive circuit wiring layout
+│       └── README.md           # 1-click Wokwi simulation guide
 ├── policies/
 │   └── floodsafe.cedar         # AWS Cedar policy definition file
 ├── scripts/
@@ -154,6 +159,13 @@ floodsafe/
 ├── SUBMISSION.md               # WeMakeDevs hackathon submission dossier
 └── README.md
 ```
+
+---
+
+## 📡 Cyber-Physical IoT Ground Reality Simulation (Wokwi + ESP32)
+
+To bridge the gap between orbital satellite latency and physical ground truth, FloodSafe features a complete in-situ hydrometric hardware simulation in [`hardware/wokwi/`](hardware/wokwi/README.md):
+* **1-Click Live Simulation**: Open 👉 **[wokwi.com/projects/477569569661872129](https://wokwi.com/projects/477569569661872129)** to run the live ESP32 simulation directly in your browser. Interact with the ultrasonic sensor distance slider to trigger flood overtopping alarms and stream live JSON telemetry!
 
 ---
 

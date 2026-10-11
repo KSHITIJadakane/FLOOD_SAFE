@@ -45,6 +45,19 @@ class UserRole(str, Enum):
     ADMIN = "admin"
 
 
+class IoTSensorType(str, Enum):
+    WATER_LEVEL_ULTRASONIC = "water_level_ultrasonic"
+    SUBMERSIBLE_PRESSURE = "submersible_pressure"
+    DRAIN_OVERFLOW_GAUGE = "drain_overflow_gauge"
+
+
+class IoTSensorStatus(str, Enum):
+    NORMAL = "normal"
+    ALERT = "alert"
+    FLOODED = "flooded"
+    OFFLINE = "offline"
+
+
 # GeoJSON Types
 class GeoPoint(BaseModel):
     type: str = "Point"
@@ -68,6 +81,24 @@ class FloodEvent(BaseModel):
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
+class IoTSensorNode(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid4()))
+    node_code: str
+    ward_id: str
+    name: str
+    latitude: float
+    longitude: float
+    sensor_type: IoTSensorType = IoTSensorType.WATER_LEVEL_ULTRASONIC
+    current_water_level_m: float = 0.0
+    alert_threshold_m: float = 0.35
+    flood_threshold_m: float = 0.80
+    rate_of_rise_m_per_hr: float = 0.0
+    status: IoTSensorStatus = IoTSensorStatus.NORMAL
+    battery_pct: int = 95
+    last_heartbeat: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    is_synthetic: bool = True
+
+
 class WaterSource(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
     source_code: str
@@ -84,6 +115,9 @@ class WaterSource(BaseModel):
     elevation_m: Optional[float] = None  # DEM height in meters
     topographic_wetness_index: Optional[float] = None  # TWI hydrologic accumulation
     sar_backscatter_db: Optional[float] = None  # Sentinel-1 SAR radar backscatter
+    nearest_iot_node_id: Optional[str] = None
+    iot_water_level_m: Optional[float] = None
+    iot_status: Optional[str] = None
     data_quality_status: str = "complete"  # complete / partial / stale
     is_synthetic: bool = True
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
@@ -119,6 +153,9 @@ class ScoredSource(BaseModel):
     elevation_m: Optional[float] = None
     topographic_wetness_index: Optional[float] = None
     sar_backscatter_db: Optional[float] = None
+    nearest_iot_node_id: Optional[str] = None
+    iot_water_level_m: Optional[float] = None
+    iot_status: Optional[str] = None
     spatial_uplift: float = 0.0
     uplift_sources: List[Dict[str, Any]] = Field(default_factory=list)
     explanation: str

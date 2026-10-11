@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = "sketch.ino"
+elf = ""
+project_url = "https://wokwi.com/projects/477569569661872129"

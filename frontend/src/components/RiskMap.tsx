@@ -8,12 +8,13 @@ import {
   Tooltip,
 } from 'react-leaflet';
 import { Play, Pause, RotateCcw, FastForward, Sparkles } from 'lucide-react';
-import { ScoredSource, TestingPlan } from '../types';
+import { ScoredSource, TestingPlan, IoTSensorNode } from '../types';
 
 interface RiskMapProps {
   sources: ScoredSource[];
   plan: TestingPlan | null;
   floodGeometry: any;
+  iotSensors?: IoTSensorNode[];
   onSelectSource: (source: ScoredSource) => void;
 }
 
@@ -36,11 +37,14 @@ export const RiskMap: React.FC<RiskMapProps> = ({
   sources,
   plan,
   floodGeometry,
+  iotSensors = [],
   onSelectSource,
 }) => {
   const [showFlood, setShowFlood] = useState(true);
   const [showSources, setShowSources] = useState(true);
   const [showCoverageCircles, setShowCoverageCircles] = useState(true);
+  const [showIoTSensors, setShowIoTSensors] = useState(true);
+  const [selectedIoTNode, setSelectedIoTNode] = useState<IoTSensorNode | null>(null);
   const [basemapStyle, setBasemapStyle] = useState<'satellite' | 'streets'>('satellite');
 
   // Interactive Greedy Animation Replay State
@@ -231,10 +235,64 @@ export const RiskMap: React.FC<RiskMapProps> = ({
             />
             <span>500m Radii ({visibleSelected.length})</span>
           </label>
+          <label style={{ display: 'flex', alignItems: 'center', gap: 4, cursor: 'pointer', color: showIoTSensors ? 'var(--brand-text)' : 'var(--ink-label)', fontWeight: showIoTSensors ? 600 : 400 }}>
+            <input
+              type="checkbox"
+              checked={showIoTSensors}
+              onChange={(e) => setShowIoTSensors(e.target.checked)}
+            />
+            <span>📡 Ground IoT ({iotSensors.length})</span>
+          </label>
         </div>
       </div>
 
       <div className="map-container-frame">
+        {/* Selected IoT Station HUD */}
+        {selectedIoTNode && (
+          <div className="map-replay-hud animate-fade-in" style={{ right: 20, left: 'auto', minWidth: 260 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <span style={{ fontSize: 10, fontFamily: 'var(--mono)', letterSpacing: '0.08em', color: '#38BDF8', textTransform: 'uppercase', fontWeight: 700 }}>
+                📡 IN-SITU IOT TELEMETRY
+              </span>
+              <button
+                onClick={() => setSelectedIoTNode(null)}
+                style={{ background: 'none', border: 'none', color: '#94A3B8', cursor: 'pointer', fontSize: 13 }}
+              >
+                ✕
+              </button>
+            </div>
+            <div style={{ fontSize: 15, fontWeight: 700, fontFamily: 'var(--mono)', color: '#FFFFFF', marginBottom: 2 }}>
+              {selectedIoTNode.node_code}
+            </div>
+            <div style={{ fontSize: 12, color: '#94A3B8', marginBottom: 6 }}>
+              {selectedIoTNode.name} ({selectedIoTNode.ward_id})
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, fontFamily: 'var(--mono)', color: '#CBD5E1', marginBottom: 3 }}>
+              <span>Water Level:</span>
+              <strong style={{ color: selectedIoTNode.status === 'flooded' ? '#F87171' : selectedIoTNode.status === 'alert' ? '#FBBF24' : '#38BDF8' }}>
+                {selectedIoTNode.current_water_level_m.toFixed(2)}m (Thresh: {selectedIoTNode.flood_threshold_m.toFixed(2)}m)
+              </strong>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, fontFamily: 'var(--mono)', color: '#CBD5E1', marginBottom: 3 }}>
+              <span>Operating Status:</span>
+              <strong style={{ textTransform: 'uppercase', color: selectedIoTNode.status === 'flooded' ? '#F87171' : selectedIoTNode.status === 'alert' ? '#FBBF24' : '#34D399' }}>
+                {selectedIoTNode.status}
+              </strong>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, fontFamily: 'var(--mono)', color: '#CBD5E1', marginBottom: 3 }}>
+              <span>Rate of Rise:</span>
+              <span>{selectedIoTNode.rate_of_rise_m_per_hr >= 0 ? '+' : ''}{selectedIoTNode.rate_of_rise_m_per_hr.toFixed(2)} m/hr</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, fontFamily: 'var(--mono)', color: '#CBD5E1' }}>
+              <span>Battery:</span>
+              <span>{selectedIoTNode.battery_pct}%</span>
+            </div>
+            <div style={{ marginTop: 8, paddingTop: 6, borderTop: '1px solid rgba(255,255,255,0.15)', fontSize: 10, color: '#38BDF8', fontFamily: 'var(--mono)' }}>
+              ✦ Real-time ground truth for Sentinel-1 radar calibration
+            </div>
+          </div>
+        )}
+
         {/* Live Replay HUD Overlay */}
         {plan && currentActivePick && animatedStep > 0 && (
           <div className="map-replay-hud animate-fade-in">
@@ -356,6 +414,92 @@ export const RiskMap: React.FC<RiskMapProps> = ({
                 </CircleMarker>
               );
             })}
+
+          {/* In-Situ Ground IoT Telemetry Hydrometric Stations */}
+          {showIoTSensors &&
+            iotSensors &&
+            iotSensors.map((node) => {
+              const isFlooded = node.status === 'flooded';
+              const isAlert = node.status === 'alert';
+              const isOffline = node.status === 'offline';
+              const sensorColor = isFlooded ? '#EF4444' : isAlert ? '#F59E0B' : isOffline ? '#64748B' : '#0284C7';
+
+              return (
+                <React.Fragment key={`iot-${node.id}`}>
+                  {(isFlooded || isAlert) && (
+                    <CircleMarker
+                      center={[node.latitude, node.longitude]}
+                      radius={16}
+                      pathOptions={{
+                        color: sensorColor,
+                        fillColor: sensorColor,
+                        fillOpacity: 0.16,
+                        weight: 1.5,
+                        dashArray: '2, 3',
+                      }}
+                    />
+                  )}
+                  <CircleMarker
+                    center={[node.latitude, node.longitude]}
+                    radius={8.5}
+                    pathOptions={{
+                      color: '#FFFFFF',
+                      fillColor: sensorColor,
+                      fillOpacity: 1,
+                      weight: 2.5,
+                    }}
+                    eventHandlers={{
+                      click: () => setSelectedIoTNode(node),
+                    }}
+                  >
+                    <Tooltip sticky>
+                      <div style={{ padding: 4, fontSize: 12.5, fontFamily: 'Inter, sans-serif' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                          <span style={{ fontSize: 13, fontFamily: 'JetBrains Mono', fontWeight: 700, color: '#0F172A' }}>
+                            📡 {node.node_code}
+                          </span>
+                          <span
+                            style={{
+                              fontSize: 10,
+                              fontFamily: 'JetBrains Mono',
+                              fontWeight: 700,
+                              padding: '1px 5px',
+                              borderRadius: 3,
+                              background: isFlooded ? '#FEE2E2' : isAlert ? '#FEF3C7' : isOffline ? '#E2E8F0' : '#E0F2FE',
+                              color: isFlooded ? '#991B1B' : isAlert ? '#92400E' : isOffline ? '#475569' : '#0369A1',
+                              textTransform: 'uppercase',
+                            }}
+                          >
+                            {node.status}
+                          </span>
+                        </div>
+                        <div style={{ color: '#334155', fontWeight: 600, marginBottom: 2 }}>{node.name}</div>
+                        <div style={{ fontSize: 11.5, color: '#64748B', fontFamily: 'JetBrains Mono' }}>
+                          Ward: {node.ward_id} · Type: {node.sensor_type.replace(/_/g, ' ')}
+                        </div>
+                        <div style={{ marginTop: 6, paddingTop: 4, borderTop: '1px solid #E2E8F0', display: 'flex', justifyContent: 'space-between', gap: 8, fontSize: 12, fontFamily: 'JetBrains Mono' }}>
+                          <span>Water Level:</span>
+                          <strong style={{ color: isFlooded ? '#DC2626' : isAlert ? '#D97706' : '#0284C7' }}>
+                            {node.current_water_level_m.toFixed(2)}m / {node.flood_threshold_m.toFixed(2)}m
+                          </strong>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, fontSize: 11, color: '#64748B', fontFamily: 'JetBrains Mono' }}>
+                          <span>Rise Rate:</span>
+                          <span>{node.rate_of_rise_m_per_hr >= 0 ? '+' : ''}{node.rate_of_rise_m_per_hr.toFixed(2)} m/hr</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, fontSize: 11, color: '#64748B', fontFamily: 'JetBrains Mono' }}>
+                          <span>Battery:</span>
+                          <span>{node.battery_pct}%</span>
+                        </div>
+                        <div style={{ marginTop: 4, fontSize: 10, color: '#0369A1', fontFamily: 'JetBrains Mono', fontStyle: 'italic' }}>
+                          ✦ In-situ ground truth for satellite cross-validation
+                        </div>
+                      </div>
+                    </Tooltip>
+                  </CircleMarker>
+                </React.Fragment>
+              );
+            })}
         </MapContainer>
       </div>
 
@@ -382,6 +526,10 @@ export const RiskMap: React.FC<RiskMapProps> = ({
           <span style={{ display: 'flex', alignItems: 'center', gap: 4, marginLeft: 6 }}>
             <span style={{ width: 10, height: 10, border: '2px solid #5EEAD4', background: '#0D9488' }} />
             Greedy Selection ({visibleSelected.length})
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 4, marginLeft: 6 }}>
+            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#0284C7', border: '1px solid #FFFFFF' }} />
+            📡 Ground IoT ({iotSensors.length})
           </span>
         </div>
         <div style={{ fontSize: 11, color: 'var(--ink-muted)' }}>

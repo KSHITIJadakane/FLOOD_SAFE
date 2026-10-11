@@ -9,8 +9,9 @@ from backend.app.models import (
     AssessmentRun,
     TestingPlan,
     FieldTest,
+    IoTSensorNode,
 )
-from backend.app.data_generator import generate_synthetic_dataset
+from backend.app.data_generator import generate_synthetic_dataset, generate_synthetic_iot_nodes
 
 
 class StorageRepository:
@@ -24,6 +25,7 @@ class StorageRepository:
         self.latest_assessment_by_event: Dict[str, str] = {}  # event_id -> run_id
         self.testing_plans: Dict[str, TestingPlan] = {}  # plan_id -> TestingPlan
         self.field_tests: Dict[str, List[FieldTest]] = {}  # event_id -> tests
+        self.iot_nodes: Dict[str, IoTSensorNode] = {}  # node_id -> IoTSensorNode
 
     def seed_default_data(self, seed: int = 42) -> FloodEvent:
         with self._lock:
@@ -33,7 +35,24 @@ class StorageRepository:
             for s in sources:
                 self.sources[s.id] = s
                 self.sources_by_code[s.source_code] = s
+            iot_nodes = generate_synthetic_iot_nodes(seed=seed)
+            for node in iot_nodes:
+                self.iot_nodes[node.id] = node
             return event
+
+    def get_iot_nodes(self) -> List[IoTSensorNode]:
+        with self._lock:
+            if not self.iot_nodes:
+                for node in generate_synthetic_iot_nodes():
+                    self.iot_nodes[node.id] = node
+            return list(self.iot_nodes.values())
+
+    def get_iot_node_by_id(self, node_id: str) -> Optional[IoTSensorNode]:
+        with self._lock:
+            if not self.iot_nodes:
+                for node in generate_synthetic_iot_nodes():
+                    self.iot_nodes[node.id] = node
+            return self.iot_nodes.get(node_id)
 
     def get_event(self, event_id: str) -> Optional[FloodEvent]:
         with self._lock:

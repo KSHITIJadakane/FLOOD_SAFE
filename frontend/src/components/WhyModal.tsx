@@ -134,9 +134,9 @@ export const WhyModal: React.FC<WhyModalProps> = ({ source, onClose }) => {
           <div style={{ marginBottom: 20, background: 'rgba(30, 41, 59, 0.4)', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: 'var(--radius-container)', padding: 14 }}>
             <div className="mono-eyebrow" style={{ margin: '0 0 10px 0', color: '#38bdf8' }}>
               <span className="dot" style={{ background: '#38bdf8' }} />
-              <span>SATELLITE SAR &amp; DEM HYDROLOGICAL INDICATORS</span>
+              <span>SATELLITE SAR, DEM &amp; IN-SITU IOT GROUND TELEMETRY</span>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10 }}>
               <div style={{ background: 'var(--surface)', padding: '8px 10px', borderRadius: 4, border: '1px solid var(--line-card)' }}>
                 <div style={{ fontSize: 10, fontFamily: 'var(--mono)', color: 'var(--ink-label)', textTransform: 'uppercase' }}>DEM Elevation</div>
                 <div style={{ fontSize: 15, fontWeight: 600, fontFamily: 'var(--mono)', color: 'var(--ink)', marginTop: 2 }}>
@@ -155,9 +155,19 @@ export const WhyModal: React.FC<WhyModalProps> = ({ source, onClose }) => {
                   {current.sar_backscatter_db !== undefined ? `${current.sar_backscatter_db} dB` : 'N/A'}
                 </div>
               </div>
+              <div style={{ background: 'var(--surface)', padding: '8px 10px', borderRadius: 4, border: '1px solid var(--line-card)' }}>
+                <div style={{ fontSize: 10, fontFamily: 'var(--mono)', color: 'var(--ink-label)', textTransform: 'uppercase' }}>In-Situ Ground IoT</div>
+                <div style={{ fontSize: 15, fontWeight: 600, fontFamily: 'var(--mono)', color: current.iot_status === 'flooded' ? 'var(--danger)' : current.iot_status === 'alert' ? 'var(--warning)' : current.iot_status === 'offline' ? 'var(--ink-muted)' : 'var(--brand-text)', marginTop: 2 }}>
+                  {current.iot_water_level_m !== undefined && current.iot_water_level_m !== null
+                    ? `${current.iot_water_level_m.toFixed(2)}m (${current.iot_status || 'normal'})`
+                    : current.iot_status === 'offline'
+                    ? 'Offline (0.50 Prior)'
+                    : 'N/A'}
+                </div>
+              </div>
             </div>
             <div style={{ fontSize: 11, color: 'var(--ink-muted)', marginTop: 8, fontFamily: 'var(--mono)' }}>
-              ✦ Specular radar backscatter &lt; -16dB indicates standing surface water pooling around source perimeter.
+              ✦ Fused Remote Sensing + In-Situ IoT: Satellite SAR provides macro radar backscatter, while municipal IoT depth sensors deliver real-time ground truth.
             </div>
           </div>
         )}

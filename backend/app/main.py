@@ -23,6 +23,7 @@ from backend.app.routers.risk_map import router as risk_map_router
 from backend.app.routers.audit import router as audit_router
 from backend.app.routers.config_router import router as config_router
 from backend.app.routers.satellite import router as satellite_router
+from backend.app.routers.iot_sensors import router as iot_sensors_router
 
 
 @asynccontextmanager
@@ -67,6 +68,7 @@ app.include_router(risk_map_router)
 app.include_router(audit_router)
 app.include_router(config_router)
 app.include_router(satellite_router)
+app.include_router(iot_sensors_router)
 
 
 @app.post(

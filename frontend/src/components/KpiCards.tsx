@@ -5,9 +5,10 @@ import { TrendingUp, Users, Droplets, Shuffle } from 'lucide-react';
 interface KpiCardsProps {
   sources: ScoredSource[];
   plan: TestingPlan | null;
+  iotSensors?: import('../types').IoTSensorNode[];
 }
 
-export const KpiCards: React.FC<KpiCardsProps> = ({ sources, plan }) => {
+export const KpiCards: React.FC<KpiCardsProps> = ({ sources, plan, iotSensors = [] }) => {
   const totalSources = sources.length;
   const veryHighCount = sources.filter((s) => s.band === 'very_high').length;
   const highCount = sources.filter((s) => s.band === 'high').length;
@@ -46,15 +47,20 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ sources, plan }) => {
         </div>
       </div>
 
-      {/* KPI 3: Monitored Water Points */}
+      {/* KPI 3: Monitored Water Points & In-Situ IoT */}
       <div className="kpi-card-metric">
         <div className="kpi-card-top">
-          <span className="kpi-title">Monitored Water Assets</span>
+          <span className="kpi-title">Monitored Assets &amp; Ground IoT</span>
           <span className="kpi-badge-neutral">{totalSources} sources</span>
         </div>
         <div className="kpi-primary-val">{totalSources}</div>
         <div className="kpi-explanation">
-          <span className="risk-dot-crimson">● {veryHighCount} Critical</span> · <span className="risk-dot-amber">● {highCount} High</span> · {modCount + lowCount} Mod/Low
+          <span className="risk-dot-crimson">● {veryHighCount} Critical</span> · <span className="risk-dot-amber">● {highCount} High</span>
+          {iotSensors.length > 0 && (
+            <div style={{ marginTop: 3, color: 'var(--brand-text)', fontWeight: 600, fontFamily: 'var(--mono)', fontSize: 11 }}>
+              📡 {iotSensors.filter(n => n.status !== 'offline').length}/{iotSensors.length} IoT Nodes Live
+            </div>
+          )}
         </div>
       </div>
 

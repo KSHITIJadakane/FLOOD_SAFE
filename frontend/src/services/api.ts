@@ -142,3 +142,17 @@ export const resetRiskWeights = async (): Promise<import('../types').RiskConfigD
   const res = await api.post('/config/risk/reset');
   return res.data;
 };
+
+export const fetchIoTSensors = async (wardId?: string): Promise<import('../types').IoTSensorNode[]> => {
+  const res = await api.get('/iot-sensors', { params: { ward_id: wardId } });
+  return res.data;
+};
+
+export const updateIoTTelemetry = async (
+  nodeId: string,
+  payload: { current_water_level_m: number; rate_of_rise_m_per_hr?: number; status?: string }
+): Promise<import('../types').IoTSensorNode> => {
+  const res = await api.patch(`/iot-sensors/${nodeId}/telemetry`, payload);
+  return res.data;
+};
+

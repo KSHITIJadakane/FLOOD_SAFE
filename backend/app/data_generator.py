@@ -12,6 +12,9 @@ from backend.app.models import (
     WaterSource,
     PopulationUnit,
     SourceType,
+    IoTSensorNode,
+    IoTSensorType,
+    IoTSensorStatus,
 )
 from backend.app.geo_utils import point_in_polygon, compute_source_vulnerability_score
 
@@ -51,6 +54,183 @@ def create_synthetic_flood_geometry(center_lat: float = CENTER_LAT, center_lon: 
         "type": "MultiPolygon",
         "coordinates": [[poly1], [poly2]],
     }
+
+
+def generate_synthetic_iot_nodes(
+    seed: int = 42,
+    center_lat: float = CENTER_LAT,
+    center_lon: float = CENTER_LON,
+) -> List[IoTSensorNode]:
+    """Generates synthetic in-situ IoT telemetry sensor stations across municipal wards."""
+    ward_configs = [
+        {
+            "ward_id": "Ward-1-NorthReach",
+            "name": "North Reach River Station",
+            "lat": center_lat + 0.032,
+            "lon": center_lon + 0.021,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 0.65,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.18,
+            "status": IoTSensorStatus.ALERT,
+        },
+        {
+            "ward_id": "Ward-1-NorthReach",
+            "name": "North Canal Spillway Gauge",
+            "lat": center_lat + 0.028,
+            "lon": center_lon + 0.018,
+            "sensor_type": IoTSensorType.DRAIN_OVERFLOW_GAUGE,
+            "level": 0.42,
+            "alert_thresh": 0.30,
+            "flood_thresh": 0.70,
+            "rise": 0.12,
+            "status": IoTSensorStatus.ALERT,
+        },
+        {
+            "ward_id": "Ward-2-CentralBasin",
+            "name": "Central Basin Primary Hydrometric",
+            "lat": center_lat + 0.002,
+            "lon": center_lon + 0.001,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 1.28,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.45,
+            "status": IoTSensorStatus.FLOODED,
+        },
+        {
+            "ward_id": "Ward-2-CentralBasin",
+            "name": "Central Storm Drain Outfall Node",
+            "lat": center_lat - 0.005,
+            "lon": center_lon - 0.004,
+            "sensor_type": IoTSensorType.DRAIN_OVERFLOW_GAUGE,
+            "level": 1.15,
+            "alert_thresh": 0.30,
+            "flood_thresh": 0.70,
+            "rise": 0.38,
+            "status": IoTSensorStatus.FLOODED,
+        },
+        {
+            "ward_id": "Ward-3-EastLowlands",
+            "name": "East Lowlands Overflow Basin Gauge",
+            "lat": center_lat - 0.018,
+            "lon": center_lon + 0.037,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 0.96,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.32,
+            "status": IoTSensorStatus.FLOODED,
+        },
+        {
+            "ward_id": "Ward-3-EastLowlands",
+            "name": "East Retention Basin Submersible",
+            "lat": center_lat - 0.024,
+            "lon": center_lon + 0.032,
+            "sensor_type": IoTSensorType.SUBMERSIBLE_PRESSURE,
+            "level": 0.0,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.0,
+            "status": IoTSensorStatus.OFFLINE,  # Offline node to test neutral imputation
+        },
+        {
+            "ward_id": "Ward-4-SouthDelta",
+            "name": "South Delta Confluence Telemetry",
+            "lat": center_lat - 0.034,
+            "lon": center_lon - 0.012,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 0.58,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.15,
+            "status": IoTSensorStatus.ALERT,
+        },
+        {
+            "ward_id": "Ward-4-SouthDelta",
+            "name": "South Marsh Sluice Monitor",
+            "lat": center_lat - 0.038,
+            "lon": center_lon - 0.008,
+            "sensor_type": IoTSensorType.DRAIN_OVERFLOW_GAUGE,
+            "level": 0.48,
+            "alert_thresh": 0.30,
+            "flood_thresh": 0.70,
+            "rise": 0.14,
+            "status": IoTSensorStatus.ALERT,
+        },
+        {
+            "ward_id": "Ward-5-WestHighland",
+            "name": "West Highland Ridge Station",
+            "lat": center_lat + 0.012,
+            "lon": center_lon - 0.039,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 0.09,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.0,
+            "status": IoTSensorStatus.NORMAL,
+        },
+        {
+            "ward_id": "Ward-5-WestHighland",
+            "name": "West Terrace Culvert Sensor",
+            "lat": center_lat + 0.008,
+            "lon": center_lon - 0.042,
+            "sensor_type": IoTSensorType.DRAIN_OVERFLOW_GAUGE,
+            "level": 0.12,
+            "alert_thresh": 0.30,
+            "flood_thresh": 0.70,
+            "rise": 0.0,
+            "status": IoTSensorStatus.NORMAL,
+        },
+        {
+            "ward_id": "Ward-6-RiverCorridor",
+            "name": "River Corridor Urban Gauge A",
+            "lat": center_lat + 0.014,
+            "lon": center_lon + 0.016,
+            "sensor_type": IoTSensorType.WATER_LEVEL_ULTRASONIC,
+            "level": 1.42,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.52,
+            "status": IoTSensorStatus.FLOODED,
+        },
+        {
+            "ward_id": "Ward-6-RiverCorridor",
+            "name": "River Corridor Bridge Telemetry B",
+            "lat": center_lat + 0.018,
+            "lon": center_lon + 0.013,
+            "sensor_type": IoTSensorType.SUBMERSIBLE_PRESSURE,
+            "level": 1.35,
+            "alert_thresh": 0.35,
+            "flood_thresh": 0.80,
+            "rise": 0.48,
+            "status": IoTSensorStatus.FLOODED,
+        },
+    ]
+
+    nodes: List[IoTSensorNode] = []
+    for idx, cfg in enumerate(ward_configs):
+        code = f"IOT-SENS-{idx+1:02d}"
+        battery = 98 - (idx % 4) * 5 if cfg["status"] != IoTSensorStatus.OFFLINE else 12
+        nodes.append(
+            IoTSensorNode(
+                node_code=code,
+                ward_id=cfg["ward_id"],
+                name=cfg["name"],
+                latitude=round(cfg["lat"], 6),
+                longitude=round(cfg["lon"], 6),
+                sensor_type=cfg["sensor_type"],
+                current_water_level_m=round(cfg["level"], 2),
+                alert_threshold_m=round(cfg["alert_thresh"], 2),
+                flood_threshold_m=round(cfg["flood_thresh"], 2),
+                rate_of_rise_m_per_hr=round(cfg["rise"], 2),
+                status=cfg["status"],
+                battery_pct=battery,
+                is_synthetic=True,
+            )
+        )
+    return nodes
 
 
 def generate_synthetic_dataset(
@@ -94,6 +274,8 @@ def generate_synthetic_dataset(
     source_weights = [0.45, 0.40, 0.15]
 
     sources: List[WaterSource] = []
+
+    iot_nodes = generate_synthetic_iot_nodes(seed=seed, center_lat=center_lat, center_lon=center_lon)
 
     for i in range(num_sources):
         cluster = rng.choice(clusters)
@@ -140,7 +322,16 @@ def generate_synthetic_dataset(
         has_drain = rng.random() > 0.10  # 10% missing drain distance
         actual_drain_dist = drain_dist if has_drain else None
 
-        if not has_history or not has_drain:
+        # Link in-situ IoT telemetry sensor for ground reality
+        ward_nodes = [node for node in iot_nodes if node.ward_id == cluster["ward"]]
+        if not ward_nodes:
+            ward_nodes = iot_nodes
+        nearest_node = min(ward_nodes, key=lambda n: math.hypot(lat - n.latitude, lon - n.longitude))
+        iot_id = nearest_node.id
+        iot_lvl = nearest_node.current_water_level_m if nearest_node.status != IoTSensorStatus.OFFLINE else None
+        iot_st = nearest_node.status.value
+
+        if not has_history or not has_drain or iot_lvl is None:
             quality_status = "partial"
         else:
             quality_status = "complete"
@@ -172,6 +363,9 @@ def generate_synthetic_dataset(
                 elevation_m=elevation,
                 topographic_wetness_index=twi_value,
                 sar_backscatter_db=sar_db,
+                nearest_iot_node_id=iot_id,
+                iot_water_level_m=iot_lvl,
+                iot_status=iot_st,
                 data_quality_status=quality_status,
                 is_synthetic=True,
             )

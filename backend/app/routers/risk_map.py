@@ -89,6 +89,9 @@ def get_risk_map_geojson(
                 "quality_score": src.quality_score,
                 "data_quality": src.data_quality,
                 "missing_features": src.missing_features,
+                "nearest_iot_node_id": src.nearest_iot_node_id,
+                "iot_water_level_m": src.iot_water_level_m,
+                "iot_status": src.iot_status,
                 "is_selected": sel_order is not None,
                 "selection_order": sel_order,
                 "is_synthetic": True,
@@ -115,6 +118,33 @@ def get_risk_map_geojson(
                     "is_synthetic": True,
                 }
             })
+
+    # 4. In-Situ IoT Ground Telemetry Stations
+    for node in storage.get_iot_nodes():
+        features.append({
+            "type": "Feature",
+            "id": f"iot-{node.id}",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [node.longitude, node.latitude],
+            },
+            "properties": {
+                "layer_type": "iot_sensor",
+                "node_id": node.id,
+                "node_code": node.node_code,
+                "ward_id": node.ward_id,
+                "name": node.name,
+                "sensor_type": node.sensor_type.value,
+                "current_water_level_m": node.current_water_level_m,
+                "flood_threshold_m": node.flood_threshold_m,
+                "alert_threshold_m": node.alert_threshold_m,
+                "rate_of_rise_m_per_hr": node.rate_of_rise_m_per_hr,
+                "status": node.status.value,
+                "battery_pct": node.battery_pct,
+                "last_heartbeat": node.last_heartbeat.isoformat(),
+                "is_synthetic": True,
+            }
+        })
 
     return {
         "type": "FeatureCollection",

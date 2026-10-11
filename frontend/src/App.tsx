@@ -11,6 +11,7 @@ import {
   QueueItem,
   TestingPlan,
   UserRole,
+  IoTSensorNode,
 } from './types';
 import {
   fetchEvents,
@@ -20,6 +21,7 @@ import {
   createTestingPlan,
   runRiskAssessment,
   setDemoRole,
+  fetchIoTSensors,
 } from './services/api';
 
 import { SyntheticBanner } from './components/SyntheticBanner';
@@ -50,6 +52,7 @@ export const App: React.FC = () => {
   const [queue, setQueue] = useState<QueueItem[]>([]);
   const [plan, setPlan] = useState<TestingPlan | null>(null);
   const [floodGeometry, setFloodGeometry] = useState<any>(null);
+  const [iotSensors, setIotSensors] = useState<IoTSensorNode[]>([]);
 
   const [capacityK, setCapacityK] = useState<number>(15);
   const [loading, setLoading] = useState<boolean>(true);
@@ -70,13 +73,15 @@ export const App: React.FC = () => {
       setActiveEvent(ev);
 
       if (ev) {
-        const [srcs, q, mapGeo] = await Promise.all([
+        const [srcs, q, mapGeo, sensors] = await Promise.all([
           fetchSources({ event_id: ev.id }),
           fetchTestingQueue(ev.id),
           fetchRiskMapGeoJSON(ev.id),
+          fetchIoTSensors(),
         ]);
         setSources(srcs);
         setQueue(q);
+        setIotSensors(sensors || []);
 
         const floodFeature = mapGeo.features.find(
           (f: any) => f.properties?.layer_type === 'flood_zone'
@@ -210,7 +215,7 @@ export const App: React.FC = () => {
             />
 
             {/* High-Density KPI Metric Grid */}
-            <KpiCards sources={sources} plan={plan} />
+            <KpiCards sources={sources} plan={plan} iotSensors={iotSensors} />
 
             {/* Interactive Capacity Controls Bar */}
             <div className="panel-paper" style={{ marginBottom: 20, padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
@@ -279,6 +284,7 @@ export const App: React.FC = () => {
                 sources={sources}
                 floodGeometry={floodGeometry}
                 plan={plan}
+                iotSensors={iotSensors}
                 onSelectSource={(src) => setSelectedWhySource(src)}
               />
               <SelectedSitesStream

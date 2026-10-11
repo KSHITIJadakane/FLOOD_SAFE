@@ -14,6 +14,27 @@ export interface FloodEvent {
   created_at: string;
 }
 
+export type IoTSensorType = 'water_level_ultrasonic' | 'submersible_pressure' | 'drain_overflow_gauge';
+export type IoTSensorStatus = 'normal' | 'alert' | 'flooded' | 'offline';
+
+export interface IoTSensorNode {
+  id: string;
+  node_code: string;
+  ward_id: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  sensor_type: IoTSensorType;
+  current_water_level_m: number;
+  alert_threshold_m: number;
+  flood_threshold_m: number;
+  rate_of_rise_m_per_hr: number;
+  status: IoTSensorStatus;
+  battery_pct: number;
+  last_heartbeat: string;
+  is_synthetic: boolean;
+}
+
 export interface ScoredSource {
   source_id: string;
   source_code: string;
@@ -38,6 +59,9 @@ export interface ScoredSource {
   elevation_m?: number;
   topographic_wetness_index?: number;
   sar_backscatter_db?: number;
+  nearest_iot_node_id?: string;
+  iot_water_level_m?: number | null;
+  iot_status?: string | null;
   spatial_uplift?: number;
   uplift_sources?: Array<{
     source_id: string;

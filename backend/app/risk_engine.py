@@ -24,12 +24,21 @@ def normalize_features(
     Extracts and normalizes raw source attributes into a [0.0, 1.0] scale.
     Missing features are explicitly preserved as None (no silent zeroes).
     """
-    # 1. Flood Exposure (already [0, 1] or None)
-    flood_norm = (
-        min(max(source.flood_exposure, 0.0), 1.0)
-        if source.flood_exposure is not None
-        else None
-    )
+    # 1. Flood Exposure (fusing satellite SAR + ground IoT telemetry when available)
+    raw_flood = source.flood_exposure
+    if source.iot_water_level_m is not None:
+        # Ground telemetry water level normalized against 0.80m overtopping flood threshold
+        iot_norm = min(max(source.iot_water_level_m / 0.80, 0.0), 1.0)
+        if raw_flood is not None:
+            # Multi-source sensor fusion: 55% satellite radar exposure + 45% ground IoT sensor telemetry
+            fused_flood = round(0.55 * raw_flood + 0.45 * iot_norm, 4)
+        else:
+            fused_flood = iot_norm
+        flood_norm = min(max(fused_flood, 0.0), 1.0)
+    elif raw_flood is not None:
+        flood_norm = min(max(raw_flood, 0.0), 1.0)
+    else:
+        flood_norm = None
 
     # 2. Drain Proximity Risk (closer to drain -> higher risk)
     drain_norm = (
@@ -90,6 +99,8 @@ def generate_source_explanation(
     population_served: int,
     spatial_uplift: float = 0.0,
     uplift_sources: List[Dict[str, Any]] | None = None,
+    iot_water_level_m: Optional[float] = None,
+    iot_status: Optional[str] = None,
 ) -> str:
     """
     Constructs a plain-language explanation matching exact contribution values.
@@ -110,6 +121,12 @@ def generate_source_explanation(
         origin_codes = ", ".join([f"{u.get('source_code')} ({u.get('distance_m')}m)" for u in uplift_sources[:2]])
         uplift_text = f" Includes +{spatial_uplift:.3f} dynamic spatial uplift propagated from nearby abnormal test results [{origin_codes}]."
 
+    iot_text = ""
+    if iot_water_level_m is not None:
+        iot_text = f" Corroborated by ground IoT station ({iot_status or 'active'}, water level: {iot_water_level_m:.2f}m)."
+    elif iot_status == "offline":
+        iot_text = " Ground IoT telemetry offline (neutral prior imputed)."
+
     missing_text = ""
     if missing_features:
         missing_names = ", ".join(m.replace("_", " ") for m in missing_features)
@@ -119,7 +136,7 @@ def generate_source_explanation(
 
     explanation = (
         f"Source {source_code} has a relative vulnerability score of {score:.2f} ({band.value} band). "
-        f"Prioritized primarily due to {top_text}, serving ~{population_served:,} residents.{uplift_text}{missing_text} "
+        f"Prioritized primarily due to {top_text}, serving ~{population_served:,} residents.{iot_text}{uplift_text}{missing_text} "
         f"This score establishes field verification priority and is not evidence of water contamination."
     )
     return explanation
@@ -172,6 +189,8 @@ def score_single_source(
         population_served=source.population_served,
         spatial_uplift=neighbor_uplift,
         uplift_sources=uplift_list,
+        iot_water_level_m=source.iot_water_level_m,
+        iot_status=source.iot_status,
     )
 
     return ScoredSource(
@@ -192,6 +211,9 @@ def score_single_source(
         elevation_m=source.elevation_m,
         topographic_wetness_index=source.topographic_wetness_index,
         sar_backscatter_db=source.sar_backscatter_db,
+        nearest_iot_node_id=source.nearest_iot_node_id,
+        iot_water_level_m=source.iot_water_level_m,
+        iot_status=source.iot_status,
         spatial_uplift=neighbor_uplift,
         uplift_sources=uplift_list,
         explanation=explanation,
