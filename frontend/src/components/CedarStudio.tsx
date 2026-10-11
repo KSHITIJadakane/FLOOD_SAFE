@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ShieldCheck, ShieldAlert, CheckCircle2, XCircle, Lock, AlertTriangle, Play } from 'lucide-react';
 import { UserRole } from '../types';
-import axios from 'axios';
+import { api } from '../services/api';
 
 interface CedarStudioProps {
   currentRole: UserRole;
@@ -20,7 +20,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
 
     if (!effectiveEventId) {
       try {
-        const eventsRes = await axios.get('/api/v1/events');
+        const eventsRes = await api.get('/events');
         if (eventsRes.data && eventsRes.data.length > 0) {
           effectiveEventId = eventsRes.data[0].id;
         }
@@ -31,7 +31,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
 
     if (effectiveEventId && !effectiveSourceId) {
       try {
-        const sourcesRes = await axios.get(`/api/v1/sources?event_id=${effectiveEventId}`);
+        const sourcesRes = await api.get(`/sources?event_id=${effectiveEventId}`);
         if (sourcesRes.data && sourcesRes.data.length > 0) {
           effectiveSourceId = sourcesRes.data[0].source_id;
         }
@@ -50,7 +50,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
       const { effectiveEventId, effectiveSourceId } = await getEffectiveEventAndSource();
 
       if (action === 'CreatePlan') {
-        await axios.post('/api/v1/testing-plans', {
+        await api.post('/testing-plans', {
           event_id: effectiveEventId,
           capacity_k: 5,
         }, {
@@ -63,7 +63,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
           message: `200 PERMITTED: Action 'CreatePlan' authorized for role '${currentRole.replace('_', ' ')}' under Cedar policy.`,
         });
       } else if (action === 'IssueAdvisory') {
-        await axios.post('/api/v1/advisories', {}, {
+        await api.post('/advisories', {}, {
           headers: { 'X-Demo-Role': currentRole, 'X-Demo-User': `demo-${currentRole}` }
         });
         setTestResult({
@@ -73,7 +73,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
           message: 'Permitted',
         });
       } else if (action === 'VerifiedFieldTest') {
-        await axios.post('/api/v1/field-tests', {
+        await api.post('/field-tests', {
           event_id: effectiveEventId,
           source_id: effectiveSourceId,
           test_type: 'lab',

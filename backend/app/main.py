@@ -4,11 +4,14 @@ Production-ready REST API with AWS Cedar authorization, Gzip compression,
 OpenAPI documentation, and lifecycle management.
 """
 from __future__ import annotations
+from pathlib import Path
 from contextlib import asynccontextmanager
 from typing import Tuple
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from backend.app.models import HealthResponse
 from backend.app.storage import storage
@@ -97,3 +100,26 @@ def get_health() -> HealthResponse:
         version="0.1.0",
         is_synthetic=True,
     )
+
+
+# ---------------------------------------------------------------------------
+# Frontend Static Asset & SPA Serving (All-in-One Cloud & Container Mode)
+# ---------------------------------------------------------------------------
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if frontend_dist.exists() and (frontend_dist / "index.html").exists():
+    assets_dir = frontend_dist / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="frontend-assets")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_spa(full_path: str):
+        # Allow API routes, docs, and health checks to pass through
+        if full_path.startswith("api/") or full_path in ("health", "docs", "redoc", "openapi.json"):
+            raise HTTPException(status_code=404, detail="Not Found")
+        
+        file_path = frontend_dist / full_path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(file_path)
+        
+        return FileResponse(frontend_dist / "index.html")
+

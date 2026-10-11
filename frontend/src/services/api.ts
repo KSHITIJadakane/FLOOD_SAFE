@@ -8,7 +8,9 @@ import {
   UserRole,
 } from '../types';
 
-const API_BASE = '/api/v1';
+const RAW_API_URL = import.meta.env.VITE_API_URL || '';
+const CLEAN_API_URL = RAW_API_URL.replace(/\/+$/, '');
+export const API_BASE = `${CLEAN_API_URL}/api/v1`;
 
 // Current active demo user role
 let currentRole: UserRole = 'operator';
@@ -19,7 +21,7 @@ export const setDemoRole = (role: UserRole) => {
 
 export const getDemoRole = (): UserRole => currentRole;
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: API_BASE,
 });
 
