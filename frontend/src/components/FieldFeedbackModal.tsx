@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, FlaskConical, CheckCircle2 } from 'lucide-react';
-import { recordFieldTest } from '../services/api';
+import { recordFieldTest, getDemoRole } from '../services/api';
 
 interface FieldFeedbackModalProps {
   sourceId: string | null;
@@ -42,7 +42,11 @@ export const FieldFeedbackModal: React.FC<FieldFeedbackModalProps> = ({
         onClose();
       }, 1400);
     } catch (err: any) {
-      alert(`Error submitting field test: ${err?.response?.data?.detail?.message || err.message}`);
+      if (err.response?.status === 403) {
+        alert(`🔒 403 FORBIDDEN by AWS Cedar Policy Engine:\n\nThe current role '${getDemoRole()}' is not authorized to submit field test results.\n\n👉 Solution: Switch your role to 'Field Recorder' or 'Admin' in the top-right header dropdown to record rapid tests!`);
+      } else {
+        alert(`Error submitting field test: ${err?.response?.data?.detail?.message || err.message}`);
+      }
     } finally {
       setSubmitting(false);
     }
