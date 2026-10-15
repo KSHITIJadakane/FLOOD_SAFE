@@ -169,7 +169,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="user-avatar-badge">
                 <span>🤖</span>
               </div>
-              <span className="user-profile-name">SUMEDH NIRWAN</span>
+              <span className="user-profile-name">ABHAYA DEOGADE</span>
               <span className="user-role-subtag">({currentRole.toUpperCase()})</span>
               <ChevronDown size={14} className={`dropdown-chevron ${userDropdownOpen ? 'open' : ''}`} />
             </button>
