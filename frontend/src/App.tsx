@@ -4,6 +4,7 @@ import {
   RefreshCw,
   Sparkles,
   ArrowRight,
+  ChevronDown,
 } from 'lucide-react';
 import {
   FloodEvent,
@@ -63,6 +64,7 @@ export const App: React.FC = () => {
   const [feedbackSource, setFeedbackSource] = useState<{ id: string; code: string } | null>(null);
   const [isTuningOpen, setIsTuningOpen] = useState<boolean>(false);
   const [isInspectorOpen, setIsInspectorOpen] = useState<boolean>(false);
+  const [isToolsDropdownOpen, setIsToolsDropdownOpen] = useState<boolean>(false);
 
   // Load initial data
   const loadInitialData = async () => {
@@ -244,26 +246,9 @@ export const App: React.FC = () => {
               <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
                 <button
                   className="btn btn-secondary btn-compact"
-                  onClick={() => setIsTuningOpen(true)}
-                  title="Tune MCDA Weights & Sensitivity"
-                  style={{ display: 'flex', alignItems: 'center', gap: 6 }}
-                >
-                  <Sliders size={13} />
-                  <span>What-If Weights</span>
-                </button>
-                <button
-                  className="btn btn-secondary btn-compact"
-                  onClick={() => setIsInspectorOpen(true)}
-                  title="Inspect Mathematical Proofs & Cedar Boundaries"
-                  style={{ display: 'flex', alignItems: 'center', gap: 6 }}
-                >
-                  <span>🔬</span>
-                  <span>AI Inspector</span>
-                </button>
-                <button
-                  className="btn btn-secondary btn-compact"
                   onClick={handleRefreshAssessment}
                   disabled={loading}
+                  style={{ display: 'flex', alignItems: 'center', gap: 6 }}
                 >
                   <RefreshCw size={13} className={loading ? 'animate-spin' : ''} />
                   <span>Refresh Triage</span>
@@ -272,10 +257,64 @@ export const App: React.FC = () => {
                   className="btn btn-primary btn-compact"
                   onClick={handleRunOptimizer}
                   disabled={optimizing}
+                  style={{ display: 'flex', alignItems: 'center', gap: 6 }}
                 >
                   <Sparkles size={13} />
                   <span>{optimizing ? 'Optimizing...' : 'Run Greedy Optimizer'}</span>
                 </button>
+
+                {/* Clubbed Advanced Tools Dropdown */}
+                <div style={{ position: 'relative' }}>
+                  <button
+                    className="btn btn-secondary btn-compact"
+                    onClick={() => setIsToolsDropdownOpen(!isToolsDropdownOpen)}
+                    style={{ display: 'flex', alignItems: 'center', gap: 6 }}
+                    title="What-If Sensitivity Weights and AI Mathematical Proofs"
+                  >
+                    <Sliders size={13} />
+                    <span>Advanced Tools</span>
+                    <ChevronDown size={12} className={`dropdown-chevron ${isToolsDropdownOpen ? 'open' : ''}`} />
+                  </button>
+
+                  {isToolsDropdownOpen && (
+                    <div
+                      className="nav-dropdown-menu animate-fade-in"
+                      style={{ right: 0, left: 'auto', minWidth: 260, top: 'calc(100% + 6px)' }}
+                    >
+                      <button
+                        className="nav-dropdown-item"
+                        onClick={() => {
+                          setIsTuningOpen(true);
+                          setIsToolsDropdownOpen(false);
+                        }}
+                      >
+                        <div className="nav-dropdown-icon-box">
+                          <Sliders size={14} />
+                        </div>
+                        <div>
+                          <div className="nav-dropdown-item-title">What-If Weights</div>
+                          <div className="nav-dropdown-item-desc">Tune 5 MCDA risk weights with live ranking recalculation</div>
+                        </div>
+                      </button>
+
+                      <button
+                        className="nav-dropdown-item"
+                        onClick={() => {
+                          setIsInspectorOpen(true);
+                          setIsToolsDropdownOpen(false);
+                        }}
+                      >
+                        <div className="nav-dropdown-icon-box">
+                          <Sparkles size={14} />
+                        </div>
+                        <div>
+                          <div className="nav-dropdown-item-title">AI Decision Inspector</div>
+                          <div className="nav-dropdown-item-desc">Inspect mathematical proofs & Cedar boundaries</div>
+                        </div>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
