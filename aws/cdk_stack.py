@@ -36,8 +36,29 @@ class FloodSafeCloudStack:
             "sort_key": {"name": "event_id", "type": "STRING"},
             "billing_mode": "PAY_PER_REQUEST",
         }
+        self.audit_log_table_config = {
+            "table_name": "FloodSafe_AuditLog",
+            "partition_key": {"name": "audit_id", "type": "STRING"},
+            "billing_mode": "PAY_PER_REQUEST",
+            "time_to_live_attribute": "ttl",
+        }
 
-        # 3. ECS Fargate Service / App Runner Container
+        # 3. AWS Lambda Greedy Maximum Coverage Optimizer
+        self.lambda_optimizer_config = {
+            "function_name": "floodsafe-optimizer",
+            "handler": "handler.lambda_handler",
+            "runtime": "python3.11",
+            "memory_size": 1024,
+            "timeout_seconds": 60,
+            "code_uri": "aws/lambda_optimizer/",
+            "environment_variables": {
+                "DYNAMODB_SOURCES_TABLE": "FloodSafe_WaterSources",
+                "DYNAMODB_PLANS_TABLE": "FloodSafe_TestingPlans",
+                "DYNAMODB_AUDIT_TABLE": "FloodSafe_AuditLog",
+            },
+        }
+
+        # 4. ECS Fargate Service / App Runner Container
         self.app_runner_service_config = {
             "service_name": "floodsafe-api-service",
             "cpu": "1 vCPU",
@@ -47,11 +68,14 @@ class FloodSafeCloudStack:
             "environment": {
                 "ENVIRONMENT": "production",
                 "CEDAR_POLICY_PATH": "policies/floodsafe.cedar",
-                "IS_SYNTHETIC": "true",
+                "USE_DYNAMODB": "true",
+                "DYNAMODB_SOURCES_TABLE": "FloodSafe_WaterSources",
+                "DYNAMODB_PLANS_TABLE": "FloodSafe_TestingPlans",
+                "DYNAMODB_AUDIT_TABLE": "FloodSafe_AuditLog",
             },
         }
 
-        # 4. Amazon API Gateway HTTP API
+        # 5. Amazon API Gateway HTTP API
         self.api_gateway_config = {
             "api_name": "FloodSafeHttpApi",
             "cors_preflight": {
@@ -59,6 +83,10 @@ class FloodSafeCloudStack:
                 "allow_methods": ["GET", "POST", "PUT", "DELETE"],
                 "allow_headers": ["Content-Type", "X-Demo-Role", "X-Demo-User"],
             },
+            "routes": [
+                {"path": "/optimize", "method": "POST", "target": "OptimizerFunction"},
+                {"path": "/{proxy+}", "method": "ANY", "target": "AppRunnerService"},
+            ],
         }
 
     def synthesize_manifest(self) -> dict:
@@ -70,6 +98,8 @@ class FloodSafeCloudStack:
                 "SatelliteIngestBucket": self.satellite_ingest_bucket_config,
                 "SourcesTable": self.sources_table_config,
                 "PlansTable": self.plans_table_config,
+                "AuditLogTable": self.audit_log_table_config,
+                "OptimizerFunction": self.lambda_optimizer_config,
                 "AppRunnerService": self.app_runner_service_config,
                 "ApiGateway": self.api_gateway_config,
             },

@@ -158,3 +158,25 @@ export const updateIoTTelemetry = async (
   return res.data;
 };
 
+export const fetchSatelliteSummary = async (): Promise<any> => {
+  const res = await api.get('/satellite/summary');
+  return res.data;
+};
+
+export const discoverSatelliteScenes = async (params?: {
+  lat?: number;
+  lon?: number;
+  radius_km?: number;
+  date_from?: string;
+  date_to?: string;
+  limit?: number;
+}): Promise<any> => {
+  const res = await api.get('/satellite/discover', { params });
+  return res.data;
+};
+
+export const fetchCedarDecisions = async (limit: number = 20): Promise<any[]> => {
+  const res = await api.get('/audit/cedar-decisions', { params: { limit } });
+  return res.data;
+};
+

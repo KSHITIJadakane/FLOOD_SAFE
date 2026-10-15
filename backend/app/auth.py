@@ -67,6 +67,23 @@ def authorize(
 
     result = is_authorized(request_payload, policies, entities)
 
+    # Log Cedar decision to DynamoDB audit trail if configured
+    decision_str = "ALLOW" if result.decision == Decision.Allow else "DENY"
+    try:
+        from backend.app.dynamodb_storage import get_dynamodb_storage
+        dynamo = get_dynamodb_storage()
+        if dynamo:
+            dynamo.log_cedar_decision(
+                user_id=user_id,
+                roles=roles,
+                action=action,
+                resource=resource,
+                decision=decision_str,
+                diagnostics=str(result.diagnostics) if hasattr(result, 'diagnostics') else None,
+            )
+    except Exception:
+        pass  # Audit logging is best-effort; never block authorization flow
+
     if result.decision != Decision.Allow:
         raise HTTPException(
             status_code=403,

@@ -32,3 +32,27 @@ def test_satellite_api_endpoints():
     data = res.json()
     assert "Copernicus Sentinel-1" in data["satellite_constellation"]
     assert data["total_monitored_sources"] > 0
+
+
+def test_sentinel1_stac_discovery():
+    from backend.app.stac_discovery import compute_bounding_box
+
+    # Test bounding box calculation around Guwahati, Assam (26.15, 91.75)
+    bbox = compute_bounding_box(lat=26.15, lon=91.75, radius_km=25.0)
+    assert len(bbox) == 4
+    assert bbox[0] < bbox[2]  # min_lon < max_lon
+    assert bbox[1] < bbox[3]  # min_lat < max_lat
+
+    # Test discover endpoint
+    res = client.get("/api/v1/satellite/discover?lat=26.15&lon=91.75&radius_km=25&limit=5")
+    assert res.status_code == 200
+    data = res.json()
+    assert "collection" in data
+    assert data["collection"] == "SENTINEL-1"
+    assert "scenes" in data
+    assert len(data["scenes"]) > 0
+    first_scene = data["scenes"][0]
+    assert "scene_id" in first_scene
+    assert "polarizations" in first_scene
+    assert "orbit_direction" in first_scene
+    assert "dataspace_browser_url" in first_scene

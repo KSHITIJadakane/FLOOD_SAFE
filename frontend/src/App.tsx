@@ -33,6 +33,7 @@ import { SelectedSitesStream } from './components/SelectedSitesStream';
 import { TestingQueue } from './components/TestingQueue';
 import { BenchmarkLab } from './components/BenchmarkLab';
 import { CedarStudio } from './components/CedarStudio';
+import { SatelliteExplorer } from './components/SatelliteExplorer';
 import { WhyModal } from './components/WhyModal';
 import { FieldFeedbackModal } from './components/FieldFeedbackModal';
 import { WeightTuningDrawer } from './components/WeightTuningDrawer';
@@ -317,7 +318,14 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 4: Cedar Auth Studio */}
+        {/* TAB 4: Copernicus Sentinel-1 Satellite SAR Explorer */}
+        {activeTab === 'satellite' && (
+          <div style={{ marginTop: 24 }}>
+            <SatelliteExplorer />
+          </div>
+        )}
+
+        {/* TAB 5: Cedar Auth Studio */}
         {activeTab === 'cedar' && (
           <div style={{ marginTop: 24 }}>
             <CedarStudio
@@ -329,7 +337,7 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 5: Standing Rules & Safety */}
+        {/* TAB 6: Standing Rules & Safety */}
         {activeTab === 'rules' && (
           <RulesSafetyView />
         )}

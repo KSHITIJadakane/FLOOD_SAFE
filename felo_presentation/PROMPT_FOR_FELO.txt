@@ -1,0 +1,56 @@
+Create an executive, modern, high-impact 8-to-10 slide presentation deck for "FloodSafe: Post-Flood Drinking Water Vulnerability Triage & Resource Allocation System".
+
+Target Event: WeMakeDevs AWS Environmental Hacks 2026.
+Audience: Hackathon Judges, Disaster Response Coordinators (UNICEF, Red Cross, NDRF), and Cloud Engineers.
+Design Style: Dark-mode tech aesthetic, deep navy/slate background with electric cyan/azure highlights, bold KPI numbers, card-based structural containers, data-driven tables, and clean professional typography. Avoid generic clip-art or childish cartoons.
+
+Follow the slide outline below strictly:
+
+Slide 1: Title & Hero
+- Title: FloodSafe
+- Subtitle: Post-Flood Drinking Water Vulnerability Triage & Resource Allocation System
+- Event: WeMakeDevs AWS Environmental Hacks 2026
+- Tech Badges: AWS Cedar Zero-Trust Engine | Copernicus Sentinel-1 SAR Radar | Greedy Submodular Optimizer | ESP32 IoT
+
+Slide 2: The Real-World Crisis
+- Title: The Hidden Killer After Floods
+- Key Problem: Receding floodwaters inundate latrines, sewers, and industrial drains, flushing deadly pathogens into community wells and taps.
+- The Trap: Contaminated floodwater looks completely clear to families. Outbreaks of cholera, typhoid, and dysentery historically kill more people than the floodwaters themselves.
+
+Slide 3: The Operational Bottleneck
+- Title: 500 Wells vs. 15 Test Kits
+- The Bottleneck: Emergency relief agencies face 500+ drinking water points across a disaster district, but trucks only carry 15-20 chemical testing kits.
+- Current Field Failure: Without decision tools, crews test blindly by road accessibility or naive ranking, causing kits to cluster redundantly around the same puddle while isolated flooded communities suffer.
+
+Slide 4: The FloodSafe Breakthrough
+- Title: From Guesswork to Precision Public-Health Triage
+- Pillar 1: Space Radar & Terrain Physics (Sentinel-1 SAR C-band microwave radar penetrates storm clouds; DEM Topographic Wetness Index calculates downhill runoff pooling).
+- Pillar 2: Explainable Multi-Criteria Scoring (Transparent 5-factor linear formula with neutral 0.5 imputation; strictly non-diagnostic decision support).
+- Pillar 3: Submodular Kit Optimization (Mathematically eliminates redundant overlapping tests to cover the maximum unique human lives per kit).
+
+Slide 5: Proven Mathematical Lift
+- Title: Submodular Optimization: +194.1% Greater Population Coverage
+- Evaluation: 500 candidate sources, 500 population units, Budget K=15 kits, Radius R=500m.
+- Stat Callout 1 (FloodSafe Optimizer): 221,559 Unique People Covered (14,770 people/kit, 0 redundant overlap, 24.6ms runtime).
+- Stat Callout 2 (Naive Top-K Ranking): 75,341 People Covered (Severe 500m overlap; FloodSafe delivers +194.1% gain).
+- Stat Callout 3 (Random Monte Carlo): 72,575 Mean People Covered (FloodSafe delivers +205.3% gain over random chance).
+- Takeaway: Naive ranking clusters kits in one flooded neighborhood; FloodSafe disperses kits across separate at-risk communities.
+
+Slide 6: AWS Cloud & Zero-Trust Safety
+- Title: AWS Serverless Architecture & Cedar Policy Guardrails
+- Left: AWS Cloud Stack (Amazon DynamoDB persistent tables for sources, testing plans, and immutable audit logs; AWS Lambda standalone greedy optimizer handler; API Gateway; AWS SAM infrastructure blueprint).
+- Right: AWS Cedar Policy Engine (Strict default-deny RBAC; non-negotiable safety invariant: software is strictly FORBIDDEN from issuing automated public panic advisories without authorized statutory sign-off).
+
+Slide 7: Cyber-Physical IoT Ground Reality
+- Title: In-Situ Sensing Station & Interactive Wokwi Simulation
+- Hardware Node: ESP32 DevKit + HC-SR04 ultrasonic water depth transducer + SSD1306 OLED display + 3-color status LEDs + piezo overtopping alarm.
+- Role: Bridges the 6-12 day satellite orbit revisit gap with minute-by-minute physical ground truth.
+- 1-Click Simulation: Live in browser at wokwi.com/projects/477569569661872129 with interactive depth slider and RESTful JSON telemetry streaming.
+
+Slide 8: Judging Summary & Verification
+- Title: Production-Ready & Fully Verified
+- Pillar 1: Idea & Impact (Tackles #1 post-flood killer with proven +194% human protection lift).
+- Pillar 2: Built on AWS (Real Cedar RBAC, DynamoDB tables, SAM deployable Lambda).
+- Pillar 3: Design & Usability (Dark-mode Leaflet GIS canvas, transparent "WHY?" math panel, interactive Cedar Studio).
+- Pillar 4: Engineering Health (45/45 Pytest tests passing, 10/10 automated spec integrity checks, open Copernicus STAC API integration).
+- Closing: Live Demo at flood-safe.onrender.com | GitHub: github.com/SumedhXy/Flood_safe

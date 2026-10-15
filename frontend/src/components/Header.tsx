@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { UserRole } from '../types';
 import { ShieldCheck, ChevronDown, Check, Moon, Sun, ExternalLink, Sliders, Sparkles } from 'lucide-react';
 
-export type ActiveNavTab = 'command' | 'queue' | 'benchmark' | 'cedar' | 'rules';
+export type ActiveNavTab = 'command' | 'queue' | 'benchmark' | 'satellite' | 'cedar' | 'rules';
 
 interface HeaderProps {
   currentRole: UserRole;
@@ -80,6 +80,12 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onTabChange('benchmark')}
           >
             BENCHMARKS
+          </button>
+          <button
+            className={`nav-link-item ${activeTab === 'satellite' ? 'active' : ''}`}
+            onClick={() => onTabChange('satellite')}
+          >
+            SATELLITE SAR
           </button>
           <button
             className={`nav-link-item ${activeTab === 'cedar' ? 'active' : ''}`}

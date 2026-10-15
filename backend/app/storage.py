@@ -79,6 +79,27 @@ class StorageRepository:
             self.assessment_runs[run.assessment_run_id] = run
             self.latest_assessment_by_event[run.event_id] = run.assessment_run_id
 
+            # Persist to AWS DynamoDB if configured
+            from backend.app.dynamodb_storage import get_dynamodb_storage
+            dynamo = get_dynamodb_storage()
+            if dynamo:
+                try:
+                    scored_dicts = [
+                        s.model_dump() if hasattr(s, 'model_dump') else s.__dict__
+                        for s in run.scored_sources
+                    ]
+                    dynamo.save_assessment_result(
+                        assessment_run_id=run.assessment_run_id,
+                        event_id=run.event_id,
+                        scored_sources=scored_dicts,
+                    )
+                except Exception as e:
+                    import logging
+                    logging.getLogger(__name__).warning(
+                        "DynamoDB persistence failed (in-memory retained): %s", e
+                    )
+
+
     def get_assessment_run(self, run_id: str) -> Optional[AssessmentRun]:
         with self._lock:
             return self.assessment_runs.get(run_id)

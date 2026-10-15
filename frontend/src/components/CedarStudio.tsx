@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { ShieldCheck, ShieldAlert, CheckCircle2, XCircle, Lock, AlertTriangle, Play } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, ShieldAlert, CheckCircle2, XCircle, Lock, AlertTriangle, Play, RefreshCw, FileText } from 'lucide-react';
 import { UserRole } from '../types';
-import { api } from '../services/api';
+import { api, fetchCedarDecisions } from '../services/api';
 
 interface CedarStudioProps {
   currentRole: UserRole;
@@ -13,6 +13,24 @@ interface CedarStudioProps {
 export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleChange, eventId, sourceId }) => {
   const [testResult, setTestResult] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+  const [auditLogs, setAuditLogs] = useState<any[]>([]);
+  const [auditLoading, setAuditLoading] = useState(false);
+
+  const loadAuditLogs = async () => {
+    setAuditLoading(true);
+    try {
+      const logs = await fetchCedarDecisions(15);
+      setAuditLogs(logs || []);
+    } catch (e) {
+      console.error('Failed to load Cedar audit logs', e);
+    } finally {
+      setAuditLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadAuditLogs();
+  }, []);
 
   const getEffectiveEventAndSource = async () => {
     let effectiveEventId = eventId;
@@ -20,7 +38,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
 
     if (!effectiveEventId) {
       try {
-        const eventsRes = await api.get('/events');
+        const eventsRes = await api.get('/flood-events');
         if (eventsRes.data && eventsRes.data.length > 0) {
           effectiveEventId = eventsRes.data[0].id;
         }
@@ -33,7 +51,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
       try {
         const sourcesRes = await api.get(`/sources?event_id=${effectiveEventId}`);
         if (sourcesRes.data && sourcesRes.data.length > 0) {
-          effectiveSourceId = sourcesRes.data[0].source_id;
+          effectiveSourceId = sourcesRes.data[0].id || sourcesRes.data[0].source_id;
         }
       } catch (e) {
         console.error('Failed to fetch sources', e);
@@ -111,6 +129,7 @@ export const CedarStudio: React.FC<CedarStudioProps> = ({ currentRole, onRoleCha
       }
     } finally {
       setLoading(false);
+      loadAuditLogs();
     }
   };
 
@@ -276,6 +295,102 @@ unless { principal in FloodSafe::Role::"admin" };
 @id("no-automatic-advisory")
 forbid (principal, action == FloodSafe::Action::"IssueAdvisory", resource);`}
         </pre>
+      </div>
+
+      {/* Live DynamoDB Cedar Decision Audit Log */}
+      <div className="panel-paper" style={{ marginTop: 24 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+          <div>
+            <div className="mono-eyebrow" style={{ marginBottom: 4 }}>
+              <span className="dot" />
+              <span>LIVE AWS DYNAMODB AUDIT STREAM (TABLE: FLOODSAFE_CEDAR_DECISIONS)</span>
+            </div>
+            <div style={{ fontSize: 13, color: 'var(--ink-body)' }}>
+              Cryptographically timestamped record of every authorization check, role transition, and safety refusal.
+            </div>
+          </div>
+          <button
+            className="btn btn-secondary btn-compact"
+            onClick={loadAuditLogs}
+            disabled={auditLoading}
+            style={{ display: 'flex', alignItems: 'center', gap: 6 }}
+          >
+            <RefreshCw size={13} className={auditLoading ? 'animate-spin' : ''} />
+            <span>{auditLoading ? 'Syncing...' : 'Sync Audit Stream'}</span>
+          </button>
+        </div>
+
+        {auditLogs.length === 0 ? (
+          <div style={{ padding: 24, textAlign: 'center', color: 'var(--ink-body)', background: 'var(--tint)', borderRadius: 'var(--radius-container)' }}>
+            No authorization decisions recorded yet in this session. Trigger an action above to see live DynamoDB audit logging.
+          </div>
+        ) : (
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12.5 }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--line-card)', textAlign: 'left', color: 'var(--ink-body)', fontFamily: 'var(--mono)' }}>
+                  <th style={{ padding: '8px 12px' }}>DECISION</th>
+                  <th style={{ padding: '8px 12px' }}>ACTION</th>
+                  <th style={{ padding: '8px 12px' }}>PRINCIPAL</th>
+                  <th style={{ padding: '8px 12px' }}>RESOURCE</th>
+                  <th style={{ padding: '8px 12px' }}>DIAGNOSTICS</th>
+                  <th style={{ padding: '8px 12px', textAlign: 'right' }}>TIMESTAMP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {auditLogs.map((log: any, idx: number) => {
+                  const isAllow = log.decision === 'ALLOW' || log.decision === 'Permitted';
+                  return (
+                    <tr
+                      key={log.audit_id || idx}
+                      style={{
+                        borderBottom: '1px solid var(--line-subtle, rgba(255,255,255,0.06))',
+                        background: idx % 2 === 0 ? 'transparent' : 'var(--tint)',
+                      }}
+                    >
+                      <td style={{ padding: '10px 12px' }}>
+                        <span
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 4,
+                            padding: '2px 8px',
+                            borderRadius: 4,
+                            fontSize: 11,
+                            fontWeight: 700,
+                            fontFamily: 'var(--mono)',
+                            letterSpacing: '0.04em',
+                            background: isAllow ? 'rgba(34, 197, 94, 0.15)' : 'rgba(239, 68, 68, 0.15)',
+                            color: isAllow ? '#22c55e' : '#ef4444',
+                            border: `1px solid ${isAllow ? 'rgba(34, 197, 94, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
+                          }}
+                        >
+                          {isAllow ? <CheckCircle2 size={12} /> : <XCircle size={12} />}
+                          {log.decision || 'UNKNOWN'}
+                        </span>
+                      </td>
+                      <td style={{ padding: '10px 12px', fontFamily: 'var(--mono)', fontWeight: 600 }}>
+                        {log.action}
+                      </td>
+                      <td style={{ padding: '10px 12px', color: 'var(--ink-body)' }}>
+                        <span style={{ fontFamily: 'var(--mono)', fontSize: 11 }}>{log.principal}</span>
+                      </td>
+                      <td style={{ padding: '10px 12px', color: 'var(--ink-body)', maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        <span style={{ fontFamily: 'var(--mono)', fontSize: 11 }}>{log.resource}</span>
+                      </td>
+                      <td style={{ padding: '10px 12px', color: 'var(--ink-body)', fontSize: 11.5 }}>
+                        {log.diagnostics || (isAllow ? 'Permitted by role policy' : 'Safety boundary refusal')}
+                      </td>
+                      <td style={{ padding: '10px 12px', textAlign: 'right', color: 'var(--ink-body)', fontFamily: 'var(--mono)', fontSize: 11 }}>
+                        {log.timestamp ? new Date(log.timestamp).toLocaleTimeString() : 'Recent'}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   );

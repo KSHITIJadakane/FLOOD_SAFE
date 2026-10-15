@@ -51,7 +51,53 @@ Resources:
         - AttributeName: event_id
           KeyType: RANGE
 
-  # 4. AWS App Runner Service running FloodSafe Container
+  # 4. DynamoDB Table for Cedar Authorization Audit Log
+  AuditLogTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: FloodSafe_AuditLog
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: audit_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: audit_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  # 5. AWS Lambda — Greedy Maximum Coverage Optimizer
+  OptimizerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: floodsafe-optimizer
+      Description: Runs greedy maximum-coverage test-kit allocation on demand
+      Handler: handler.lambda_handler
+      CodeUri: lambda_optimizer/
+      Runtime: python3.11
+      Timeout: 60
+      MemorySize: 1024
+      Environment:
+        Variables:
+          DYNAMODB_SOURCES_TABLE: !Ref WaterSourcesTable
+          DYNAMODB_PLANS_TABLE: !Ref TestingPlansTable
+          DYNAMODB_AUDIT_TABLE: !Ref AuditLogTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref WaterSourcesTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TestingPlansTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AuditLogTable
+      Events:
+        OptimizeApi:
+          Type: HttpApi
+          Properties:
+            Path: /optimize
+            Method: post
+
+  # 6. AWS App Runner Service running FloodSafe Container
   FloodSafeAppRunnerService:
     Type: AWS::AppRunner::Service
     Properties:
@@ -67,6 +113,14 @@ Resources:
                 Value: production
               - Name: IS_SYNTHETIC
                 Value: 'true'
+              - Name: USE_DYNAMODB
+                Value: 'true'
+              - Name: DYNAMODB_SOURCES_TABLE
+                Value: !Ref WaterSourcesTable
+              - Name: DYNAMODB_PLANS_TABLE
+                Value: !Ref TestingPlansTable
+              - Name: DYNAMODB_AUDIT_TABLE
+                Value: !Ref AuditLogTable
       InstanceConfiguration:
         Cpu: '1 vCPU'
         Memory: '2 GB'
@@ -75,3 +129,9 @@ Outputs:
   AppRunnerServiceUrl:
     Description: URL of the FloodSafe FastAPI App Runner service
     Value: !GetAtt FloodSafeAppRunnerService.ServiceUrl
+  OptimizerFunctionArn:
+    Description: ARN of the Greedy Optimizer Lambda function
+    Value: !GetAtt OptimizerFunction.Arn
+  OptimizerApiUrl:
+    Description: URL of the optimizer HTTP API endpoint
+    Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/optimize'

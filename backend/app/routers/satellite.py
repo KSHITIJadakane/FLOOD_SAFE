@@ -48,3 +48,29 @@ def get_satellite_summary(event_id: Optional[str] = None) -> Dict[str, Any]:
         "calibration_standard": "Sigma-0 (dB) gamma-calibrated",
         "is_synthetic": True,
     }
+
+
+@router.get("/discover")
+async def discover_sentinel1_scenes(
+    lat: float = Query(default=26.15, description="Center latitude (WGS84)"),
+    lon: float = Query(default=91.75, description="Center longitude (WGS84)"),
+    radius_km: float = Query(default=25.0, ge=1.0, le=200.0, description="Search radius in kilometers"),
+    date_from: Optional[str] = Query(default=None, description="ISO start date (YYYY-MM-DD)"),
+    date_to: Optional[str] = Query(default=None, description="ISO end date (YYYY-MM-DD)"),
+    limit: int = Query(default=8, ge=1, le=20, description="Max scenes to return"),
+) -> Dict[str, Any]:
+    """Queries the open Copernicus Data Space STAC catalog for real Sentinel-1 SAR scenes.
+
+    Returns real C-band SAR radar imagery metadata (polarizations, orbit, acquisition time,
+    bounding box, and Copernicus Data Space browser links) for the flood impact zone.
+    """
+    from backend.app.stac_discovery import search_sentinel1_scenes
+
+    return await search_sentinel1_scenes(
+        lat=lat,
+        lon=lon,
+        radius_km=radius_km,
+        date_from=date_from,
+        date_to=date_to,
+        limit=limit,
+    )
