@@ -40,7 +40,7 @@ Browser / Evaluator   |  [ / ]             -> React 18 Leaflet GIS Dashboard |
 
 #### Step 2: Create a New Web Service
 1. Click the blue **"New +"** button at top right and select **"Web Service"**.
-2. Under "Connect a repository", search for and select: **`SumedhXy/Flood_safe`**.
+2. Under "Connect a repository", search for and select: **`KSHITIJadakane/FLOOD_SAFE`**.
 
 #### Step 3: Configure Settings
 Fill in the following fields:

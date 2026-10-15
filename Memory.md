@@ -6,7 +6,7 @@
 
 ## 1. Project Identity & Active State
 
-* **Repository**: `github.com/SumedhXy/Flood_safe`
+* **Repository**: `github.com/KSHITIJadakane/FLOOD_SAFE`
 * **Local Root**: `d:\codeverse\hackathons\AI WATER HACKATHON`
 * **Target Competition**: WeMakeDevs AWS Environmental Hacks (October 2026)
 * **Overall Status**: **Feature-Complete, 100% Tested, Production-Verified**
@@ -69,7 +69,7 @@ Do not hallucinate or guess these metrics. Use these exact benchmark results:
 
 * **Live Cloud Deployment**: `https://flood-safe.onrender.com`
 * **Interactive Wokwi Hardware Simulation**: `https://wokwi.com/projects/477569569661872129`
-* **GitHub Repository**: `https://github.com/SumedhXy/Flood_safe`
+* **GitHub Repository**: `https://github.com/KSHITIJadakane/FLOOD_SAFE`
 * **Presentation Deck**: `FloodSafe.pdf` (12.5 MB, 9 slides generated in Felo)
 
 ---

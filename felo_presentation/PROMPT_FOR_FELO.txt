@@ -53,4 +53,4 @@ Slide 8: Judging Summary & Verification
 - Pillar 2: Built on AWS (Real Cedar RBAC, DynamoDB tables, SAM deployable Lambda).
 - Pillar 3: Design & Usability (Dark-mode Leaflet GIS canvas, transparent "WHY?" math panel, interactive Cedar Studio).
 - Pillar 4: Engineering Health (45/45 Pytest tests passing, 10/10 automated spec integrity checks, open Copernicus STAC API integration).
-- Closing: Live Demo at flood-safe.onrender.com | GitHub: github.com/SumedhXy/Flood_safe
+- Closing: Live Demo at flood-safe.onrender.com | GitHub: github.com/KSHITIJadakane/FLOOD_SAFE

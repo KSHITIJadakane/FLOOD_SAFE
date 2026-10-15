@@ -171,4 +171,4 @@
 ### Closing Call to Action
 * **Live Web App**: [https://flood-safe.onrender.com](https://flood-safe.onrender.com)
 * **Wokwi IoT Hardware Simulation**: [https://wokwi.com/projects/477569569661872129](https://wokwi.com/projects/477569569661872129)
-* **GitHub Repository**: [https://github.com/SumedhXy/Flood_safe](https://github.com/SumedhXy/Flood_safe)
+* **GitHub Repository**: [https://github.com/KSHITIJadakane/FLOOD_SAFE](https://github.com/KSHITIJadakane/FLOOD_SAFE)
