@@ -44,7 +44,35 @@ import { RulesSafetyView } from './components/RulesSafetyView';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ActiveNavTab>('command');
+  const getInitialTab = (): ActiveNavTab => {
+    const hash = window.location.hash.replace('#', '') as ActiveNavTab;
+    const validTabs: ActiveNavTab[] = ['command', 'queue', 'benchmark', 'satellite', 'cedar', 'rules'];
+    if (validTabs.includes(hash)) return hash;
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab') as ActiveNavTab;
+    if (tabParam && validTabs.includes(tabParam)) return tabParam;
+    return 'command';
+  };
+
+  const [activeTab, setActiveTabState] = useState<ActiveNavTab>(getInitialTab);
+
+  const setActiveTab = (tab: ActiveNavTab) => {
+    setActiveTabState(tab);
+    window.location.hash = tab;
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '') as ActiveNavTab;
+      const validTabs: ActiveNavTab[] = ['command', 'queue', 'benchmark', 'satellite', 'cedar', 'rules'];
+      if (validTabs.includes(hash)) {
+        setActiveTabState(hash);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   const [currentRole, setCurrentRole] = useState<UserRole>('operator');
 
   const [events, setEvents] = useState<FloodEvent[]>([]);
